@@ -1,0 +1,202 @@
+.stweb__footer{
+    background: $color_azul;
+    .footer{
+        &__brand {
+            padding: 20px 0;            
+        }
+        &__navbar{
+            padding: 20px 0;
+            @media (min-width:992px){
+                padding: 37px 0 75px;
+            }
+            border-top: 1px solid #D3D4D3;
+            border-bottom: 1px solid #D3D4D3;
+            .navbar{
+                padding: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: -10px;
+                margin-right: -10px;
+                display: block;
+                @media (min-width:992px) {
+                    display: flex;                    
+                }
+                .item{
+                    width: auto;
+                    max-width: 100%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    margin-bottom: 32px;
+                    @media (min-width:992px){
+                        margin-bottom: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .collapsible{
+                &__header{
+                    cursor: pointer;                    
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @media (min-width:992px){
+                        pointer-events:none;
+                    }
+                    .title{
+                        display: block;
+                        font-family: $font;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: $color_white;
+                        @media (min-width:992px){
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                    .icon{
+                        width: 16px;
+                        height: 16px;
+                        fill: $color_cian;
+                        position: relative;
+                        right: 10px;
+                        transition: all 0.25s ease-in;
+                        @media (min-width:992px){
+                            display: none;
+                        }
+                    }
+                    &.active{
+                        .icon{
+                            transform: rotate(180deg);
+                            transition: all 0.25s ease-out;
+                        }
+                    }
+                }
+                &__body{
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    @media (min-width: 992px) {
+                        max-height: none;
+                        overflow: visible;
+                    }
+                    .link{
+                        font-family: $font;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #B6B7B7;
+                        display: block;
+                        @media (min-width: 992px){
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                    .sub__item{
+                        padding: 15px 0;
+                        @media (min-width: 992px){
+                            padding: 4px 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__rrss{
+            padding: 20px 0 36px;
+            @media (min-width: 992px){
+                padding: 8px 0;
+            }
+            .rrss{
+                @media (min-width: 992px){
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__year{
+                    font-family: $font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $color_white;
+                    display: block;
+                    margin-bottom: 8px;
+                    @media (min-width: 992px) {
+                        color: #B6B7B7;
+                        margin-bottom: 0;
+                    }
+                }
+                &__nav{
+                    @media (min-width: 992px){
+                        display: flex;
+                    }
+                    .claims{
+                        margin: 0 -8px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        @media (min-width: 992px){
+                            margin: 0;
+                        }
+                        .item{
+                            padding: 0 8px;
+                            margin-bottom: 10px;
+                            border-right: 1px solid #B6B7B7;
+                            &:last-child{
+                                border-right: none;
+                            }
+                            @media (min-width: 992px){   
+                                margin-bottom: 0;                      
+                                padding: 0 8px;
+                            }
+                        }
+                        .icon{
+                            width: 20px;
+                            padding-right: 4px;
+                            fill: #B6B7B7;
+                        }
+                        .link{
+                            display: block;
+                            font-family: $font;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: $color_white;
+                            @media (min-width: 992px) {
+                                color: #B6B7B7;
+                            }
+                        }
+                    }
+                    .network{
+                        display: flex;
+                        margin: 8px 0 0;
+                        @media (min-width: 992px){
+                            margin: 0;
+                        }
+                        .item{
+                            padding: 0 4px;
+                        }
+                        .link{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 20px;
+                            height: 16px;
+                            font-size: 17px;
+                            font-weight: 400;
+                            .icon{
+                                fill: $color_white;
+                                @media (min-width: 992px) {
+                                    fill: #B6B7B7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
