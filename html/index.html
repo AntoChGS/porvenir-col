@@ -20,59 +20,36 @@
     <body class="body">
         <h1 class="visually--hidden">Porvenir Colombia</h1>
         <header class="pvr__header"> 
-            <div class="header--quicklinks"> 
-                <div class="dropdown">
-                    <button class="dropdown--toggle" type="button"> <span class="text">Personas </span><span class="icon">
+            <ul class="header--quicklinks"> 
+                <li class="dropdown"><a class="dropdown--toggle" href="/personas"> <span class="text">Personas </span><span class="icon">
                             <svg>
                                 <use xlink:href="images/icons/icons.svg#icon-chevron-down">              </use>
-                            </svg></span></button>
-                    <div class="dropdown--menu" id="quickLinks">
-                        <div class="dropdown--item"><a class="link" href="http://" target="_blank" rel="noopener noreferrer">Empresas</a></div>
-                        <div class="dropdown--item"><a class="link" href="http://" target="_blank" rel="noopener noreferrer">Pensionados</a></div>
-                        <div class="dropdown--item"><a class="link" href="http://" target="_blank" rel="noopener noreferrer">Servicios en línea</a></div>
-                        <div class="dropdown--item"><a class="link" href="http://" target="_blank" rel="noopener noreferrer">Certificados y extractos </a></div>
-                        <div class="dropdown--item"><a class="link" href="http://" target="_blank" rel="noopener noreferrer">Ayuda </a></div>
-                    </div>
-                </div>
-            </div>
+                            </svg></span></a>
+                    <ul class="dropdown--menu" id="quickLinks">
+                        <li class="dropdown--item"><a class="link" href="/empresas" target="_blank" rel="noopener noreferrer">Empresas</a></li>
+                        <li class="dropdown--item"><a class="link" href="/prensionados" target="_blank" rel="noopener noreferrer">Pensionados</a></li>
+                        <li class="dropdown--item"><a class="link" href="/servicios" target="_blank" rel="noopener noreferrer">Servicios en línea</a></li>
+                        <li class="dropdown--item"><a class="link" href="/certificados" target="_blank" rel="noopener noreferrer">Certificados y extractos </a></li>
+                        <li class="dropdown--item"><a class="link" href="/ayuda" target="_blank" rel="noopener noreferrer">Ayuda </a></li>
+                    </ul>
+                </li>
+            </ul>
             <div class="header--navigation">
                 <div class="brand"> 
                     <picture> 
                         <source media="(min-width: 768px)" srcset="images/header/brand-mobile.png"><img src="images/header/brand-mobile.png" alt="" srcset="images/header/brand-mobile.png">
                     </picture>
                 </div>
-                <button class="btn__primary" type="button">Iniciar sesión </button>
-                <form action="" method="get"> 
-                    <label for="search">¿Que quieres buscar?</label>
-                    <input type="search" id="search" name="q">
-                    <input type="submit" value="Buscar">
-                </form>
-                <button class="menu--btn" type="button"><span class="bar">menu</span></button>
-                <nav class="nav__menu">
-                    <ul class="menu--list">
-                        <li class="menu--item">pensiones
-                            <ul class="submenu--list">
-                                <li class="submenu--item">Servicios en línea</li>
-                                <li class="submenu--item">Articulo de interés</li>
-                                <li class="submenu--item">Preguntas frecuentes</li>
-                            </ul>
-                        </li>
-                        <li class="menu--item">Cesantías
-                            <ul class="submenu--list">
-                                <li class="submenu--item">Servicios en línea</li>
-                                <li class="submenu--item">Articulo de interés</li>
-                                <li class="submenu--item">Preguntas frecuentes</li>
-                            </ul>
-                        </li>
-                        <li class="menu--item">Pensiones Voluntarias
-                            <ul class="submenu--list">
-                                <li class="submenu--item">Servicios en línea</li>
-                                <li class="submenu--item">Articulo de interés</li>
-                                <li class="submenu--item">Preguntas frecuentes</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="navigation"><a class="btn--login" href="#"> <span class="text">Iniciar sesión </span><span class="icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-arrow-right"></use>
+                            </svg></span></a>
+                    <button class="btn--search" type="button"> <span class="text">buscar </span><span class="icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-search"> </use>
+                            </svg></span></button>
+                    <button class="btn--menu" type="button" id="btnNav"> <span class="text">Menu</span><span class="icon-left"></span><span class="icon-right"></span></button>
+                </div>
             </div>
         </header>
         <main role="main">

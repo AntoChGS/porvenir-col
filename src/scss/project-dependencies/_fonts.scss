@@ -45,10 +45,18 @@
 
 @font-face {
     @include font-face('Banda', normal, 700, 'Banda Bold',
-            '../fonts/porvenir/BandaBold-Bold.ttf?s16i6w',
-            '../fonts/porvenir/BandaBold-Bold.ttf?s16i6w#iefix',
-            '../fonts/porvenir/BandaBold-Bold.woff?s16i6w',
-            '../fonts/porvenir/BandaBold-Bold.woff2?s16i6w');
+            '../fonts/porvenir/banda/BandaBold-Bold.ttf?s16i6w',
+            '../fonts/porvenir/banda/BandaBold-Bold.ttf?s16i6w#iefix',
+            '../fonts/porvenir/banda/BandaBold-Bold.woff?s16i6w',
+            '../fonts/porvenir/banda/BandaBold-Bold.woff2?s16i6w');
+}
+
+@font-face {
+    @include font-face('Nunito Sans', normal, 700, 'Nunito Sans Bold',
+            '../fonts/porvenir/nunito/nunitosans-bold.ttf?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-bold.ttf?s16i6w#iefix',
+            '../fonts/porvenir/nunito/nunitosans-bold.woff?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-bold.woff2?s16i6w');
 }
 
 // @font-face {

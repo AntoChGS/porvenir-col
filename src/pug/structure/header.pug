@@ -1,20 +1,20 @@
 header.pvr__header 
-    .header--quicklinks 
-        .dropdown
-            button(type="button" class="dropdown--toggle") 
+    ul.header--quicklinks 
+        li.dropdown
+            a(href="/personas" class="dropdown--toggle") 
                 span.text Personas 
                 span.icon: svg: use(xlink:href=iconPath+'chevron-down')               
-            .dropdown--menu#quickLinks
-                .dropdown--item
-                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Empresas
-                .dropdown--item
-                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Pensionados
-                .dropdown--item
-                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Servicios en línea
-                .dropdown--item
-                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Certificados y extractos 
-                .dropdown--item
-                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Ayuda 
+            ul.dropdown--menu#quickLinks
+                li.dropdown--item
+                    a(href="/empresas", target="_blank", rel="noopener noreferrer" class="link") Empresas
+                li.dropdown--item
+                    a(href="/prensionados", target="_blank", rel="noopener noreferrer" class="link") Pensionados
+                li.dropdown--item
+                    a(href="/servicios", target="_blank", rel="noopener noreferrer" class="link") Servicios en línea
+                li.dropdown--item
+                    a(href="/certificados", target="_blank", rel="noopener noreferrer" class="link") Certificados y extractos 
+                li.dropdown--item
+                    a(href="/ayuda", target="_blank", rel="noopener noreferrer" class="link") Ayuda 
 
     .header--navigation
         .brand 
@@ -22,29 +22,41 @@ header.pvr__header
                 source(media="(min-width: 768px)", srcset="images/header/brand-mobile.png")
                 img(src="images/header/brand-mobile.png", alt="", srcset="images/header/brand-mobile.png")
 
-        button(type="button" class="btn__primary") Iniciar sesión 
+        //- nav.nav__menu
+        //-     ul.menu--list
+        //-         li.menu--item pensiones
+        //-             ul.submenu--list
+        //-                 li.submenu--item Servicios en línea
+        //-                 li.submenu--item Articulo de interés
+        //-                 li.submenu--item Preguntas frecuentes
+        //-         li.menu--item Cesantías
+        //-             ul.submenu--list
+        //-                 li.submenu--item Servicios en línea
+        //-                 li.submenu--item Articulo de interés
+        //-                 li.submenu--item Preguntas frecuentes
+        //-         li.menu--item Pensiones Voluntarias
+        //-             ul.submenu--list
+        //-                 li.submenu--item Servicios en línea
+        //-                 li.submenu--item Articulo de interés
+        //-                 li.submenu--item Preguntas frecuentes
 
-        form(action="", method="get") 
-            label(for="search") ¿Que quieres buscar?
-            input(type="search" id="search" name="q")
-            input(type="submit" value="Buscar")  
+        //- form(action="", method="get") 
+        //-     label(for="search") ¿Que quieres buscar?
+        //-     input(type="search" id="search" name="q")
+        //-     input(type="submit" value="Buscar") 
 
-        button(type="button" class="menu--btn")
-            span.bar menu
-        nav.nav__menu
-            ul.menu--list
-                li.menu--item pensiones
-                    ul.submenu--list
-                        li.submenu--item Servicios en línea
-                        li.submenu--item Articulo de interés
-                        li.submenu--item Preguntas frecuentes
-                li.menu--item Cesantías
-                    ul.submenu--list
-                        li.submenu--item Servicios en línea
-                        li.submenu--item Articulo de interés
-                        li.submenu--item Preguntas frecuentes
-                li.menu--item Pensiones Voluntarias
-                    ul.submenu--list
-                        li.submenu--item Servicios en línea
-                        li.submenu--item Articulo de interés
-                        li.submenu--item Preguntas frecuentes
+        .navigation
+            a(href="#" class="btn--login") 
+                span.text Iniciar sesión 
+                span.icon: svg: use(xlink:href=iconPath+'arrow-right')
+
+            button(type="button" class="btn--search") 
+                span.text buscar 
+                span.icon: svg: use(xlink:href=iconPath+'search') 
+
+            button(type="button" class="btn--menu" id="btnNav") 
+                span.text Menu
+                span.icon-left
+                span.icon-right
+
+
