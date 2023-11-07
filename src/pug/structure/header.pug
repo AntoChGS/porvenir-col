@@ -1,1 +1,50 @@
-header Menu
+header.pvr__header 
+    .header--quicklinks 
+        .dropdown
+            button(type="button" class="dropdown--toggle") 
+                span.text Personas 
+                span.icon: svg: use(xlink:href=iconPath+'chevron-down')               
+            .dropdown--menu#quickLinks
+                .dropdown--item
+                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Empresas
+                .dropdown--item
+                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Pensionados
+                .dropdown--item
+                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Servicios en línea
+                .dropdown--item
+                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Certificados y extractos 
+                .dropdown--item
+                    a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Ayuda 
+
+    .header--navigation
+        .brand 
+            picture 
+                source(media="(min-width: 768px)", srcset="images/header/brand-mobile.png")
+                img(src="images/header/brand-mobile.png", alt="", srcset="images/header/brand-mobile.png")
+
+        button(type="button" class="btn__primary") Iniciar sesión 
+
+        form(action="", method="get") 
+            label(for="search") ¿Que quieres buscar?
+            input(type="search" id="search" name="q")
+            input(type="submit" value="Buscar")  
+
+        button(type="button" class="menu--btn")
+            span.bar menu
+        nav.nav__menu
+            ul.menu--list
+                li.menu--item pensiones
+                    ul.submenu--list
+                        li.submenu--item Servicios en línea
+                        li.submenu--item Articulo de interés
+                        li.submenu--item Preguntas frecuentes
+                li.menu--item Cesantías
+                    ul.submenu--list
+                        li.submenu--item Servicios en línea
+                        li.submenu--item Articulo de interés
+                        li.submenu--item Preguntas frecuentes
+                li.menu--item Pensiones Voluntarias
+                    ul.submenu--list
+                        li.submenu--item Servicios en línea
+                        li.submenu--item Articulo de interés
+                        li.submenu--item Preguntas frecuentes
