@@ -8,42 +8,42 @@ footer.prv-footer
                             picture.logo__picture 
                                 source(media="(min-width: 768px)", srcset="images/logo/logo-porvenir-blanco.png")
                                 img(src="images/logo/logo-porvenir-blanco.png", alt="logo porvenir", width="113", heigh="87")
-                    h5.menu__title Síguenos en:
-                    ul.social-list 
-                        li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'twitter') 
-                        li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'facebook')
-                        li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'instagram')
-                        li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'youtube')
+                    .footer__social
+                        p.menu__title Síguenos en:
+                        ul.social__list 
+                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'twitter') 
+                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'facebook')
+                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'instagram')
+                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'youtube')
                 .nav__menu
                     .nav__wrapper
                         .nav__column
-                            .footer__menu
-                                .accordion__item 
-                                    h5.menu-accordion__header.menu__title 
-                                        button.menu-accordion__button(type="button") Documentación
-                                            span.icon: svg: use(xlink:href=iconPath+'arrow-down')
-                                    .menu-accordion__collapse
-                                        .menu-accordion__body
-                                            ul.menu__links 
-                                                li: a(href="#") Ir a todos los documentos
-                                                li: a(href="#") Comisiones de Administración
-                                                li: a(href="#") Consulta de solicitudes y quejas
-                                .accordion__item 
-                                    h5.menu-accordion__header.menu__title 
-                                        button.menu-accordion__button(type="button") Noticias
-                                            span.icon: svg: use(xlink:href=iconPath+'arrow-down')
-                                    .menu-accordion__collapse
-                                        .menu-accordion__body
-                                            ul.menu__links 
-                                                li: a(href="#") Todas las noticias
-                                                li: a(href="#") Comunicados de prensa
+                            .footer__menu.menu-accordion 
+                                p.menu-accordion__header.menu__title 
+                                    button.menu-accordion__button Documentación
+                                        span.icon: svg: use(xlink:href=iconPath+'arrow-down')
+                                .menu-accordion__collapse
+                                    .menu-accordion__body
+                                        ul.menu__links 
+                                            li: a(href="#") Ir a todos los documentos
+                                            li: a(href="#") Comisiones de Administración
+                                            li: a(href="#") Consulta de solicitudes y quejas
+                                 
+                                p.menu-accordion__header.menu__title 
+                                    button.menu-accordion__button Noticias
+                                        span.icon: svg: use(xlink:href=iconPath+'arrow-down')
+                                .menu-accordion__collapse
+                                    .menu-accordion__body
+                                        ul.menu__links 
+                                            li: a(href="#") Todas las noticias
+                                            li: a(href="#") Comunicados de prensa
                         .nav__column 
-                            .footer__menu 
-                                .accordion__item
-                                    h5.menu-accordion__header.menu__title 
-                                        button.menu-accordion__button(type="button") Corporativo
-                                            span.icon: svg: use(xlink:href=iconPath+'arrow-down')
-                                    .menu-accordion__collapse
+                            .footer__menu.menu-accordion 
+                                p.menu-accordion__header.menu__title 
+                                    button.menu-accordion__button(type="button") Corporativo
+                                        span.icon: svg: use(xlink:href=iconPath+'arrow-down')
+                                .menu-accordion__collapse
+                                    .menu-accordion__body
                                         ul.menu__links 
                                             li: a(href="#") Mapa del sitio
                                             li: a(href="#") Sobre nosotros
@@ -52,12 +52,12 @@ footer.prv-footer
                                             li: a(href="#") Inclusión a la diversidad y a los afiliados con discapacidades
                                             li: a(href="#") Sostenibilidad
                         .nav__column 
-                            .footer__menu 
-                                .accordion__item
-                                    h5.menu-accordion__header.menu__title 
-                                        button.menu-accordion__button(type="button") Legal
-                                            span.icon: svg: use(xlink:href=iconPath+'arrow-down')
-                                    .menu-accordion__collapse
+                            .footer__menu.menu-accordion 
+                                p.menu-accordion__header.menu__title 
+                                    button.menu-accordion__button(type="button") Legal
+                                        span.icon: svg: use(xlink:href=iconPath+'arrow-down')
+                                .menu-accordion__collapse
+                                    .menu-accordion__body
                                         ul.menu__links 
                                             li: a(href="#") Línea ética
                                             li: a(href="#") Transparencia y acceso a la información
@@ -65,12 +65,12 @@ footer.prv-footer
                                             li: a(href="#") Sistema de atención al consumidor
                                             li: a(href="#") Defensor del consumidor financiero
                         .nav__column
-                            .footer__menu
-                                .accordion__item
-                                    h5.menu-accordion__header.menu__title 
-                                        button.menu-accordion__button(type="button") Productos
-                                            span.icon: svg: use(xlink:href=iconPath+'arrow-down')
-                                    .menu-accordion__collapse
+                            .footer__menu.menu-accordion
+                                p.menu-accordion__header.menu__title 
+                                    button.menu-accordion__button(type="button") Productos
+                                        span.icon: svg: use(xlink:href=iconPath+'arrow-down')
+                                .menu-accordion__collapse
+                                    .menu-accordion__body
                                         ul.menu__links 
                                             li: a(href="#") Pensiones Obligatorias
                                             li: a(href="#") Rentabilidad y fichas Pensiones Obligatorias

@@ -11,11 +11,10 @@ if (document.querySelector('.prv-footer')) {
             e.preventDefault();
             var panel = this.nextElementSibling;
             var coursePanel = document.getElementsByClassName("menu-accordion__collapse");
-            var courseAccordion = document.getElementsByClassName("menu-accordion__header");
             var courseAccordionActive = document.getElementsByClassName("menu-accordion__header active");
 
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
+            if (panel.style.height) {
+                panel.style.height = null;
                 this.classList.remove("active");
             } else {
                 for (var ii = 0; ii < courseAccordionActive.length; ii++) {
@@ -23,9 +22,10 @@ if (document.querySelector('.prv-footer')) {
                 }
                 for (var iii = 0; iii < coursePanel.length; iii++) {
                     this.classList.remove("active");
-                    coursePanel[iii].style.maxHeight = null;
+                    coursePanel[iii].style.height = null;
                 }
-                panel.style.maxHeight = panel.scrollHeight + "px";
+                
+                panel.style.height = panel.scrollHeight + "px";
                 this.classList.add("active");
             }
         }
