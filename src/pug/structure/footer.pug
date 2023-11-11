@@ -4,17 +4,25 @@ footer.prv-footer
             .nav__wrapper
                 .nav__brand
                     .footer__logo
-                        a.logo__link(href="https://www.porvenir.com.co/") 
+                        a.logo__link(href="https://www.porvenir.com.co/", title="Porvenir") 
                             picture.logo__picture 
                                 source(media="(min-width: 768px)", srcset="images/logo/logo-porvenir-blanco.png")
                                 img(src="images/logo/logo-porvenir-blanco.png", alt="logo porvenir", width="113", heigh="87")
                     .footer__social
                         p.menu__title Síguenos en:
                         ul.social__list 
-                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'twitter') 
-                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'facebook')
-                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'instagram')
-                            li: a(href="#", target="_blank", rel="noopener noreferrer"): span.icon: svg: use(xlink:href=iconPath+'youtube')
+                            li
+                                a(href="#", target="_blank", rel="noopener noreferrer", title="Twitter")
+                                    span.icon: svg: use(xlink:href=iconPath+'twitter') 
+                            li
+                                a(href="#", target="_blank", rel="noopener noreferrer", title="Facebook")
+                                    span.icon: svg: use(xlink:href=iconPath+'facebook')
+                            li
+                                a(href="#", target="_blank", rel="noopener noreferrer", title="Instagram")
+                                    span.icon: svg: use(xlink:href=iconPath+'instagram')
+                            li
+                                a(href="#", target="_blank", rel="noopener noreferrer", title="Youtube")
+                                    span.icon: svg: use(xlink:href=iconPath+'youtube')
                 .nav__menu
                     .nav__wrapper
                         .nav__column
@@ -86,7 +94,7 @@ footer.prv-footer
                     a.groups__link(href="https://www.grupoaval.com/", target="_blank", rel="noopener noreferrer") 
                         picture.groups__image 
                             source(media="(min-width: 768px)", srcset="images/logo/logo-grupo-aval.png")
-                            img(src="images/logo/logo-grupo-aval-mobile.png", alt="logo porvenir", width="164", heigh="33")
+                            img(src="images/logo/logo-grupo-aval-mobile.png", alt="logo grupo aval", width="164", heigh="33")
                 .groups__item
                     a.groups__link(href="#", target="_blank", rel="noopener noreferrer") 
                         picture.groups__image 

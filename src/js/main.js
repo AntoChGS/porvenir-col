@@ -2,8 +2,8 @@
 //=require jquery/dist/jquery.min.js
 //=require swiper/swiper-bundle.min.js
 
-if (document.querySelector('.prv-footer')) {
-    let acc = document.querySelectorAll(".prv-footer .menu-accordion__header");
+if (document.querySelector('.prv-footer .menu-accordion')) {
+    let acc = document.querySelectorAll(".prv-footer .menu-accordion .menu-accordion__header");
     let i;
 
     for (i = 0; i < acc.length; i++) {
