@@ -20,7 +20,7 @@ if (components) {
       tab.setAttribute("aria-expanded", false);
 
       var button = tab.firstElementChild;
-      button.addEventListener("click", toggle);
+      button.addEventListener("click", toggleFAQ);
 
       var panel = tab.nextElementSibling;
       panel.id = "accordionPanel" + b;
@@ -35,7 +35,7 @@ if (components) {
 }
 
 // -- Toggle Panels
-function toggle() {
+function toggleFAQ() {
   var component = this.parentNode.parentNode;
   var tabs = component.getElementsByClassName("c-accordion__tab");
   var tab = this.parentNode;
@@ -191,29 +191,29 @@ btnNav.addEventListener("click", (event) => {
 // -- Nav Accordion get and configuration
 let navComponents = document.getElementsByClassName("nav__accordion--list");
 if (navComponents) {
-    let component;
-    for (a = (navComponents.length - 1); a >= 0; a--) {
-        component = navComponents[a];
-        let tabs = component.getElementsByClassName("nav__accordion--tab");
-        let tab;        
-            for (b = (tabs.length - 1); b >= 0; b--) {
-            tab = tabs[b];
-            tab.id = "accordionTabNav" + b;
-            tab.setAttribute("aria-expanded", false);
-            
-            let button = tab.firstElementChild;
-            button.addEventListener("click", toggle);
+  let component;
+  for (a = navComponents.length - 1; a >= 0; a--) {
+    component = navComponents[a];
+    let tabs = component.getElementsByClassName("nav__accordion--tab");
+    let tab;
+    for (b = tabs.length - 1; b >= 0; b--) {
+      tab = tabs[b];
+      tab.id = "accordionTabNav" + b;
+      tab.setAttribute("aria-expanded", false);
 
-            let panel = tab.querySelector('.link').nextElementSibling;
-            panel.id = "accordionPanelNav" + b;
-            panel.dataset.height = getHeight(tab, panel);
-            
-            // -- Set Initial ARIA
-            tab.setAttribute("aria-controls", panel.id);
-            tab.setAttribute("aria-expanded", false);
-            panel.setAttribute("aria-labelledby", tab.id);
-        }
+      let button = tab.firstElementChild;
+      button.addEventListener("click", toggle);
+
+      let panel = tab.querySelector(".link").nextElementSibling;
+      panel.id = "accordionPanelNav" + b;
+      panel.dataset.height = getHeight(tab, panel);
+
+      // -- Set Initial ARIA
+      tab.setAttribute("aria-controls", panel.id);
+      tab.setAttribute("aria-expanded", false);
+      panel.setAttribute("aria-labelledby", tab.id);
     }
+  }
 }
 
 // -- function Toggle List navigation
