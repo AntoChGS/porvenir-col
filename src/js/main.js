@@ -202,7 +202,7 @@ if (navComponents) {
       tab.setAttribute("aria-expanded", false);
 
       let button = tab.firstElementChild;
-      button.addEventListener("click", toggle);
+      button.addEventListener("click", toggleNav);
 
       let panel = tab.querySelector(".link").nextElementSibling;
       panel.id = "accordionPanelNav" + b;
@@ -216,8 +216,8 @@ if (navComponents) {
   }
 }
 
-// -- function Toggle List navigation
-function toggle(e) {
+// -- function ToggleNav List navigation
+function toggleNav(e) {
   if (document.querySelector(".nav__accordion")) {
     e.preventDefault();
     let component = this.parentNode.parentNode;
@@ -279,8 +279,10 @@ function widthChangeCallback() {
       .querySelector(".navigation--action .btn--menu")
       .classList.remove("open");
     document.querySelector(".nav__menu").removeAttribute("style");
+    document.querySelector(".nav__menu").classList.add("nav__accessible");
   } else {
     document.querySelector(".nav__menu").classList.add("nav__accordion");
+    document.querySelector(".nav__menu").classList.remove("nav__accessible");
     document
       .querySelector(".navigation--menu")
       .insertAdjacentElement("beforeEnd", navigation);
