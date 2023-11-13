@@ -591,11 +591,7 @@
                     height: 56px;
                     padding: 0px 0;
                     gap: 5px;
-                    pointer-events: none;                    
-                    &:hover,
-                    &:focus {
-                        color: #3E6A27;                                           
-                    }
+                    pointer-events: none;
                 }
 
                 .text {
@@ -645,6 +641,9 @@
                 &:hover,
                 &:focus,
                 &:focus-within{
+                    .link{
+                        color: #3E6A27;
+                    }
                     .submenu--list{
                         opacity: 1;
                         visibility: visible;
