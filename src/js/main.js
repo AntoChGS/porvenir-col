@@ -200,14 +200,14 @@ if (navComponents) {
         let tab;        
     for (b = (tabs.length - 1); b >= 0; b--) {
       tab = tabs[b];
-      tab.id = "accordionTab" + b;
+      tab.id = "accordionTabNav" + b;
       tab.setAttribute("aria-expanded", false);
       
       let button = tab.firstElementChild;
       button.addEventListener("click", toggle);
 
       let panel = tab.querySelector('.link').nextElementSibling;
-      panel.id = "accordionPanel" + b;
+      panel.id = "accordionPanelNav" + b;
       panel.dataset.height = getHeight(tab, panel);
       
       // -- Set Initial ARIA
