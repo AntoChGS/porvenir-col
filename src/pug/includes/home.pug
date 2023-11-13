@@ -1,10 +1,9 @@
-
 section.pvr__banner
     .pvr__banner--content
         .pvr__banner--left
             h1.title Ahorra para tus sueños, construye tu futuro.
             p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            a(href="#").btn__primary.pvr__banner--btn Afiliate a Porvenir
+            a(href="#").pvr__banner--btn.prv-btn.prv-btn--round-corner.prv-btn--orange Afiliate a Porvenir
             
         .pvr__banner--right 
             picture.pvr__banner--image
@@ -146,7 +145,7 @@ section.pvr__caracteristicas
 
 section.pvr__historias
     .pvr__historias--content
-        h2.pvr__historias--title ¿Qué esperas para vivir tu Porvenir? 
+        h2.pvr__historias--title.prv-title.prv-txt-green-700 ¿Qué esperas para vivir tu Porvenir? 
         ul.pvr__historias--list
             li.pvr__historias--item
                 .pvr__historias--item--content
@@ -169,7 +168,7 @@ section.pvr__historias
 
 section.pvr__preguntas
     .pvr__preguntas--content
-        h2.pvr__preguntas--title Preguntas frecuentes
+        h2.pvr__preguntas--title.prv-title.prv-txt-green-700 Preguntas frecuentes
         .pvr__preguntas--right
             .pvr__preguntas--list.c-accordion(data-multiselect="false")
                 h4.pvr__preguntas--item--header.c-accordion__tab
@@ -187,3 +186,282 @@ section.pvr__preguntas
                 .pvr__preguntas--item--body.c-accordion__panel
                     .info.c-accordion__panel__content
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.   
+
+.prv-interest-section
+    .container 
+        h2.interest__title.prv-title.prv-txt-green-700 Esto también te podría interesar
+    .interest__carousel
+        .container
+            .prv-tab-horizontal
+                ul.prv-nav-tab 
+                    li.tab__item.active(data-tab-extra="tab-1")
+                        button.tab__link(type="button", role="tab") Artículo
+                    li.tab__item(data-tab-extra="tab-2")
+                        button.tab__link(type="button", role="tab") Noticias
+                    li.tab__item(data-tab-extra="tab-3")
+                        button.tab__link(type="button", role="tab") Tab Label
+            .prv-tab-content
+                .prv-tab-pane.active#tab-1(role="tabpanel")
+                    .interest__swiper
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title 1
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title 2
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title 3
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title 4
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title 5
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title 6
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                
+                            .interest-slider-controls
+                                .interest-slider-btn.swiper-button-prev
+                                    <svg class="svg--inline" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" role="img">
+                                    <path d="M7 0.705006C6.61 0.315006 5.98 0.315006 5.59 0.705006L1 5.29501C0.610004 5.68501 0.610004 6.31501 1 6.70501L5.59 11.295C5.98 11.685 6.61 11.685 7 11.295C7.39 10.905 7.39 10.275 7 9.88501L3.12 5.99501L7 2.11501C7.38 1.72501 7.38 1.08501 7 0.705006Z" fill="currentColor"/>
+                                    </svg>
+                                .swiper-pagination
+                                .interest-slider-btn.swiper-button-next
+                                    <svg class="svg--inline" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" role="img">
+                                    <path d="M0.999989 0.710632C0.609989 1.10063 0.609989 1.73063 0.999989 2.12063L4.87999 6.00063L0.999989 9.88063C0.609989 10.2706 0.609989 10.9006 0.999989 11.2906C1.38999 11.6806 2.01999 11.6806 2.40999 11.2906L6.99999 6.70063C7.38999 6.31063 7.38999 5.68063 6.99999 5.29063L2.40999 0.700632C2.02999 0.320632 1.38999 0.320632 0.999989 0.710632Z" fill="currentColor"/>
+                                    </svg>
+                    
+                .prv-tab-pane#tab-2(role="tabpanel")
+                    .interest__swiper
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title A1
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title A2
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title A3
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title A4
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title A5
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title A6
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                
+                            .interest-slider-controls
+                                .interest-slider-btn.swiper-button-prev
+                                    <svg class="svg--inline" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" role="img">
+                                    <path d="M7 0.705006C6.61 0.315006 5.98 0.315006 5.59 0.705006L1 5.29501C0.610004 5.68501 0.610004 6.31501 1 6.70501L5.59 11.295C5.98 11.685 6.61 11.685 7 11.295C7.39 10.905 7.39 10.275 7 9.88501L3.12 5.99501L7 2.11501C7.38 1.72501 7.38 1.08501 7 0.705006Z" fill="currentColor"/>
+                                    </svg>
+                                .swiper-pagination
+                                .interest-slider-btn.swiper-button-next
+                                    <svg class="svg--inline" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" role="img">
+                                    <path d="M0.999989 0.710632C0.609989 1.10063 0.609989 1.73063 0.999989 2.12063L4.87999 6.00063L0.999989 9.88063C0.609989 10.2706 0.609989 10.9006 0.999989 11.2906C1.38999 11.6806 2.01999 11.6806 2.40999 11.2906L6.99999 6.70063C7.38999 6.31063 7.38999 5.68063 6.99999 5.29063L2.40999 0.700632C2.02999 0.320632 1.38999 0.320632 0.999989 0.710632Z" fill="currentColor"/>
+                                    </svg>
+                    
+                .prv-tab-pane#tab-3(role="tabpanel")
+                    .interest__swiper
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title B1
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title B2
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title B3
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title B4
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title B5
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                .swiper-slide
+                                    .prv-card
+                                        picture.prv-card__img-top 
+                                            source(media="(min-width: 768px)", srcset="images/cards/card-image-desktop.jpg")
+                                            img(src="images/cards/card-image-mobile.jpg", alt="title", width="380", heigh="186")
+                                        .prv-card__body
+                                            p.card__badge.prv-txt-orange-300 Label
+                                            h3.card__title.prv-txt-green-700 Title B6
+                                            .card__description
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                            .card__button
+                                                a.prv-btn.prv-btn--round-corner.prv-btn--orange(href="#") Ver más
+                                
+                            .interest-slider-controls
+                                .interest-slider-btn.swiper-button-prev
+                                    <svg class="svg--inline" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" role="img">
+                                    <path d="M7 0.705006C6.61 0.315006 5.98 0.315006 5.59 0.705006L1 5.29501C0.610004 5.68501 0.610004 6.31501 1 6.70501L5.59 11.295C5.98 11.685 6.61 11.685 7 11.295C7.39 10.905 7.39 10.275 7 9.88501L3.12 5.99501L7 2.11501C7.38 1.72501 7.38 1.08501 7 0.705006Z" fill="currentColor"/>
+                                    </svg>
+                                .swiper-pagination
+                                .interest-slider-btn.swiper-button-next
+                                    <svg class="svg--inline" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" role="img">
+                                    <path d="M0.999989 0.710632C0.609989 1.10063 0.609989 1.73063 0.999989 2.12063L4.87999 6.00063L0.999989 9.88063C0.609989 10.2706 0.609989 10.9006 0.999989 11.2906C1.38999 11.6806 2.01999 11.6806 2.40999 11.2906L6.99999 6.70063C7.38999 6.31063 7.38999 5.68063 6.99999 5.29063L2.40999 0.700632C2.02999 0.320632 1.38999 0.320632 0.999989 0.710632Z" fill="currentColor"/>
+                                    </svg>
+                    
