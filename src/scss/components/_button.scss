@@ -1,4 +1,4 @@
-.prv-btn {
+.prv-btn { 
     display: inline-block;
     padding: 12px 13px;
     font-weight: 700;
@@ -21,7 +21,7 @@
         font-size: 14px;
     }
 
-    &:hover {
+    &:hover, &:active {
         color: $color-orange-300;
         text-decoration: underline;
     }
@@ -60,7 +60,7 @@
         color: $color-white;
         border: 4px solid transparent;
 
-        &:hover {
+        &:hover, &:active {
             color: $color-white;
             background: $color-orange-400;
             text-decoration: none;
