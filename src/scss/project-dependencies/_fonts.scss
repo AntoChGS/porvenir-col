@@ -11,46 +11,6 @@
     font-display: swap;
 }
 
-// @font-face {
-//     @include font-face('Telefonica', normal, 200, 'Telefonica Extra Light',
-//             '../fonts/telefonica/Telefonica-ExtraLight.ttf?s16i6w',
-//             '../fonts/telefonica/Telefonica-ExtraLight.ttf?s16i6w#iefix',
-//             '../fonts/telefonica/Telefonica-ExtraLight.woff?s16i6w',
-//             '../fonts/telefonica/Telefonica-ExtraLight.woff2?s16i6w');
-// }
-
-// @font-face {
-//     @include font-face('Telefonica', normal, 300, 'Telefonica Light',
-//             '../fonts/telefonica/Telefonica-Light.ttf?s16i6w',
-//             '../fonts/telefonica/Telefonica-Light.ttf?s16i6w#iefix',
-//             '../fonts/telefonica/Telefonica-Light.woff?s16i6w',
-//             '../fonts/telefonica/Telefonica-Light.woff2?s16i6w');
-// }
-
-// @font-face {
-//     @include font-face('Telefonica', normal, 400, 'Telefonica Regular',
-//             '../fonts/telefonica/Telefonica-Regular.ttf?s16i6w',
-//             '../fonts/telefonica/Telefonica-Regular.ttf?s16i6w#iefix',
-//             '../fonts/telefonica/Telefonica-Regular.woff?s16i6w',
-//             '../fonts/telefonica/Telefonica-Regular.woff2?s16i6w');
-// }
-
-// @font-face {
-//     @include font-face('Telefonica', italic, 400, 'Telefonica Italic',
-//             '../fonts/telefonica/Telefonica-RegularItalic.ttf?s16i6w',
-//             '../fonts/telefonica/Telefonica-RegularItalic.ttf?s16i6w#iefix',
-//             '../fonts/telefonica/Telefonica-RegularItalic.woff?s16i6w',
-//             '../fonts/telefonica/Telefonica-RegularItalic.woff2?s16i6w');
-// }
-
-@font-face {
-    @include font-face('Banda', normal, 700, 'Banda Bold',
-            '../fonts/porvenir/banda/BandaBold-Bold.ttf?s16i6w',
-            '../fonts/porvenir/banda/BandaBold-Bold.ttf?s16i6w#iefix',
-            '../fonts/porvenir/banda/BandaBold-Bold.woff?s16i6w',
-            '../fonts/porvenir/banda/BandaBold-Bold.woff2?s16i6w');
-}
-
 @font-face {
     @include font-face('Nunito Sans', normal, 700, 'Nunito Sans Bold',
             '../fonts/porvenir/nunito/nunitosans-bold.ttf?s16i6w',
@@ -67,23 +27,50 @@
             '../fonts/porvenir/nunito/nunitosans-regular.woff2?s16i6w');
 }
 
-// @font-face {
-//     @include font-face('Telefonica Hand', normal, 400, 'Telefonica Hand',
-//             '../fonts/telefonica/Telefonica-Hand.ttf?s16i6w',
-//             '../fonts/telefonica/Telefonica-Hand.ttf?s16i6w#iefix',
-//             '../fonts/telefonica/Telefonica-Hand.woff?s16i6w',
-//             '../fonts/telefonica/Telefonica-Hand.woff2?s16i6w');
-// }
+@font-face {
+    @include font-face('Banda', normal, 200, 'Banda Extra Light',
+            '../fonts/banda/Banda-ExtraLight.ttf?s16i6w',
+            '../fonts/banda/Banda-ExtraLight.ttf?s16i6w#iefix',
+            '../fonts/banda/Banda-ExtraLight.woff?s16i6w',
+            '../fonts/banda/Banda-ExtraLight.woff2?s16i6w');
+}
 
-// // Font Icomoon
-// @font-face {
-//     font-family: 'icomoon';
-//     font-style: normal;
-//     font-weight: normal;
-//     src:  url('../fonts/material-icons/icomoon.eot?s16i6w');
-//     src:  url('../fonts/material-icons/icomoon.eot?s16i6w#iefix') format('embedded-opentype'),
-//         url('../fonts/material-icons/icomoon.ttf?s16i6w') format('truetype'),
-//         url('../fonts/material-icons/icomoon.woff?s16i6w') format('woff'),
-//         url('../fonts/material-icons/icomoon.svg?s16i6w#icomoon') format('svg');
-// }
+@font-face {
+    @include font-face('Banda', normal, 300, 'Banda Light',
+            '../fonts/banda/Banda-Light.ttf?s16i6w',
+            '../fonts/banda/Banda-Light.ttf?s16i6w#iefix',
+            '../fonts/banda/Banda-Light.woff?s16i6w',
+            '../fonts/banda/Banda-Light.woff2?s16i6w');
+}
 
+@font-face {
+    @include font-face('Banda', normal, 400, 'Banda Regular',
+            '../fonts/banda/Banda-Regular.ttf?s16i6w',
+            '../fonts/banda/Banda-Regular.ttf?s16i6w#iefix',
+            '../fonts/banda/Banda-Regular.woff?s16i6w',
+            '../fonts/banda/Banda-Regular.woff2?s16i6w');
+}
+
+@font-face {
+    @include font-face('Banda', italic, 400, 'Banda Italic',
+            '../fonts/banda/Banda-RegularItalic.ttf?s16i6w',
+            '../fonts/banda/Banda-RegularItalic.ttf?s16i6w#iefix',
+            '../fonts/banda/Banda-RegularItalic.woff?s16i6w',
+            '../fonts/banda/Banda-RegularItalic.woff2?s16i6w');
+}
+
+@font-face {
+    @include font-face('Banda', normal, 600, 'Banda Semi Bold',
+            '../fonts/banda/Banda-SemiBold.ttf?s16i6w',
+            '../fonts/banda/Banda-SemiBold.ttf?s16i6w#iefix',
+            '../fonts/banda/Banda-SemiBold.woff?s16i6w',
+            '../fonts/banda/Banda-SemiBold.woff2?s16i6w');
+}
+
+@font-face {
+    @include font-face('Banda', normal, 700, 'Banda Bold',
+            '../fonts/banda/Banda-Bold.ttf?s16i6w',
+            '../fonts/banda/Banda-Bold.ttf?s16i6w#iefix',
+            '../fonts/banda/Banda-Bold.woff?s16i6w',
+            '../fonts/banda/Banda-Bold.woff2?s16i6w');
+}
