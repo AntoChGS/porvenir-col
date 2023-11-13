@@ -1,5 +1,5 @@
 header.pvr__header 
-    ul.header--quicklinks 
+    ul.header--quicklinks
         li.dropdown
             a(href="/personas" class="dropdown--toggle") 
                 span.text Personas 
@@ -9,7 +9,7 @@ header.pvr__header
                     a(href="/empresas", target="_blank", rel="noopener noreferrer" class="link") Empresas
                 li.dropdown--item
                     a(href="/prensionados", target="_blank", rel="noopener noreferrer" class="link") Pensionados
-                li.dropdown--item
+                li.dropdown--item.offset--item
                     a(href="/servicios", target="_blank", rel="noopener noreferrer" class="link") Servicios en línea
                 li.dropdown--item
                     a(href="/certificados", target="_blank", rel="noopener noreferrer" class="link") Certificados y extractos 
@@ -17,46 +17,68 @@ header.pvr__header
                     a(href="/ayuda", target="_blank", rel="noopener noreferrer" class="link") Ayuda 
 
     .header--navigation
-        .brand 
-            picture 
-                source(media="(min-width: 768px)", srcset="images/header/brand-mobile.png")
-                img(src="images/header/brand-mobile.png", alt="", srcset="images/header/brand-mobile.png")
+        .content
+            .brand 
+                a(href="/" class="brand__link") 
+                    picture 
+                        source(media="(min-width: 992px)", srcset="images/header/brand-desktop.png")
+                        img(src="images/header/brand-mobile.png", alt="Logo Porvenir", srcset="images/header/brand-mobile.png" class="image")
 
-        //- nav.nav__menu
-        //-     ul.menu--list
-        //-         li.menu--item pensiones
-        //-             ul.submenu--list
-        //-                 li.submenu--item Servicios en línea
-        //-                 li.submenu--item Articulo de interés
-        //-                 li.submenu--item Preguntas frecuentes
-        //-         li.menu--item Cesantías
-        //-             ul.submenu--list
-        //-                 li.submenu--item Servicios en línea
-        //-                 li.submenu--item Articulo de interés
-        //-                 li.submenu--item Preguntas frecuentes
-        //-         li.menu--item Pensiones Voluntarias
-        //-             ul.submenu--list
-        //-                 li.submenu--item Servicios en línea
-        //-                 li.submenu--item Articulo de interés
-        //-                 li.submenu--item Preguntas frecuentes
 
-        //- form(action="", method="get") 
-        //-     label(for="search") ¿Que quieres buscar?
-        //-     input(type="search" id="search" name="q")
-        //-     input(type="submit" value="Buscar") 
+            .navigation
+                .navigation--desktop              
+                .navigation--login
+                    a(href="#" class="btn--login") 
+                        span.text Iniciar sesión 
+                        span.icon: svg: use(xlink:href=iconPath+'arrow-right')
+                .navigation--action
+                    button(type="button" class="btn--search") 
+                        span.text buscar 
+                        span.icon: svg: use(xlink:href=iconPath+'search') 
+                    button(type="button" class="btn--menu" id="btnNav") 
+                        span.text Menu
+                        span.icon-left
+                        span.icon-right
+            .navigation--menu   
 
-        .navigation
-            a(href="#" class="btn--login") 
-                span.text Iniciar sesión 
-                span.icon: svg: use(xlink:href=iconPath+'arrow-right')
+.global__navigation      
+    nav.nav__menu
+        ul.menu--list.nav__accordion--list(data-multiselect="false")
+            li.menu--item.nav__accordion--tab
+                a(href="/pensiones-obligatorias" class="link") 
+                    span.icon: svg: use(xlink:href=iconPath+'piggy-bank') 
+                    span.text Pensiones Obligatorias
+                    span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
+                ul.submenu--list.nav__accordion--panel
+                    li.submenu--item 
+                        a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea
+                    li.submenu--item 
+                        a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Articulo de interés
+                    li.submenu--item 
+                        a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Preguntas frecuentes
+            li.menu--item.nav__accordion--tab
+                a(href="/cesantias" class="link") 
+                    span.icon: svg: use(xlink:href=iconPath+'home') 
+                    span.text Cesantías
+                    span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
+                ul.submenu--list.nav__accordion--panel
+                    li.submenu--item 
+                        a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea
+                    li.submenu--item 
+                        a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Articulo de interés
+            li.menu--item.nav__accordion--tab
+                a(href="pensiones voluntarias" class="link") 
+                    span.icon: svg: use(xlink:href=iconPath+'coins') 
+                    span.text Pensiones Voluntarias
+                    span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
+                ul.submenu--list.nav__accordion--panel
+                    li.submenu--item 
+                        a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea       
 
-            button(type="button" class="btn--search") 
-                span.text buscar 
+    .navigation--search
+        form(action="", method="get") 
+            input(type="search" id="search" name="q" class="search__input")
+            label(for="search" class="search__label") Buscar
+            button(type="submit" value="Buscar" class="search__btn") 
+                span.text buscar
                 span.icon: svg: use(xlink:href=iconPath+'search') 
-
-            button(type="button" class="btn--menu" id="btnNav") 
-                span.text Menu
-                span.icon-left
-                span.icon-right
-
-

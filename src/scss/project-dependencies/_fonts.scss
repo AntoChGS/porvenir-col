@@ -59,6 +59,14 @@
             '../fonts/porvenir/nunito/nunitosans-bold.woff2?s16i6w');
 }
 
+@font-face {
+    @include font-face('Nunito Sans', normal, 400, 'Nunito Sans Regular',
+            '../fonts/porvenir/nunito/nunitosans-regular.ttf?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-regular.ttf?s16i6w#iefix',
+            '../fonts/porvenir/nunito/nunitosans-regular.woff?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-regular.woff2?s16i6w');
+}
+
 // @font-face {
 //     @include font-face('Telefonica Hand', normal, 400, 'Telefonica Hand',
 //             '../fonts/telefonica/Telefonica-Hand.ttf?s16i6w',
