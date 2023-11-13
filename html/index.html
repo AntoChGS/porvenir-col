@@ -16,11 +16,267 @@
         <!--meta(name='msapplication-config' content='images/favicon/browserconfig.xml')-->
         <!--meta(name='theme-color' content='#0044bd')-->
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="fonts/stylesheet.css">
     </head>
     <body class="body">
         <h1 class="visually--hidden">Porvenir Colombia</h1>
-        <header>Menu</header>
+        <header class="pvr__header"> 
+            <ul class="header--quicklinks">
+                <li class="dropdown"><a class="dropdown--toggle" href="/personas"> <span class="text">Personas </span><span class="icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-chevron-down">              </use>
+                            </svg></span></a>
+                    <ul class="dropdown--menu" id="quickLinks">
+                        <li class="dropdown--item"><a class="link" href="/empresas" target="_blank" rel="noopener noreferrer">Empresas</a></li>
+                        <li class="dropdown--item"><a class="link" href="/prensionados" target="_blank" rel="noopener noreferrer">Pensionados</a></li>
+                        <li class="dropdown--item offset--item"><a class="link" href="/servicios" target="_blank" rel="noopener noreferrer">Servicios en línea</a></li>
+                        <li class="dropdown--item"><a class="link" href="/certificados" target="_blank" rel="noopener noreferrer">Certificados y extractos </a></li>
+                        <li class="dropdown--item"><a class="link" href="/ayuda" target="_blank" rel="noopener noreferrer">Ayuda </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header--navigation">
+                <div class="content">
+                    <div class="brand"> <a class="brand__link" href="/"> 
+                            <picture> 
+                                <source media="(min-width: 992px)" srcset="images/header/brand-desktop.png"><img class="image" src="images/header/brand-mobile.png" alt="Logo Porvenir" srcset="images/header/brand-mobile.png">
+                            </picture></a></div>
+                    <div class="navigation">
+                        <div class="navigation--desktop">             </div>
+                        <div class="navigation--login"><a class="btn--login" href="#"> <span class="text">Iniciar sesión </span><span class="icon">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-arrow-right"></use>
+                                    </svg></span></a></div>
+                        <div class="navigation--action">
+                            <button class="btn--search" type="button"> <span class="text">buscar </span><span class="icon">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-search"> </use>
+                                    </svg></span></button>
+                            <button class="btn--menu" type="button" id="btnNav"> <span class="text">Menu</span><span class="icon-left"></span><span class="icon-right"></span></button>
+                        </div>
+                    </div>
+                    <div class="navigation--menu">  </div>
+                </div>
+            </div>
+        </header>
+        <div class="global__navigation">     
+            <nav class="nav__menu">
+                <ul class="menu--list nav__accordion--list" data-multiselect="false">
+                    <li class="menu--item nav__accordion--tab"><a class="link" href="/pensiones-obligatorias"> <span class="icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-piggy-bank"> </use>
+                                </svg></span><span class="text">Pensiones Obligatorias</span><span class="icon icon--toggle">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a>
+                        <ul class="submenu--list nav__accordion--panel">
+                            <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Servicios en línea</a></li>
+                            <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Articulo de interés</a></li>
+                            <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Preguntas frecuentes</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu--item nav__accordion--tab"><a class="link" href="/cesantias"> <span class="icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-home"> </use>
+                                </svg></span><span class="text">Cesantías</span><span class="icon icon--toggle">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a>
+                        <ul class="submenu--list nav__accordion--panel">
+                            <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Servicios en línea</a></li>
+                            <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Articulo de interés</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu--item nav__accordion--tab"><a class="link" href="pensiones voluntarias"> <span class="icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-coins"> </use>
+                                </svg></span><span class="text">Pensiones Voluntarias</span><span class="icon icon--toggle">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a>
+                        <ul class="submenu--list nav__accordion--panel">
+                            <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Servicios en línea       </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="navigation--search">
+                <form action="" method="get"> 
+                    <input class="search__input" type="search" id="search" name="q">
+                    <label class="search__label" for="search">Buscar</label>
+                    <button class="search__btn" type="submit" value="Buscar"> <span class="text">buscar</span><span class="icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-search"> </use>
+                            </svg></span></button>
+                </form>
+            </div>
+        </div>
         <main role="main">
+            <section class="pvr__banner">
+                <div class="pvr__banner--content">
+                    <div class="pvr__banner--left">
+                        <h1 class="title">Ahorra para tus sueños, construye tu futuro.</h1>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="btn__primary pvr__banner--btn" href="#">Afiliate a Porvenir</a>
+                    </div>
+                    <div class="pvr__banner--right"> 
+                        <picture class="pvr__banner--image">
+                            <source media="(min-width: 1024px)" srcset="images/Banner-Family-desktop.png"><img class="picture" src="images/Banner-Family-mobile.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="pvr__caracteristicas">
+                <div class="pvr__caracteristicas--content"> 
+                    <ul class="pvr__caracteristicas--list">
+                        <li class="pvr__caracteristicas--item">
+                            <div class="pvr__caracteristicas--item--content">
+                                <div class="pvr__caracteristicas--item--image"><img src="images/Icono-Pension-Obligatorias.png" alt=""></div>
+                                <h2 class="title">Pensiones Obligatorias</h2>
+                                <p class="text">La pensión obligatoria es el derecho que construyes mediante los aportes que realizas para pensión.</p>
+                                <ul class="btn__list">
+                                    <li><a class="btn__item" href="#" target="_blank"><span class="btn__item--info"><span class="btn__item--number">01</span><span class="btn__item--text">Asesoría pensional</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></a></li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">02</span><span class="btn__item--text">Certificado de afiliación</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">03</span><span class="btn__item--text">Requisitos para pensionarse</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">04</span><span class="btn__item--text">Extracto o saldo</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pvr__caracteristicas--item">
+                            <div class="pvr__caracteristicas--item--content">
+                                <div class="pvr__caracteristicas--item--image"><img src="images/Icono-Cesantias.png" alt=""></div>
+                                <h2 class="title">Pensiones Obligatorias</h2>
+                                <p class="text">La pensión obligatoria es el derecho que construyes mediante los aportes que realizas para pensión.</p>
+                                <ul class="btn__list">
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">01</span><span class="btn__item--text">Asesoría pensional</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">02</span><span class="btn__item--text">Certificado de afiliación</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">03</span><span class="btn__item--text">Requisitos para pensionarse</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">04</span><span class="btn__item--text">Extracto o saldo</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pvr__caracteristicas--item">
+                            <div class="pvr__caracteristicas--item--content">
+                                <div class="pvr__caracteristicas--item--image"><img src="images/Icono-Pension-Voluntarias.png" alt=""></div>
+                                <h2 class="title">Pensiones Obligatorias</h2>
+                                <p class="text">La pensión obligatoria es el derecho que construyes mediante los aportes que realizas para pensión.</p>
+                                <ul class="btn__list">
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">01</span><span class="btn__item--text">Asesoría pensional</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">02</span><span class="btn__item--text">Certificado de afiliación</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">03</span><span class="btn__item--text">Requisitos para pensionarse</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn__item"><span class="btn__item--info"><span class="btn__item--number">04</span><span class="btn__item--text">Extracto o saldo</span></span><span class="btn__item--icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.79625 5.70374C9.79625 6.26374 10.2463 6.70374 10.7963 6.70374H16.3863L5.49625 17.5937C5.10625 17.9837 5.10625 18.6137 5.49625 19.0037C5.88625 19.3937 6.51625 19.3937 6.90625 19.0037L17.7963 8.11374V13.7037C17.7963 14.2537 18.2463 14.7037 18.7963 14.7037C19.3463 14.7037 19.7963 14.2537 19.7963 13.7037V5.70374C19.7963 5.15374 19.3463 4.70374 18.7963 4.70374H10.7963C10.2463 4.70374 9.79625 5.15374 9.79625 5.70374Z" fill="black"/>
+</svg></span></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="pvr__historias">
+                <div class="pvr__historias--content">
+                    <h2 class="pvr__historias--title">¿Qué esperas para vivir tu Porvenir? </h2>
+                    <ul class="pvr__historias--list">
+                        <li class="pvr__historias--item">
+                            <div class="pvr__historias--item--content">
+                                <div class="pvr__historias--item--image"><img src="images/Historias-Person.png" alt=""></div>
+                                <h3 class="title">Gilberto hace parte de los 2.099 pensionados en Porvenir del mes de septiembre.  </h3>
+                                <p class="text">“Pensionarme con Porvenir fue sencillo y me acompañaron en cada paso. Ahora disfruto de mis nietos con la tranquilidad de que mi futuro está asegurado".</p>
+                            </div>
+                        </li>
+                        <li class="pvr__historias--item">
+                            <div class="pvr__historias--item--content">
+                                <div class="pvr__historias--item--image"><img src="images/Historias-Person.png" alt=""></div>
+                                <h3 class="title">Con sus cesantías, Carolina cumplió uno de sus sueños en septiembre.  </h3>
+                                <p class="text">“Con mis cesantías de Porvenir logré pagar la primera cuota del apartamento que siempre quise. Porvenir, además, me acompañó en cada momento”.</p>
+                            </div>
+                        </li>
+                        <li class="pvr__historias--item">
+                            <div class="pvr__historias--item--content">
+                                <div class="pvr__historias--item--image"><img src="images/Historias-Person.png" alt=""></div>
+                                <h3 class="title">Camilo es una de los 8000 personas que ya disfrutan de la pensión voluntaria. </h3>
+                                <p class="text">“Estuve buscando muchas opciones para invertir, y la pensión voluntaria de Porvenir fue la que más me impresionó”.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="pvr__preguntas">
+                <div class="pvr__preguntas--content">
+                    <h2 class="pvr__preguntas--title">Preguntas frecuentes</h2>
+                    <div class="pvr__preguntas--right">
+                        <div class="pvr__preguntas--list c-accordion" data-multiselect="false">
+                            <h4 class="pvr__preguntas--item--header c-accordion__tab">
+                                <button class="title">¿Hijos pueden heredar pensión de padres?</button>
+                            </h4>
+                            <div class="pvr__preguntas--item--body c-accordion__panel">
+                                <div class="info c-accordion__panel__content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.</p>
+                                </div>
+                            </div>
+                            <h4 class="pvr__preguntas--item--header c-accordion__tab">
+                                <button class="title">¿Hijos pueden heredar pensión de padres?</button>
+                            </h4>
+                            <div class="pvr__preguntas--item--body c-accordion__panel">
+                                <div class="info c-accordion__panel__content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.</p>
+                                </div>
+                            </div>
+                            <h4 class="pvr__preguntas--item--header c-accordion__tab">
+                                <button class="title">¿Hijos pueden heredar pensión de padres?</button>
+                            </h4>
+                            <div class="pvr__preguntas--item--body c-accordion__panel">
+                                <div class="info c-accordion__panel__content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.   </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <div class="prv-interest-section">
                 <div class="container"> 
                     <h2 class="interest__title prv-title prv-txt-green-700">Esto también te podría interesar</h2>
