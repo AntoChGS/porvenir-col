@@ -1,0 +1,111 @@
+.prv-interest-section {
+    position: relative;
+    padding: 32px 0 32px;
+
+    @media (min-width: 992px) {
+        padding: 40px 0 0;
+    }
+
+    .interest {
+        &__title {
+            text-align: center;
+            margin-bottom: 44px;
+        }
+
+        &__carousel {
+            position: relative;
+
+            @media (min-width: 992px) {
+                padding-bottom: 70px;
+            }
+
+            &::before {
+                @media (min-width: 576px) {
+                    content: "";
+                    position: absolute;
+                    top: 173px;
+                    width: 100%;
+                    height: 100%;
+                    background: #FEF4DC;
+                    border-radius: 24px 24px 0px 0px;
+                }
+            }
+        }
+
+        &__swiper {
+            .interest-slider-controls {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 25px;
+            }
+
+            .interest-slider-btn {
+                transition: .5s;
+                position: relative;
+                width: 24px;
+                height: 24px;
+                padding: 4px 0;
+                margin-top: 0;
+                z-index: 11;
+                /*
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);*/
+                font-size: 8px;
+                color: $color-orange-300;
+
+                &::after {
+                    content: none;
+                }
+
+                &.swiper-button-prev {
+                    left: 0;
+
+                    @media (min-width: 768px) {
+                        margin-right: 12px;
+                    }
+                }
+
+                &.swiper-button-next {
+                    right: 0;
+
+                    @media (min-width: 768px) {
+                        margin-left: 12px;
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                position: relative;
+                bottom: inherit;
+                line-height: .8;
+
+                @media (min-width: 576px) {
+                    width: auto;
+                }
+            }
+
+            .swiper-pagination-bullet {
+                width: 14px;
+                height: 14px;
+                background: transparent;
+                border: 1px solid $color-orange-300;
+                opacity: 1;
+                margin: 2px 12px;
+
+                @media (min-width: 992px) {
+                    width: 18px;
+                    height: 18px;
+                    margin: 0 12px;
+                }
+            }
+
+            .swiper-pagination-bullet-active {
+                background: $color-orange-300;
+                border-color: $color-orange-300;
+            }   
+        }
+    }
+}

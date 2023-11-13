@@ -29,7 +29,10 @@
 @import 'project-dependencies/colors';
 
 // Components
-
+@import 'components/button';
+@import 'components/cards';
+@import 'components/title';
+@import 'components/tabs';
 
 // Patterns
 @import 'patterns/general';
@@ -39,4 +42,4 @@
 @import 'structure/footer';
 
 // Pages
-
+@import 'pages/home';
