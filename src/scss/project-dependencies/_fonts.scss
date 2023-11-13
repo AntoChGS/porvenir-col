@@ -12,6 +12,22 @@
 }
 
 @font-face {
+    @include font-face('Nunito Sans', normal, 700, 'Nunito Sans Bold',
+            '../fonts/porvenir/nunito/nunitosans-bold.ttf?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-bold.ttf?s16i6w#iefix',
+            '../fonts/porvenir/nunito/nunitosans-bold.woff?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-bold.woff2?s16i6w');
+}
+
+@font-face {
+    @include font-face('Nunito Sans', normal, 400, 'Nunito Sans Regular',
+            '../fonts/porvenir/nunito/nunitosans-regular.ttf?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-regular.ttf?s16i6w#iefix',
+            '../fonts/porvenir/nunito/nunitosans-regular.woff?s16i6w',
+            '../fonts/porvenir/nunito/nunitosans-regular.woff2?s16i6w');
+}
+
+@font-face {
     @include font-face('Banda', normal, 200, 'Banda Extra Light',
             '../fonts/banda/Banda-ExtraLight.ttf?s16i6w',
             '../fonts/banda/Banda-ExtraLight.ttf?s16i6w#iefix',
@@ -58,23 +74,3 @@
             '../fonts/banda/Banda-Bold.woff?s16i6w',
             '../fonts/banda/Banda-Bold.woff2?s16i6w');
 }
-
-/*@font-face {
-    @include font-face('Banda Hand', normal, 400, 'Banda Hand',
-            '../fonts/banda/Banda-Hand.ttf?s16i6w',
-            '../fonts/banda/Banda-Hand.ttf?s16i6w#iefix',
-            '../fonts/banda/Banda-Hand.woff?s16i6w',
-            '../fonts/banda/Banda-Hand.woff2?s16i6w');
-}*/
-
-// Font Icomoon
-/*@font-face {
-    font-family: 'icomoon';
-    font-style: normal;
-    font-weight: normal;
-    src:  url('../fonts/material-icons/icomoon.eot?s16i6w');
-    src:  url('../fonts/material-icons/icomoon.eot?s16i6w#iefix') format('embedded-opentype'),
-        url('../fonts/material-icons/icomoon.ttf?s16i6w') format('truetype'),
-        url('../fonts/material-icons/icomoon.woff?s16i6w') format('woff'),
-        url('../fonts/material-icons/icomoon.svg?s16i6w#icomoon') format('svg');
-}*/
