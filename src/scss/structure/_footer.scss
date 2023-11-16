@@ -324,7 +324,7 @@
                     }
                 }
 
-                >a {
+                a {
                     color: #fff;
                     text-decoration: underline;
 
@@ -344,7 +344,7 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            margin-top: 32px;
+            margin-top: 24px;
 
             @media (min-width: 992px) {
                 flex-direction: row;
@@ -352,7 +352,7 @@
 
             .groups {
                 &__item {
-                    margin: 0 auto;
+                    margin: 8px auto 8px;
 
                     @media (min-width: 992px) {
                         margin: 0 8px;
