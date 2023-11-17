@@ -72,6 +72,7 @@ function getHeight(tab, panel) {
 }
 
 //dropdown menu quicklinks
+const LinkQuickActive = document.querySelector(".dropdown--menu .active .link").textContent;
 const btnQuicklink = document.querySelector(
   ".header--quicklinks .dropdown--toggle"
 );
@@ -181,9 +182,6 @@ btnNav.addEventListener("click", (event) => {
   navMain.addEventListener("focusout", (e) => {
     if (navMain !== e.target && !navMain.contains(e.relatedTarget)) {
       document.getElementById("btnNav").focus();
-
-      // navMain.classList.remove('show');
-      // btnNav.classList.remove('open');
     }
   });
 });
@@ -266,6 +264,7 @@ function widthChangeCallback() {
     document
       .querySelector(".navigation .navigation--login")
       .insertAdjacentElement("beforebegin", search);
+
   } else {
     document
       .querySelector(".header--quicklinks")

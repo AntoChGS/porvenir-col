@@ -3,7 +3,7 @@
         width: 100%;
         position: relative;
         box-shadow: 0px 2px 4px 0px rgba(170, 170, 170, 0.40);
-
+        z-index: 9;
         .header {
             &--quicklinks {
                 position: relative;
@@ -33,15 +33,14 @@
                         align-items: center;
                         cursor: pointer;
                         text-decoration: none;
-
                         @media (min-width: 768px) {
                             width: auto;
                             pointer-events: none;
                             cursor: default;
                             padding: 0px 16px;
                             background: #FAFAFA;
+                            display: none;
                         }
-
                         .text {
                             font-family: Banda;
                             font-size: 14px;
@@ -151,6 +150,14 @@
                                 color: #1F1F1F;
                             }
                         }
+                        &.active{
+                            background-color: #FAFAFA;
+                            outline: #FAFAFA;
+                            display: none;
+                            @media (min-width: 768px){
+                                display: flex;
+                            }
+                        }
                     }
                 }
             }
@@ -169,11 +176,6 @@
                     flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-between;
-
-                    @media (min-width: 1320px) {
-                        gap: 0px 27px;
-                    }
-
                     @media (min-width: 992px) {
                         padding: 0 20px;
                         display: flex;
@@ -185,16 +187,13 @@
                         gap: 0px 8px;
                         flex-wrap: nowrap;
                     }
+                    @media (min-width: 1320px) {
+                        gap: 0px 27px;
+                    }
                 }
 
                 .brand {
                     width: 42px;
-
-                    @media (min-width: 1320px) {
-                        width: 136px;
-                        padding: 8px 20px;
-                    }
-
                     @media (min-width: 992px) {
                         display: flex;
                         width: 84px;
@@ -204,7 +203,10 @@
                         justify-content: center;
                         align-items: flex-start;
                     }
-
+                    @media (min-width: 1320px) {
+                        width: 136px;
+                        padding: 8px 20px;
+                    }
                     &__link {
                         display: block;
                     }
@@ -212,20 +214,18 @@
 
                 .navigation {
                     display: flex;
-
-                    @media (min-width: 1320px) {
-                        gap: 16px;
-                    }
-
                     @media (min-width: 992px) {
                         width: 100%;
                         border-radius: 12px 12px 64px 12px;
-                        justify-content: flex-end;
+                        justify-content: space-between;
                         background: #E9E9E9;
                         padding-left: 10px;
-                        gap: 8px;
+                        gap: 6px;
                     }
-
+                    @media (min-width: 1320px) {
+                        gap: 16px;
+                        justify-content: flex-end;
+                    }
                     &--search {
                         display: none;
 
@@ -342,12 +342,6 @@
                                 background: #FB6903;
                                 border-color: #FB6903;
                             }
-
-                            @media (min-width: 1200px) {
-                                font-size: 20px;
-                                padding: 16px 20px;
-                            }
-
                             @media (min-width: 992px) {
                                 font-size: 16px;
                                 line-height: 24px;
@@ -355,7 +349,10 @@
                                 padding: 16px 10px;
                                 border-radius: 40px 0px 40px 40px;
                             }
-
+                            @media (min-width: 1200px) {
+                                font-size: 20px;
+                                padding: 16px 20px;
+                            }
                             .text {
                                 @media (min-width: 992px) {
                                     white-space: pre;
@@ -546,11 +543,6 @@
     .menu {
         &--list {
             margin: 0;
-
-            @media (min-width: 1250px) {
-                gap: 16px;
-            }
-
             @media (min-width: 992px) {
                 width: 100%;
                 max-width: 687px;
@@ -558,6 +550,9 @@
                 align-items: flex-start;
                 gap: 0;
                 align-self: stretch;
+            }            
+            @media (min-width: 1250px) {
+                gap: 16px;
             }
         }
 
@@ -575,13 +570,6 @@
                 line-height: normal;
                 position: relative;
                 text-decoration: none;
-
-                @media (min-width: 1200px) {
-                    font-size: 16px;
-                    gap: 10px;
-                    padding: 0px 8px;
-                }
-
                 @media (min-width: 992px) {
                     justify-content: center;
                     color: #1F1F1F;
@@ -592,11 +580,14 @@
                     padding: 0px 0;
                     gap: 5px;
                     pointer-events: none;
+                    padding: 0px 6px;
                 }
-
+                @media (min-width: 1200px) {
+                    font-size: 16px;
+                    gap: 10px;
+                }
                 .text {
                     margin-left: 16px;
-
                     @media (min-width: 992px) {
                         white-space: pre;
                         margin-left: 0;
@@ -717,4 +708,10 @@
     background: rgba(170, 170, 170, .4);
     box-shadow: 0 2px 4px 0 rgba(170, 170, 170, .4);
     z-index: 0;
+}
+
+body.signed-in{
+    .pvr__header .header--navigation .navigation--menu{
+        top: 157px;
+    }
 }
