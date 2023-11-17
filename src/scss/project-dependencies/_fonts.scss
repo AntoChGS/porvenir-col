@@ -12,19 +12,27 @@
 }
 
 @font-face {
-    @include font-face('Nunito Sans', normal, 700, 'Nunito Sans Bold',
-            '../fonts/porvenir/nunito/nunitosans-bold.ttf?s16i6w',
-            '../fonts/porvenir/nunito/nunitosans-bold.ttf?s16i6w#iefix',
-            '../fonts/porvenir/nunito/nunitosans-bold.woff?s16i6w',
-            '../fonts/porvenir/nunito/nunitosans-bold.woff2?s16i6w');
+    @include font-face('Nunito Sans', normal, 400, 'Nunito Sans Regular',
+            '../fonts/nunito/NunitoSans-Regular.ttf?s16i6w',
+            '../fonts/nunito/NunitoSans-Regular.ttf?s16i6w#iefix',
+            '../fonts/nunito/NunitoSans-Regular.woff?s16i6w',
+            '../fonts/nunito/NunitoSans-Regular.woff2?s16i6w');
 }
 
 @font-face {
-    @include font-face('Nunito Sans', normal, 400, 'Nunito Sans Regular',
-            '../fonts/porvenir/nunito/nunitosans-regular.ttf?s16i6w',
-            '../fonts/porvenir/nunito/nunitosans-regular.ttf?s16i6w#iefix',
-            '../fonts/porvenir/nunito/nunitosans-regular.woff?s16i6w',
-            '../fonts/porvenir/nunito/nunitosans-regular.woff2?s16i6w');
+    @include font-face('Nunito Sans', italic, 400, 'Nunito Sans Italic',
+            '../fonts/nunito/NunitoSans-Italic.ttf?s16i6w',
+            '../fonts/nunito/NunitoSans-Italic.ttf?s16i6w#iefix',
+            '../fonts/nunito/NunitoSans-Italic.woff?s16i6w',
+            '../fonts/nunito/NunitoSans-Italic.woff2?s16i6w');
+}
+
+@font-face {
+    @include font-face('Nunito Sans', normal, 700, 'Nunito Sans Bold',
+            '../fonts/nunito/NunitoSans-Bold.ttf?s16i6w',
+            '../fonts/nunito/NunitoSans-Bold.ttf?s16i6w#iefix',
+            '../fonts/nunito/NunitoSans-Bold.woff?s16i6w',
+            '../fonts/nunito/NunitoSans-Bold.woff2?s16i6w');
 }
 
 @font-face {
