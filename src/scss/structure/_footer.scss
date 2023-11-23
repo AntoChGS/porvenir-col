@@ -65,10 +65,10 @@
                 &__title {
                     font-size: 14px;
                     font-weight: 700;
-                    font-family: $fontBanda;
+                    font-family: var(--fontBanda);
                     line-height: 1.3;
                     text-align: left;
-                    color: #fff;
+                    color: var(--color-white);
                     margin: 0;
 
                     @media (min-width: 992px) {
@@ -85,7 +85,7 @@
                 &-accordion {
                     &__header {
                         cursor: pointer;
-                        border-bottom: 1px solid #fff;
+                        border-bottom: 1px solid var(--color-white);
 
                         @media (min-width:992px) {
                             pointer-events: none;
@@ -129,9 +129,9 @@
                         width: 100%;
                         font-size: 14px;
                         font-weight: 700;
-                        font-family: $fontBanda;
+                        font-family: var(--fontBanda);
                         line-height: 1.3;
-                        color: #fff;
+                        color: var(--color-white);
                         padding: 20px 8px 20px 16px;
                         background-color: transparent;
                         border: 0;
@@ -206,7 +206,7 @@
                         }
 
                         >a {
-                            color: #fff;
+                            color: var(--color-white);
                         }
                     }
                 }
@@ -288,7 +288,7 @@
                         width: 44px;
                         height: 44px;
                         background: #3E6A27;
-                        color: #fff;
+                        color: var(--color-white);
                         border-radius: 4px;
                         text-decoration: none;
 
@@ -304,28 +304,28 @@
         &__copyright {
             padding: 32px 0 48px;
             background: #565656;
-            border-top: 1px solid #FFFFFF;
+            border-top: 1px solid var(--color-white);
 
             .copyright__text {
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 1.3;
                 text-align: center;
-                color: #fff;
+                color: var(--color-white);
 
                 >* {
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 1.3;
                     text-align: center;
-                    color: #fff;
+                    color: var(--color-white);
                     &:last-child {
                         margin-bottom: 0;
                     }
                 }
 
                 a {
-                    color: #fff;
+                    color: var(--color-white);
                     text-decoration: underline;
 
                     &:hover {

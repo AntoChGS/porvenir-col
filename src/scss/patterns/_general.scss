@@ -8,15 +8,15 @@
         box-sizing: border-box;
     }
     &:focus {
-        outline: 2px solid blue;
+        outline: 2px solid var(--color-black-80);
     }
 }
 
 body {
-    font-family: $fontNunito;
+    font-family: var(--fontNunito);
     font-size: 16px;
     line-height: 1.5;
-    color: $color-gray-500;
+    color: var(--color-gray-500);
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  color: $color-gray-500;
+  color: var(--color-gray-500);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,13 +89,13 @@ p {
 
 a {
     word-wrap: break-word;
-    color: $color-blue;
-    -webkit-tap-highlight-color: transparent;
+    color: --color-blue;
+    -webkit-tap-highlight-color: var(--transparent);
     transition: all ease 300ms;
     text-decoration: none;
     &:hover,
     &:active {
-        color: $color-blue;
+        color: --color-blue;
         text-decoration: underline;
     }
 }
@@ -118,7 +118,7 @@ img {
 }
 
 button {
-    font-family: $fontNunito;
+    font-family: var(--fontNunito);
 }
 
 form {
@@ -176,4 +176,8 @@ legend {
     height: 1em;
     overflow: visible;
     vertical-align: -0.125em;
+}
+
+.portlet-barebone .portlet-content{
+    border: 0;
 }
