@@ -501,7 +501,15 @@
     .interest {
         &__title {
             text-align: center;
-            margin-bottom: 44px;
+            margin-bottom: 16px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 36px;
+            }
+
+            +.interest__subtitle {
+                margin-top: 60px;
+            }
         }
 
         &__carousel {

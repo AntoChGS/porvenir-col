@@ -153,16 +153,10 @@
                                 color: $color-black-80;
                             }
                         }
-<<<<<<< HEAD
 
-                        &.active {
-                            background-color: #FAFAFA;
-                            outline: #FAFAFA;
-=======
                         &.active{
                             background-color: $color-white-300;
                             outline: $color-white-300;
->>>>>>> 92f9a9e58de07df9eb60e0a94a0660a9916cccb7
                             display: none;
 
                             @media (min-width: 768px) {
@@ -666,13 +660,8 @@
                 transition-duration: 250ms, 0ms;
                 transition-delay: 0ms, 0ms;
             }
-<<<<<<< HEAD
 
             @media (min-width: 992px) {
-=======
-            @media (min-width: 992px){
-
->>>>>>> 92f9a9e58de07df9eb60e0a94a0660a9916cccb7
                 cursor: pointer;
 
                 &:hover,
@@ -766,14 +755,8 @@
     z-index: 0;
 }
 
-<<<<<<< HEAD
-body.signed-in {
-    .pvr__header .header--navigation .navigation--menu {
-        top: 157px;
-=======
 body.signed-in{
     .pvr__header .header--navigation .navigation--menu{
         top: 149px;
->>>>>>> 92f9a9e58de07df9eb60e0a94a0660a9916cccb7
     }
 }
