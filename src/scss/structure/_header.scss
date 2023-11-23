@@ -39,6 +39,7 @@
                         align-items: center;
                         cursor: pointer;
                         text-decoration: none;
+
                         @media (min-width: 768px) {
                             width: auto;
                             pointer-events: none;
@@ -47,6 +48,7 @@
                             background: var(--color-white-300);
                             display: none;
                         }
+
                         .text {
                             font-family: Banda;
                             font-size: 14px;
@@ -154,10 +156,12 @@
                                 color: var(--color-black-80);
                             }
                         }
+
                         &.active{
                             background-color: var(--color-white-300);
                             display: none;
-                            @media (min-width: 768px){
+
+                            @media (min-width: 768px) {
                                 display: flex;
                             }
                         }
@@ -179,6 +183,7 @@
                     flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-between;
+
                     @media (min-width: 992px) {
                         padding: 0 20px;
                         display: flex;
@@ -190,6 +195,7 @@
                         gap: 0px 8px;
                         flex-wrap: nowrap;
                     }
+
                     @media (min-width: 1320px) {
                         gap: 0px 27px;
                     }
@@ -197,6 +203,7 @@
 
                 .brand {
                     width: 42px;
+
                     @media (min-width: 992px) {
                         display: flex;
                         width: 84px;
@@ -206,17 +213,27 @@
                         justify-content: center;
                         align-items: flex-start;
                     }
+
                     @media (min-width: 1320px) {
                         width: 136px;
                         padding: 8px 20px;
                     }
+
                     &__link {
                         display: block;
+
+                        .image {
+                            display: block;
+                            width: auto;
+                            height: auto;
+                            max-width: 100%;
+                        }
                     }
                 }
 
                 .navigation {
                     display: flex;
+
                     @media (min-width: 992px) {
                         width: 100%;
                         border-radius: 12px 12px 64px 12px;
@@ -225,9 +242,11 @@
                         padding-left: 10px;
                         gap: 6px;
                     }
+
                     @media (min-width: 1320px) {
                         gap: 16px;                        
                     }
+
                     &--search {
                         display: none;
 
@@ -343,6 +362,7 @@
                                 background: var(--color-orange-400);
                                 border-color: var(--color-orange-400);
                             }
+
                             @media (min-width: 992px) {
                                 font-size: 16px;
                                 line-height: 24px;
@@ -350,6 +370,7 @@
                                 padding: 16px 10px;
                                 border-radius: 40px 0px 40px 40px;
                             }
+
                             @media (min-width: 1200px) {
                                 font-size: 20px;
                                 padding: 16px 20px;
@@ -359,7 +380,6 @@
                             //         white-space: pre;
                             //     }
                             // }
-
                             .icon {
                                 @media (min-width: 992px) {
                                     width: 24px;
@@ -545,6 +565,7 @@
     .menu {
         &--list {
             margin: 0;
+
             @media (min-width: 992px) {
                 width: 100%;
                 max-width: 687px;
@@ -552,7 +573,8 @@
                 align-items: flex-start;
                 gap: 0;
                 align-self: stretch;
-            }            
+            }
+
             @media (min-width: 1250px) {
                 gap: 16px;
             }
@@ -560,6 +582,7 @@
 
         &--item {
             width: auto;
+
             .link {
                 display: flex;
                 width: 100%;
@@ -572,6 +595,7 @@
                 line-height: normal;
                 position: relative;
                 text-decoration: none;
+
                 @media (min-width: 992px) {
                     justify-content: center;
                     color: var(--color-black-80);
@@ -584,12 +608,15 @@
                     pointer-events: none;
                     padding: 0px 6px;
                 }
+
                 @media (min-width: 1200px) {
                     font-size: 16px;
                     gap: 10px;
                 }
+
                 .text {
                     margin-left: 16px;
+
                     @media (min-width: 992px) {
                         white-space: pre;
                         margin-left: 0;
@@ -636,13 +663,14 @@
                     visibility: visible;
                 }
             }
-            @media (min-width: 992px){
 
+            @media (min-width: 992px) {
                 cursor: pointer;
+
                 &:hover,
                 &:focus,
-                &:focus-within{
-                    .link{
+                &:focus-within {
+                    .link {
                         color: #3E6A27;
                         .icon{
                             img{
@@ -650,7 +678,8 @@
                             }
                         }
                     }
-                    .submenu--list{
+
+                    .submenu--list {
                         opacity: 1;
                         visibility: visible;
                         padding: 16px 0px;
@@ -675,7 +704,8 @@
             transition-duration: 250ms, 0ms;
             transition-delay: 0ms, 250ms;
             transition-timing-function: ease-in, ease-in;
-            @media (min-width: 992px){
+
+            @media (min-width: 992px) {
                 position: absolute;
                 visibility: hidden;
                 overflow: hidden;
@@ -704,13 +734,15 @@
                 padding: 10px 36px 10px 62px;
                 margin: 8px 0;
                 display: block;
+
                 @media (min-width: 992px) {
                     display: flex;
                     height: 44px;
                     padding: 10px 42px;
                     align-items: center;
                     gap: 10px;
-                    &:focus{
+
+                    &:focus {
                         text-decoration: underline;
                     }
                 }
