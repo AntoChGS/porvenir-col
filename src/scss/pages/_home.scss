@@ -69,11 +69,6 @@
 // caracteristicas
 .pvr__caracteristicas {
     background: var(--color-white);
-
-    @media (min-width: 1222px) {
-        background-color: var(--color-black);
-    }
-
     &--content {
         padding: 16px 0px;
 
@@ -240,7 +235,6 @@
         padding-bottom: 40px;
         padding-left: 30px;
         padding-right: 30px;
-        background-color: var(--color-black);
     }
 
     &--title {
@@ -401,11 +395,6 @@
 // esperas para vivir
 .pvr__historias {
     background: var(--color-white);
-
-    @media (min-width: 1222px) {
-        background-color: var(--color-black);
-    }
-
     &--title {
         text-align: center;
         margin: 0 auto 20px;
