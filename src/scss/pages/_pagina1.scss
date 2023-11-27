@@ -1,0 +1,121 @@
+.pvr-menu_navigation {
+  top: 20px;
+  background-color: transparent;
+  position: sticky;
+  z-index: 123;
+  &--content {
+    padding: 0px;
+    @media (min-width: 1222px) {
+      padding: 0px;
+      position: relative;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      font-family: $fontBanda;
+      line-height: 1.2;
+      color: #3e6a27;
+      width: 172px;
+      margin-bottom: 12px;
+      @media (min-width: 1222px) {
+        font-size: 24px;
+        margin-bottom: 14px;
+        width: 230px;
+      }
+    }
+
+    .text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 7px;
+      width: 179px;
+
+      @media (min-width: 1222px) {
+        font-size: 16px;
+        line-height: 20px;
+        width: 230px;
+      }
+    }
+
+    .btn__item {
+      cursor: pointer;
+      border: none;
+      background-color: #ffffff;
+      border-bottom: 0.5px solid #ababab;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 8px 2px;
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        background: #faefe8;
+      }
+
+      &--info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &--number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.1;
+        width: 29px;
+        height: 21px;
+        background-color: #fdde96;
+        color: #000000;
+        margin-right: 8px;
+        border-radius: 30px;
+        @media (min-width: 1222px) {
+          margin-right: 8px;
+        }
+      }
+
+      &--text {
+        font-size: 14px;
+
+        @media (min-width: 1222px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &--list {
+    margin: 0 auto;
+    @media (min-width: 650px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+      width: 673px;
+    }
+
+    @media (min-width: 1222px) {
+      width: 1222px;
+      justify-content: end;
+    }
+  }
+
+  &--item {
+    width: 320px;
+    margin: 0 auto;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: -2px -2px 0px 0px rgba(0, 0, 0, 0.04),
+      2px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    padding: 29px 20px;
+    position: relative;
+    z-index: 1;
+    @media (min-width: 650px) {
+      margin: 0px;
+    }
+  }
+}

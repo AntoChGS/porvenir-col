@@ -21,36 +21,39 @@
 @import "../../node_modules/bootstrap/scss/grid";
 
 //Libraries
-@import '../../node_modules/swiper/swiper-bundle';
+@import "../../node_modules/swiper/swiper-bundle";
 
 // Project dependencies
-@import 'project-dependencies/fonts';
-@import 'project-dependencies/variables';
-@import 'project-dependencies/colors';
+@import "project-dependencies/fonts";
+@import "project-dependencies/variables";
+@import "project-dependencies/colors";
 
 // Components
-@import 'components/background';
-@import 'components/button';
-@import 'components/cards';
-@import 'components/title';
-@import 'components/tabs';
-@import 'components/text-align';
+@import "components/background";
+@import "components/button";
+@import "components/cards";
+@import "components/title";
+@import "components/tabs";
+@import "components/text-align";
 
 // Patterns
-@import 'patterns/general';
+@import "patterns/general";
 
 // Structure
-@import 'structure/header';
-@import 'structure/footer';
+@import "structure/header";
+@import "structure/footer";
 
+// Pages
+@import "pages/home";
+@import "pages/pagina1";
 // Templates - ADT
-@import 'templates/ADT/cards-tpl-1';
+@import "templates/ADT/cards-tpl-1";
 
 // Templates - Content Web
-@import 'templates/content-web/banner-hero';
-@import 'templates/content-web/caracteristicas';
-@import 'templates/content-web/historias';
-@import 'templates/content-web/preguntas-frecuentes';
+@import "templates/content-web/banner-hero";
+@import "templates/content-web/caracteristicas";
+@import "templates/content-web/historias";
+@import "templates/content-web/preguntas-frecuentes";
 
 // Templates - Fragments
-@import 'templates/fragments/tabs-tpl-1';
+@import "templates/fragments/tabs-tpl-1";
