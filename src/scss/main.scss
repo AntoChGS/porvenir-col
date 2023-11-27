@@ -21,25 +21,26 @@
 @import "../../node_modules/bootstrap/scss/grid";
 
 //Libraries
-@import '../../node_modules/swiper/swiper-bundle';
+@import "../../node_modules/swiper/swiper-bundle";
 
 // Project dependencies
-@import 'project-dependencies/fonts';
-@import 'project-dependencies/variables';
-@import 'project-dependencies/colors';
+@import "project-dependencies/fonts";
+@import "project-dependencies/variables";
+@import "project-dependencies/colors";
 
 // Components
-@import 'components/button';
-@import 'components/cards';
-@import 'components/title';
-@import 'components/tabs';
+@import "components/button";
+@import "components/cards";
+@import "components/title";
+@import "components/tabs";
 
 // Patterns
-@import 'patterns/general';
+@import "patterns/general";
 
 // Structure
-@import 'structure/header';
-@import 'structure/footer';
+@import "structure/header";
+@import "structure/footer";
 
 // Pages
-@import 'pages/home';
+@import "pages/home";
+@import "pages/pagina1";
