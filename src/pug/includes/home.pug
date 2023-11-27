@@ -10,7 +10,7 @@ section.pvr__banner
                 source(media="(min-width: 1024px)" srcset="images/Banner-Family-desktop.png")
                 img(src="images/Banner-Family-mobile.png", alt="").picture
 
-section.pvr__caracteristicas
+section.pvr__caracteristicas.prv-bg-white-300.prv-bg-green-90deg-2
     .pvr__caracteristicas--content 
         ul.pvr__caracteristicas--list
             li.pvr__caracteristicas--item
@@ -170,26 +170,38 @@ section.pvr__preguntas
     .pvr__preguntas--content
         h2.pvr__preguntas--title.prv-title.prv-txt-green-700 Preguntas frecuentes
         .pvr__preguntas--right
-            .pvr__preguntas--list.c-accordion(data-multiselect="false")
-                p.pvr__preguntas--item--header.c-accordion__tab
-                    button.title ¿Hijos pueden heredar pensión de padres?
-                .pvr__preguntas--item--body.c-accordion__panel
-                    .info.c-accordion__panel__content
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.
-                p.pvr__preguntas--item--header.c-accordion__tab
-                    button.title ¿Hijos pueden heredar pensión de padres?
-                .pvr__preguntas--item--body.c-accordion__panel
-                    .info.c-accordion__panel__content
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.
-                p.pvr__preguntas--item--header.c-accordion__tab
-                    button.title ¿Hijos pueden heredar pensión de padres?
-                .pvr__preguntas--item--body.c-accordion__panel
-                    .info.c-accordion__panel__content
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.   
+            .pvr__preguntas--list.accordion(data-multiselect="false")
+                .pvr__preguntas--item
+                    p.pvr__preguntas--item--header.accordion__tab
+                        button.title ¿Hijos pueden heredar pensión de padres?
+                    .pvr__preguntas--item--body.accordion__panel
+                        .info.c-accordion__panel__content
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.
+                .pvr__preguntas--item
+                    p.pvr__preguntas--item--header.accordion__tab
+                        button.title ¿Hijos pueden heredar pensión de padres?
+                    .pvr__preguntas--item--body.accordion__panel
+                        .info.c-accordion__panel__content
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.
+                .pvr__preguntas--item
+                    p.pvr__preguntas--item--header.accordion__tab
+                        button.title ¿Hijos pueden heredar pensión de padres?
+                    .pvr__preguntas--item--body.accordion__panel
+                        .info.c-accordion__panel__content
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.
+                .pvr__preguntas--item
+                    p.pvr__preguntas--item--header.accordion__tab
+                        button.title ¿Hijos pueden heredar pensión de padres?
+                    .pvr__preguntas--item--body.accordion__panel
+                        .info.c-accordion__panel__content
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia assumenda neque harum enim, odio, aliquid eveniet rem et pariatur magnam perspiciatis quod corrupti quo. Quasi quos tenetur similique voluptatibus.                                                        
+        .pvr__preguntas--footer 
+            a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn") Consultar todas las preguntas
 
 .prv-interest-section
     .container 
         h2.interest__title.prv-title.prv-txt-green-700 Esto también te podría interesar
+        h2.interest__subtitle.prv-subtitle Esto también te podría interesar
     .interest__carousel
         .container
             .prv-tab-horizontal

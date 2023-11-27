@@ -43,36 +43,36 @@ header.pvr__header
             .navigation--menu   
 
     .global__navigation      
-        nav.nav__menu
-            ul.menu--list.nav__accordion--list(data-multiselect="false")
-                li.menu--item.nav__accordion--tab
-                    a(href="/pensiones-obligatorias" class="link") 
+        nav.nav__menu#navigation
+            ul.menu--list.accordion__list(data-multiselect="false")
+                li.menu--item
+                    a(href="/pensiones-obligatorias" class="link accordion__tab") 
                         span.icon: svg: use(xlink:href=iconPath+'piggy-bank') 
                         span.text Pensiones Obligatorias
                         span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
-                    ul.submenu--list.nav__accordion--panel
+                    ul.submenu--list.accordion__panel
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Articulo de interés
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Preguntas frecuentes
-                li.menu--item.nav__accordion--tab
-                    a(href="/cesantias" class="link") 
+                li.menu--item
+                    a(href="/cesantias" class="link accordion__tab") 
                         span.icon: svg: use(xlink:href=iconPath+'home') 
                         span.text Cesantías
                         span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
-                    ul.submenu--list.nav__accordion--panel
+                    ul.submenu--list.accordion__panel
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Articulo de interés
-                li.menu--item.nav__accordion--tab
-                    a(href="pensiones voluntarias" class="link") 
+                li.menu--item
+                    a(href="pensiones voluntarias" class="link accordion__tab") 
                         span.icon: svg: use(xlink:href=iconPath+'coins') 
                         span.text Pensiones Voluntarias
                         span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
-                    ul.submenu--list.nav__accordion--panel
+                    ul.submenu--list.accordion__panel
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea       
 

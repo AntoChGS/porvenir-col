@@ -29,10 +29,12 @@
 @import "project-dependencies/colors";
 
 // Components
+@import "components/background";
 @import "components/button";
 @import "components/cards";
 @import "components/title";
 @import "components/tabs";
+@import "components/text-align";
 
 // Patterns
 @import "patterns/general";
@@ -44,3 +46,14 @@
 // Pages
 @import "pages/home";
 @import "pages/pagina1";
+// Templates - ADT
+@import "templates/ADT/cards-tpl-1";
+
+// Templates - Content Web
+@import "templates/content-web/banner-hero";
+@import "templates/content-web/caracteristicas";
+@import "templates/content-web/historias";
+@import "templates/content-web/preguntas-frecuentes";
+
+// Templates - Fragments
+@import "templates/fragments/tabs-tpl-1";
