@@ -4,10 +4,6 @@
             width: 100%;
             margin: auto;
             overflow-x: auto;
-<<<<<<< HEAD
-=======
-            background-color: var(--color-white);
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
         }
 
         &-content {
@@ -32,7 +28,6 @@
                 flex-grow: 1;
                 flex-shrink: 0;
 
-<<<<<<< HEAD
                 .tab__link {
                     &.active {
                         color: $color-gray-600;
@@ -40,12 +35,6 @@
                         &::after {
                             height: 3px;
                         }
-=======
-                &.active {
-                    .tab__link {
-                        color: var(--color-gray-600);
-                        border-bottom: 3px solid var(--color-orange-300);
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
                     }
                 }
             }
@@ -64,25 +53,16 @@
                 font-weight: 700;
                 font-family: var(--fontBanda);
                 line-height: 1.15;
-<<<<<<< HEAD
                 color: $color-gray-400 ;
                 transition: color;
                 transition-duration: 300ms;
                 transition-timing-function: ease-in;
-=======
-                color: var(--color-gray-400);
-                border-bottom: 3px solid transparent;
-                transition: color, border-bottom;
-                transition-duration: 300ms, 300ms;
-                transition-timing-function: ease-in, ease-in;
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
 
                 @media (min-width: 768px) {
                     font-size: 20px;
                     padding: 6px 8px;
                 }
 
-<<<<<<< HEAD
                 &::after {
                     position: absolute;
                     right: 0;
@@ -96,11 +76,6 @@
                     transition: background-color, height;
                     transition-duration: 300ms, 200ms;
                     transition-timing-function: ease-in, ease-in;
-=======
-                &:hover {
-                    color: var(--color-gray-600);
-                    border-bottom: 3px solid var(--color-orange-300);
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
                 }
 
                 &:hover {

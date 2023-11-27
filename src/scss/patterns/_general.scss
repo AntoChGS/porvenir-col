@@ -10,11 +10,7 @@
     }
 
     &:focus {
-<<<<<<< HEAD
         outline: 2px solid $color-black-80;
-=======
-        outline: 2px solid var(--color-black-80);
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
     }
 }
 
@@ -46,17 +42,8 @@ h6 {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1, h2, h3, h4, h5, h6 {
-<<<<<<< HEAD
     font-weight: 600;
     color: $color-gray-500;
-=======
-  font-weight: 600;
-  color: var(--color-gray-500);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
 }
 
 h1 {
@@ -124,13 +111,8 @@ p {
 
 a {
     word-wrap: break-word;
-<<<<<<< HEAD
     color: $color-blue;
     -webkit-tap-highlight-color: $transparent;
-=======
-    color: --color-blue;
-    -webkit-tap-highlight-color: var(--transparent);
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
     transition: all ease 300ms;
     text-decoration: none;
 
@@ -220,10 +202,6 @@ legend {
     vertical-align: -0.125em;
 }
 
-<<<<<<< HEAD
 .portlet-barebone .portlet-content {
-=======
-.portlet-barebone .portlet-content{
->>>>>>> b5f65b9634ada1c23cb0e1608e6ff33c1517aae0
     border: 0;
 }
