@@ -2,25 +2,25 @@
 //=require jquery/dist/jquery.min.js
 //=require swiper/swiper-bundle.min.js
 
-  //function accordion toggle
-  accordionToggle('accordion');
-  accordionToggle('accordion__list');
+//function accordion toggle
+accordionToggle('accordion');
+accordionToggle('accordion__list');
 
-  //dropdown menu quicklinks
-  dropDownQuickLinks();
+//dropdown menu quicklinks
+dropDownQuickLinks();
 
-  //function header mobile
-  showMenuHamburguer();
+//function header mobile
+showMenuHamburguer();
 
-  // function swiper sliders
-  swiperLoops();
-  
-  // Footer Menu accordion
-  footerAccordion();
-  
-  //function resize
-  window.addEventListener("resize", widthChangeCallback);
-  widthChangeCallback();
+// function swiper sliders
+swiperLoops();
+
+// Footer Menu accordion
+footerAccordion();
+
+//function resize
+window.addEventListener("resize", widthChangeCallback);
+widthChangeCallback();
 
 //dropdown menu quicklinks
 function dropDownQuickLinks() {
@@ -82,7 +82,7 @@ function dropDownQuickLinks() {
 }
 
 //Funcion Hamburger Show and Hide Menu Navegación Mobile 
-function showMenuHamburguer(){
+function showMenuHamburguer() {
   const btnNav = document.querySelector("#btnNav");
   const navMain = document.querySelector(".navigation--menu");
   const navigation = document.querySelector(".nav__menu#navigation");
@@ -113,7 +113,7 @@ function showMenuHamburguer(){
       } else {
         document.querySelector(".navigation--menu .nav__menu").style.visibility =
           "hidden";
-          document.body.removeAttribute("style");
+        document.body.removeAttribute("style");
       }
     }
     navMain.addEventListener("focusout", (e) => {
@@ -125,7 +125,7 @@ function showMenuHamburguer(){
 }
 
 //accordion tab
-function accordionToggle(element){
+function accordionToggle(element) {
   let components = document.getElementsByClassName(element);
   if (components) {
     let component;
@@ -173,7 +173,7 @@ function toggle(e) {
   if (tab.classList.contains("accordion__tab--active") && panel) {
     panel.style.height = panel.dataset.height;
     this.setAttribute("aria-expanded", "true");
-  } else if (panel){
+  } else if (panel) {
     panel.style.height = 0;
     this.setAttribute("aria-expanded", "false");
   }
@@ -224,7 +224,7 @@ function swiperLoops() {
 }
 
 //Footer Function
-function footerAccordion(){
+function footerAccordion() {
   if (document.querySelector(".prv-footer .menu-accordion")) {
     let acc = document.querySelectorAll(".prv-footer .menu-accordion .menu-accordion__header");
     let i;
