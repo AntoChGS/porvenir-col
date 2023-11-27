@@ -1,28 +1,31 @@
-// Fonts
-$fontBanda  : 'Banda';
-$fontNunito : 'Nunito Sans';
-$fontIcomoon: 'icomoon';
 
-// Colores
-$transparent      : transparent;
-$color-black      : #000000;
-$color-black-80   : #1F1F1F;
-$color-blue       : #004fff;
-$color-gray-60    : #C3C3C3;
-$color-gray-80    : #ADABA5;
-$color-gray-400   : #808080;
-$color-gray-500   : #565656;
-$color-gray-600   : #404040;
-$color-green-500  : #507C13;
-$color-green-700  : #3E6A27;
-$color-yellow     : #FABC2D;
-$color-yellow-80  : #FEF4DC;
-$color-orange-300 : #FC802A;
-$color-orange-400 : #FB6903;
-$color-white      : #ffffff;
-$color-white-60   : #E9E9E9;
-$color-white-80   : #E9E9E9;
-$color-white-300  : #FAFAFA;
+
+:root {    
+    // Fonts
+    --fontBanda  : 'Banda';
+    --fontNunito : 'Nunito Sans';
+    --fontIcomoon: 'icomoon';
+    // Colores
+    --transparent      : transparent;
+    --color-black      : #000000;
+    --color-black-80   : #1F1F1F;
+    --color-blue       : #004fff;
+    --color-gray-60    : #C3C3C3;
+    --color-gray-80    : #ADABA5;
+    --color-gray-400   : #808080;
+    --color-gray-500   : #565656;
+    --color-gray-600   : #404040;
+    --color-green-500  : #507C13;
+    --color-green-700  : #3E6A27;
+    --color-yellow     : #FABC2D;
+    --color-yellow-80  : #FEF4DC;
+    --color-orange-300 : #FC802A;
+    --color-orange-400 : #FB6903;
+    --color-white      : #ffffff;
+    --color-white-60   : #E9E9E9;
+    --color-white-80   : #E9E9E9;
+    --color-white-300  : #FAFAFA;
+}
 
 
 // MIXIN - PREFIX

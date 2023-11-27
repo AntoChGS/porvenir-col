@@ -145,7 +145,7 @@ const navigation = document.querySelector(".nav__menu");
 const search = document.querySelector(".navigation--search");
 
 btnNav.addEventListener("click", (event) => {
-  if (document.querySelector(".nav__accordion")) {
+  // if (document.querySelector(".nav__accordion")) {
     event.preventDefault();
 
     btnNav.classList.toggle("open");
@@ -177,13 +177,14 @@ btnNav.addEventListener("click", (event) => {
       document.querySelector(".navigation--menu .nav__menu").style.visibility =
         "hidden";
     }
-  }
+  // }
 
   navMain.addEventListener("focusout", (e) => {
     if (navMain !== e.target && !navMain.contains(e.relatedTarget)) {
       document.getElementById("btnNav").focus();
     }
   });
+
 });
 
 // -- Nav Accordion get and configuration
@@ -216,7 +217,7 @@ if (navComponents) {
 
 // -- function ToggleNav List navigation
 function toggleNav(e) {
-  if (document.querySelector(".nav__accordion")) {
+  // if (document.querySelector(".nav__accordion")) {
     e.preventDefault();
     let component = this.parentNode.parentNode;
     let tabs = component.getElementsByClassName("nav__accordion--tab");
@@ -243,7 +244,7 @@ function toggleNav(e) {
       panel.style.height = 0;
       this.setAttribute("aria-expanded", "false");
     }
-  }
+  // }
 }
 
 // height of the element panel

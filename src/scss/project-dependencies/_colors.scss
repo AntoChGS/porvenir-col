@@ -1,23 +1,23 @@
 .prv-txt {
     &-white {
-        color: $color-white;
+        color: var(--color-white);
     }
 
     &-black {
-        color: $color-black;
+        color: var(--color-black);
     }
 
     &-green-700 {
-        color: $color-green-700;
+        color: var(--color-green-700);
     }
 
     &-orange {
         &-300 {
-            color: $color-orange-300;
+            color: var(--color-orange-300);
         }
 
         &-400 {
-            color: $color-orange-400;
+            color: var(--color-orange-400);
         }
     }
 }

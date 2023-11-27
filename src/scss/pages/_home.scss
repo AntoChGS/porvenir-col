@@ -24,10 +24,10 @@
     }
 
     .title {
-        color: #ffffff;
+        color: var(--color-white);
         font-size: 36px;
         font-weight: 700;
-        font-family: $fontBanda;
+        font-family: var(--fontBanda);
         line-height: 1.2;
         margin-bottom: 16px;
 
@@ -42,7 +42,7 @@
 
         @media (min-width: 1023px) {
             display: block;
-            color: #ffffff;
+            color: var(--color-white);
             font-size: 18px;
             line-height: 24px;
             margin-bottom: 24px;
@@ -68,12 +68,7 @@
 
 // caracteristicas
 .pvr__caracteristicas {
-    background: #ffffff;
-
-    @media (min-width: 1222px) {
-        background-color: #000000;
-    }
-
+    background: var(--color-white);
     &--content {
         padding: 16px 0px;
 
@@ -96,7 +91,7 @@
         .title {
             font-size: 20px;
             font-weight: 700;
-            font-family: $fontBanda;
+            font-family: var(--fontBanda);
             line-height: 1.2;
             color: #3e6a27;
             width: 172px;
@@ -125,7 +120,7 @@
         .btn__item {
             cursor: pointer;
             border: none;
-            background-color: #ffffff;
+            background-color: var(--color-white);
             border-bottom: 0.5px solid #ababab;
             display: flex;
             align-items: center;
@@ -155,7 +150,7 @@
                 width: 29px;
                 height: 21px;
                 background-color: #fc802a;
-                color: #ffffff;
+                color: var(--color-white);
                 margin-right: 4px;
                 border-radius: 30px;
 
@@ -240,7 +235,6 @@
         padding-bottom: 40px;
         padding-left: 30px;
         padding-right: 30px;
-        background-color: #000000;
     }
 
     &--title {
@@ -252,22 +246,39 @@
     }
 
     &--content {
-        width: 320px;
+        width: 100%;
+        max-width: 320px;
         margin: 0 auto;
-
         @media (min-width: 650px) {
-            width: 673px;
+            width: 100%;
+            max-width: 673px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: #ffffff;
+            background-color: var(--color-white);
             border-radius: 24px;
             padding: 16px 20px;
         }
 
         @media (min-width: 1222px) {
-            width: 1222px;
+            max-width: 1222px;
+        }
+    }
+
+    &--footer{
+        width: 100%;
+        text-align: right;
+        margin-top: 12px;
+        .prv-btn{
+            text-decoration: underline;
+            padding: 12px 0;
+            @media (min-width: 992px){
+                padding: 8px 0;
+            }
+            &:hover{
+                color: #FB6903;
+            }
         }
     }
 
@@ -287,7 +298,7 @@
             cursor: pointer;
             width: 100%;
             height: 64px;
-            background-color: #ffffff;
+            background-color: var(--color-white);
             border: none;
             margin: 0px;
             border-bottom: 1px solid #ababab;
@@ -305,7 +316,7 @@
                 text-align: left;
                 width: 100%;
                 height: 100%;
-
+                cursor: pointer;
                 @media (min-width: 650px) {
                     font-size: 16px;
                     line-height: 24px;
@@ -344,7 +355,6 @@
 
                 &+.c-accordion__panel {
                     visibility: visible;
-                    visibility: visible;
                     transition-duration: 250ms, 0ms;
                     transition-delay: 0ms, 0ms;
                 }
@@ -354,7 +364,11 @@
         &--body {
             height: 0;
             visibility: hidden;
-            transition-delay: 0.1s;
+            overflow: hidden;
+            transition: height, visibility;
+            transition-duration: 250ms, 0ms;
+            transition-delay: 0ms, 250ms;
+            transition-timing-function: ease-in, ease-in;
             background-color: #faefe8;
             border-left: 2px solid #fc802a;
 
@@ -366,13 +380,12 @@
                 font-size: 16px;
                 line-height: 22px;
                 color: #565656;
-                margin-bottom: 14px;
                 padding: 20px;
-
+                // margin-bottom: 14px;
                 @media (min-width: 650px) {
                     font-size: 16px;
                     line-height: 22px;
-                    margin-bottom: 20px;
+                    // margin-bottom: 20px;
                 }
             }
         }
@@ -381,12 +394,7 @@
 
 // esperas para vivir
 .pvr__historias {
-    background: #ffffff;
-
-    @media (min-width: 1222px) {
-        background-color: #000000;
-    }
-
+    background: var(--color-white);
     &--title {
         text-align: center;
         margin: 0 auto 20px;
@@ -406,9 +414,9 @@
         .title {
             font-size: 18px;
             font-weight: 700;
-            font-family: $fontBanda;
+            font-family: var(--fontBanda);
             line-height: 1.2;
-            color: #000000;
+            color: var(--color-black);
             margin-bottom: 16px;
 
             @media (min-width: 1222px) {
@@ -554,7 +562,7 @@
                 top: 50%;
                 transform: translateY(-50%);*/
                 font-size: 8px;
-                color: $color-orange-300;
+                color: var(--color-orange-300);
 
                 &::after {
                     content: none;
@@ -591,7 +599,7 @@
                 width: 14px;
                 height: 14px;
                 background: transparent;
-                border: 1px solid $color-orange-300;
+                border: 1px solid var(--color-orange-300);
                 opacity: 1;
                 margin: 2px 12px;
 
@@ -603,8 +611,8 @@
             }
 
             .swiper-pagination-bullet-active {
-                background: $color-orange-300;
-                border-color: $color-orange-300;
+                background: var(--color-orange-300);
+                border-color: var(--color-orange-300);
             }
         }
     }
