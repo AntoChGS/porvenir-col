@@ -1,66 +1,167 @@
 .pvr__banner {
+  height: 472px;
+  overflow: hidden;
+  @media (min-width: 1023px) {
+    height: 456px;
+  }
+  &--content {
+    width: 360px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 32px 20px 0px;
+    position: relative;
+    @media (min-width: 1023px) {
+      display: flex;
+      width: 95%;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    @media (min-width: 1222px) {
+      width: 1222px;
+      padding: 0px;
+    }
+  }
+
+  &--left {
+    @media (min-width: 1023px) {
+      width: 590px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--fontBanda);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    @media (min-width: 1023px) {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-bottom: 16px;
+    @media (min-width: 1023px) {
+      display: block;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &--right {
+    display: flex;
+    justify-content: center;
+    @media (min-width: 1023px) {
+      height: 100%;
+      align-items: end;
+    }
+  }
+
+  &--image {
+    position: absolute;
+    bottom: 0px;
+    @media (min-width: 1023px) {
+      position: inherit;
+    }
+    .picture {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &--btn {
+    margin-bottom: 19px;
+    @media (min-width: 1023px) {
+      display: inline-block;
+      margin-bottom: 0px;
+    }
+  }
+
+  &.pvr__banner--bkg-green {
     background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
+  }
+  &.pvr__banner--bkg-orange {
+    background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
+  }
 
-    &--content {
-        width: 360px;
-        margin: 0 auto;
-        padding: 32px 20px 0px;
+  &.pvr__banner--v2 {
+    height: 384px;
+    @media (min-width: 1023px) {
+      height: 335px;
+      background: transparent;
+    }
 
+    .pvr__banner--content {
+      @media (min-width: 1023px) {
+        border-radius: 16px;
+        padding: 0px 120px;
+      }
+    }
+    &.pvr__banner--bkg-green {
+      .pvr__banner--content {
         @media (min-width: 1023px) {
-            width: 1222px;
-            display: flex;
-            justify-content: space-between;
-            //   padding-top: 51px;
-            padding: 51px 0px 0px;
-            align-items: flex-end;
+          background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
         }
+      }
     }
-
-    &--left {
+    &.pvr__banner--bkg-orange {
+      .pvr__banner--content {
         @media (min-width: 1023px) {
-            width: 590px;
+          background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
         }
+      }
     }
+  }
 
-    .title {
-        color: #ffffff;
-        font-size: 36px;
-        font-weight: 700;
-        font-family: var(--fontBanda);
-        line-height: 1.2;
-        margin-bottom: 16px;
+  .title {
+    color: var(--color-white);
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--fontBanda);
+    line-height: 1.2;
+    margin-bottom: 16px;
 
-        @media (min-width: 1023px) {
-            font-size: 64px;
-            margin-bottom: 8px;
-        }
+    @media (min-width: 1023px) {
+      font-size: 64px;
+      margin-bottom: 8px;
     }
+  }
 
-    .text {
-        display: none;
+  .text {
+    display: none;
 
-        @media (min-width: 1023px) {
-            display: block;
-            color: #ffffff;
-            font-size: 18px;
-            line-height: 24px;
-            margin-bottom: 24px;
-        }
+    @media (min-width: 1023px) {
+      display: block;
+      color: var(--color-white);
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 24px;
     }
+  }
 
-    &--right {
-        display: flex;
-        justify-content: center;
-    }
+  &--right {
+    display: flex;
+    justify-content: center;
+  }
 
-    &--image {
-        .picture {
-            width: auto;
-            height: auto;
-        }
+  &--image {
+    .picture {
+      width: auto;
+      height: auto;
     }
+  }
 
-    &--btn {
-        margin-bottom: 50px;
-    }
+  &--btn {
+    margin-bottom: 50px;
+  }
 }
