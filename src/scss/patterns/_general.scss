@@ -3,12 +3,14 @@
     -webkit-font-smoothing: antialiased;
     /* No bold in Mac. */
     box-sizing: border-box;
+
     &::before,
     &::after {
         box-sizing: border-box;
     }
+
     &:focus {
-        outline: 2px solid blue;
+        outline: 2px solid $color-black-80;
     }
 }
 
@@ -20,12 +22,18 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+
     @media (max-width: 991px) {
         font-size: 14px;
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
     margin: 0;
@@ -34,51 +42,65 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  color: $color-gray-500;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
+    font-weight: 600;
+    color: $color-gray-500;
 }
 
 h1 {
     font-size: 50px;
+    margin-bottom: 20px;
+
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
 }
 
 h2 {
     font-size: 42px;
+    margin-bottom: 20px;
+
+    @media (max-width: 576px) {
+        font-size: 28px;
+    }
 }
 
 h3 {
     font-size: 36px;
     line-height: 1.2;
+    margin-bottom: 20px;
+
+    @media (max-width: 576px) {
+        font-size: 24px;
+    }
 }
 
 h4 {
     font-size: 28px;
     line-height: 1.4;
+    margin-bottom: 20px;
+
+    @media (max-width: 576px) {
+        font-size: 22px;
+    }
 }
 
 h5 {
     font-size: 24px;
     line-height: 1.3;
+    margin-bottom: 20px;
+
+    @media (max-width: 576px) {
+        font-size: 18px;
+    }
 }
 
 h6 {
     font-size: 18px;
     line-height: 1.7;
-}
+    margin-bottom: 20px;
 
-@media (max-width: 576px) {
-    h1 {
-      font-size: 30px;
-    }
-    h2{
-      font-size: 28px;
-    }
-    h4 {
-        font-size: 22px;
+    @media (max-width: 576px) {
+        font-size: 16px;
     }
 }
 
@@ -90,9 +112,10 @@ p {
 a {
     word-wrap: break-word;
     color: $color-blue;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: $transparent;
     transition: all ease 300ms;
     text-decoration: none;
+
     &:hover,
     &:active {
         color: $color-blue;
@@ -128,7 +151,8 @@ form {
 .icon {
     display: inline-block;
     line-height: 0.8;
-    > svg {
+
+    >svg {
         display: inline-block;
         font-size: inherit;
         width: 1em;
@@ -176,4 +200,8 @@ legend {
     height: 1em;
     overflow: visible;
     vertical-align: -0.125em;
+}
+
+.portlet-barebone .portlet-content {
+    border: 0;
 }
