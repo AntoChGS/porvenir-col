@@ -4,17 +4,14 @@
             width: 100%;
             margin: auto;
             overflow-x: auto;
-            background-color: var(--color-white);
         }
 
         &-content {
             >.prv-tab-pane {
-                display: none;
                 padding: 12px 0px;
-            }
-
-            >.active {
-                display: block;
+                &.prv-tab-pane--none {
+                    display: none;
+                }
             }
         }
     }
@@ -31,15 +28,19 @@
                 flex-grow: 1;
                 flex-shrink: 0;
 
-                &.active {
-                    .tab__link {
-                        color: var(--color-gray-600);
-                        border-bottom: 3px solid var(--color-orange-300);
+                .tab__link {
+                    &.active {
+                        color: $color-gray-600;
+
+                        &::after {
+                            height: 3px;
+                        }
                     }
                 }
             }
 
             &__link {
+                position: relative;
                 display: block;
                 padding: 6px 4px;
                 background: transparent;
@@ -52,24 +53,37 @@
                 font-weight: 700;
                 font-family: var(--fontBanda);
                 line-height: 1.15;
-                color: var(--color-gray-400);
-                border-bottom: 3px solid transparent;
-                transition: color, border-bottom;
-                transition-duration: 300ms, 300ms;
-                transition-timing-function: ease-in, ease-in;
+                color: $color-gray-400 ;
+                transition: color;
+                transition-duration: 300ms;
+                transition-timing-function: ease-in;
 
                 @media (min-width: 768px) {
                     font-size: 20px;
                     padding: 6px 8px;
                 }
 
-                &:hover {
-                    color: var(--color-gray-600);
-                    border-bottom: 3px solid var(--color-orange-300);
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: auto;
+                    content: '';
+                    display: block;
+                    background-color: $color-orange-300;
+                    height: 0px;
+                    transition: background-color, height;
+                    transition-duration: 300ms, 200ms;
+                    transition-timing-function: ease-in, ease-in;
                 }
 
-                &:focus {
-                    text-decoration: underline;
+                &:hover {
+                    color: $color-gray-600;
+
+                    &::after {
+                        height: 3px;
+                    }
                 }
             }
         }
