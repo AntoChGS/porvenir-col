@@ -118,7 +118,7 @@ a {
 
     &:hover,
     &:active {
-        color: --color-blue;
+        color: var(--color-blue);
         text-decoration: underline;
     }
 }
