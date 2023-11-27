@@ -261,9 +261,7 @@ function widthChangeCallback() {
   const search = document.querySelector(".navigation--search");
   if (window.innerWidth > 768) {
     document.querySelector(".header--quicklinks").removeAttribute("id");
-    document
-      .querySelector(".navigation .navigation--desktop")
-      .insertAdjacentElement("beforeEnd", navigation);
+    document.querySelector(".navigation .navigation--desktop").insertAdjacentElement("beforeEnd", navigation);
     document
       .querySelector(".navigation .navigation--login")
       .insertAdjacentElement("beforebegin", search);
