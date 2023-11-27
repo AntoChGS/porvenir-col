@@ -31,7 +31,7 @@
     }
 
     &:disabled {
-        color: var(--color-gray-80);
+        color: $color-gray-80;
         background: transparent;
         text-decoration: underline;
     }
