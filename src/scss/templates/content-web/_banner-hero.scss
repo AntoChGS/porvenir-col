@@ -1,5 +1,4 @@
 .pvr__banner {
-  //   height: 472px;
   overflow: hidden;
   @media (min-width: 1023px) {
     height: 456px;
@@ -21,7 +20,6 @@
       padding: 0px;
     }
   }
-
   &--left {
     @media (min-width: 1023px) {
       width: 590px;
@@ -31,7 +29,6 @@
       justify-content: center;
     }
   }
-
   &--right {
     display: flex;
     justify-content: center;
@@ -40,9 +37,7 @@
       align-items: end;
     }
   }
-
   &--image {
-    // position: absolute;
     bottom: 0px;
     @media (min-width: 1023px) {
       position: inherit;
@@ -52,15 +47,13 @@
       height: auto;
     }
   }
-
   &--btn {
-    margin-bottom: 19px;
+    margin-bottom: 16px;
     @media (min-width: 1023px) {
       display: inline-block;
       margin-bottom: 0px;
     }
   }
-
   &.pvr__banner--bkg-green {
     background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
   }
@@ -74,7 +67,6 @@
       height: 335px;
       background: transparent;
     }
-
     .pvr__banner--content {
       @media (min-width: 1023px) {
         border-radius: 16px;
@@ -96,21 +88,18 @@
       }
     }
   }
-
   .title {
     color: var(--color-white);
     font-size: 36px;
     font-weight: 700;
     font-family: var(--fontBanda);
-    line-height: 1.2;
-    margin-bottom: 16px;
-
+    line-height: normal;
+    margin-bottom: 8px;
     @media (min-width: 1023px) {
       font-size: 64px;
       margin-bottom: 16px;
     }
   }
-
   .text {
     font-size: 16px;
     line-height: 20px;
