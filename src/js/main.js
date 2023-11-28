@@ -302,36 +302,15 @@ function widthChangeCallback() {
   let d = document;
 
   function init() {
-    //Links
-    let anchor1Link = d.getElementById("anchor1Link");
-
-    //Anchors
-    let anchor1 = d.getElementById("anchor1");
-
-    anchor1Link.addEventListener(
-      "click",
-      (e) => {
-        console.log("sticky");
+    let links = document.querySelectorAll(".btn__navigatelink");
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
         e.preventDefault();
-        scrollTo(anchor1, e);
-      },
-      false
-    );
-
-    console.log(
-      "anchor1: " + scrollTopValue(anchor1) + " / " + offsetTopValue(anchor1)
-    ); //DEBUG
-
-    console.log("App loaded. Have fun!");
-  }
-
-  function scrollTopValue(domElement) {
-    //DEBUG
-    return "scrollTopValue:", domElement.scrollTop;
-  }
-  function offsetTopValue(domElement) {
-    //DEBUG
-    return "offsetTopValue:", domElement.offsetTop;
+        let anchor = this.getAttribute("data-navigatelink");
+        anchor = document.querySelector(`[data-navigateanchor='${anchor}']`);
+        scrollTo(anchor, e);
+      });
+    });
   }
 
   var requestAnimFrame = (function () {
@@ -345,7 +324,7 @@ function widthChangeCallback() {
     );
   })();
 
-  function scrollTo(to, callback, duration = 1500) {
+  function scrollTo(to, callback, duration = 500) {
     if (isDomElement(to)) {
       // console.log('this is an element:', to); //DEBUG
       to = to.offsetTop;
@@ -363,10 +342,12 @@ function widthChangeCallback() {
     }
 
     function position() {
+      console.log("anchor position", to);
       return (
-        document.documentElement.offsetTop ||
-        document.body.parentNode.offsetTop ||
-        document.body.offsetTop
+        // document.documentElement.offsetTop ||
+        // document.body.parentNode.offsetTop ||
+        // document.body.offsetTop
+        document.body.getBoundingClientRect().top * -1
       );
     }
 
