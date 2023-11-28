@@ -1,5 +1,4 @@
 .pvr__banner {
-  height: 472px;
   overflow: hidden;
   @media (min-width: 1023px) {
     height: 456px;
@@ -39,7 +38,6 @@
     }
   }
   &--image {
-    position: absolute;
     bottom: 0px;
     @media (min-width: 1023px) {
       position: inherit;
@@ -50,7 +48,7 @@
     }
   }
   &--btn {
-    margin-bottom: 19px;
+    margin-bottom: 16px;
     @media (min-width: 1023px) {
       display: inline-block;
       margin-bottom: 0px;
@@ -95,9 +93,8 @@
     font-size: 36px;
     font-weight: 700;
     font-family: var(--fontBanda);
-    line-height: 1.2;
-    margin-bottom: 16px;
-
+    line-height: normal;
+    margin-bottom: 8px;
     @media (min-width: 1023px) {
       font-size: 64px;
       margin-bottom: 16px;
