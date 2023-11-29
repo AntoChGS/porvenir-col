@@ -1,8 +1,10 @@
 .pvr-menu_navigation {
   top: 20px;
   background-color: transparent;
-  position: sticky;
   z-index: 123;
+  @media (min-width: 992px) {
+    position: sticky;
+  }
   &--content {
     padding: 0px;
     @media (min-width: 1222px) {
