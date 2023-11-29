@@ -422,3 +422,33 @@ function findScrollingElement(element) {
     }
   } while ((element = element.parentNode));
 }
+
+// ver mas
+let certificados__items = document.querySelectorAll(".prv__certificados--item");
+let boton_vermas = document.querySelector(".prv__certificados--vermas");
+if (certificados__items.length <= 4) {
+  boton_vermas.style.display = "none";
+}
+if (certificados__items.length > 4) {
+  certificados__items.forEach((elem, i) => {
+    if (i > 3) {
+      certificados__items[i].style.display = "none";
+    }
+  });
+}
+boton_vermas.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (boton_vermas.classList.contains("active")) {
+    boton_vermas.classList.remove("active");
+    certificados__items.forEach((elem, i) => {
+      if (i > 3) {
+        certificados__items[i].style.display = "none";
+      }
+    });
+  } else {
+    boton_vermas.classList.add("active");
+    certificados__items.forEach((elem, i) => {
+      certificados__items[i].style.display = "block";
+    });
+  }
+});
