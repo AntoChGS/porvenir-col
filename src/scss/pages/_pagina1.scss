@@ -124,6 +124,22 @@
 
 .prv__certificados {
   padding: 16px 0px;
+  &--vermas--content {
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    @media (min-width: 992px) {
+      width: 780px;
+    }
+    .prv__certificados--vermas {
+      text-decoration: underline;
+      padding-right: 0px;
+      &:hover {
+        color: #fb6903;
+      }
+    }
+  }
 }
 .prv__certificados--list {
   display: flex;
@@ -142,6 +158,7 @@
   width: 320px;
   height: 75px;
   margin-bottom: 16px;
+  transition: height 0.2s ease-in-out;
   @media (min-width: 992px) {
     width: 380px;
     height: 118px;
@@ -201,5 +218,11 @@
     position: absolute;
     right: 8px;
     top: calc(50% - 12px);
+  }
+  &.desactive {
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+    margin-bottom: 0px;
   }
 }

@@ -432,7 +432,7 @@ if (certificados__items.length <= 4) {
 if (certificados__items.length > 4) {
   certificados__items.forEach((elem, i) => {
     if (i > 3) {
-      certificados__items[i].style.display = "none";
+      certificados__items[i].classList.add("desactive");
     }
   });
 }
@@ -442,13 +442,15 @@ boton_vermas.addEventListener("click", (e) => {
     boton_vermas.classList.remove("active");
     certificados__items.forEach((elem, i) => {
       if (i > 3) {
-        certificados__items[i].style.display = "none";
+        boton_vermas.textContent = "Ver más";
+        certificados__items[i].classList.add("desactive");
       }
     });
   } else {
     boton_vermas.classList.add("active");
     certificados__items.forEach((elem, i) => {
-      certificados__items[i].style.display = "block";
+      boton_vermas.textContent = "Ver menos";
+      certificados__items[i].classList.remove("desactive");
     });
   }
 });
