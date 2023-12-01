@@ -446,11 +446,25 @@ boton_vermas.addEventListener("click", (e) => {
         certificados__items[i].classList.add("desactive");
       }
     });
+
+    boton_vermas.blur();
+    setTimeout(function () {
+      certificados__items[0]
+        .querySelector(".prv__certificados--item--link")
+        .focus();
+    }, 50);
   } else {
     boton_vermas.classList.add("active");
     certificados__items.forEach((elem, i) => {
       boton_vermas.textContent = "Ver menos";
       certificados__items[i].classList.remove("desactive");
     });
+
+    boton_vermas.blur();
+    setTimeout(function () {
+      certificados__items[4]
+        .querySelector(".prv__certificados--item--link")
+        .focus();
+    }, 50);
   }
 });
