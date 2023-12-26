@@ -2,25 +2,35 @@
 //=require jquery/dist/jquery.min.js
 //=require swiper/swiper-bundle.min.js
 
-//function accordion toggle
-accordionToggle("accordion");
-accordionToggle("accordion__list");
+  //function resize
+  window.addEventListener("resize", widthChangeCallback);
+  widthChangeCallback();
 
-//dropdown menu quicklinks
-dropDownQuickLinks();
+  //function accordion toggle
+  accordionToggle('accordion');
 
-//function header mobile
-showMenuHamburguer();
+  //dropdown menu quicklinks
+  dropDownQuickLinks();
 
-// function swiper sliders
-swiperLoops();
+  //function header mobile
+  showMenuHamburguer();
 
-// Footer Menu accordion
-footerAccordion();
+  // function swiper sliders
+  swiperLoops();
 
-//function resize
-window.addEventListener("resize", widthChangeCallback);
-widthChangeCallback();
+  // invoke function DataLayer
+  const elemDataLayer = document.querySelectorAll('*[class^="datalayer"]');
+  if (elemDataLayer) {
+    elemDataLayer.forEach(element => {
+      element.addEventListener('click', porvenirDataLayer);
+    });
+  }
+
+  // More View Direct Access
+  directAccess();
+
+  // Footer Menu accordion
+  footerAccordion();
 
 //dropdown menu quicklinks
 function dropDownQuickLinks() {
@@ -81,7 +91,7 @@ function dropDownQuickLinks() {
   }
 }
 
-//Funcion Hamburger Show and Hide Menu Navegación Mobile
+//Funcion Hamburger Show and Hide Menu Navegación Mobile 
 function showMenuHamburguer() {
   const btnNav = document.querySelector("#btnNav");
   const navMain = document.querySelector(".navigation--menu");
@@ -94,29 +104,25 @@ function showMenuHamburguer() {
       if (navMain.classList.contains("show")) {
         document.body.style.overflow = "hidden";
         navMain.insertAdjacentElement("beforeEnd", navigation);
-        document.querySelector(
-          ".navigation--menu .nav__menu"
-        ).style.visibility = "visible";
+        document.querySelector(".navigation--menu .nav__menu").style.visibility =
+          "visible";
         const visibleNav = Array.from(
           document.querySelectorAll(".nav__menu")
         ).filter(
-          (s) =>
-            window.getComputedStyle(s).getPropertyValue("display") !== "none"
+          (s) => window.getComputedStyle(s).getPropertyValue("display") !== "none"
         )[0];
         const visibleNavLinks = Array.from(
           visibleNav.getElementsByTagName("li")
         ).filter(
-          (s) =>
-            window.getComputedStyle(s).getPropertyValue("display") !== "none"
+          (s) => window.getComputedStyle(s).getPropertyValue("display") !== "none"
         );
-        if (visibleNavLinks.length > 0) {
-          const firstLink = visibleNavLinks[0].querySelector("a");
-          firstLink.focus();
-        }
+        // if (visibleNavLinks.length > 0) {
+        //   const firstLink = visibleNavLinks[0].querySelector("a");
+        //   firstLink.focus();
+        // }
       } else {
-        document.querySelector(
-          ".navigation--menu .nav__menu"
-        ).style.visibility = "hidden";
+        document.querySelector(".navigation--menu .nav__menu").style.visibility =
+          "hidden";
         document.body.removeAttribute("style");
       }
     }
@@ -130,27 +136,32 @@ function showMenuHamburguer() {
 
 //accordion tab
 function accordionToggle(element) {
-  let components = document.getElementsByClassName(element);
-  if (components) {
-    let component;
-    for (let a = components.length - 1; a >= 0; a--) {
-      component = components[a];
-      let tabs = component.getElementsByClassName("accordion__tab");
-      let tab;
-      for (let b = tabs.length - 1; b >= 0; b--) {
-        tab = tabs[b];
-        tab.id = "accordionTab" + b;
-        tab.setAttribute("aria-expanded", false);
-        let button = tab;
-        button.addEventListener("click", toggle);
-        let panel = tab.nextElementSibling;
-        if (panel) {
-          panel.id = "accordionPanel" + b;
-          panel.dataset.height = getHeight(tab, panel);
-          // -- Set Initial ARIA
-          tab.setAttribute("aria-controls", panel.id);
-          tab.setAttribute("aria-expanded", false);
-          panel.setAttribute("aria-labelledby", tab.id);
+  if (document.querySelectorAll(element)) {
+    const randomId = function (length = 6) {
+      return Math.random().toString(36).substring(2, length + 2);
+    };
+    let components = document.getElementsByClassName(element);
+    if (components) {
+      let component;
+      for (let a = components.length - 1; a >= 0; a--) {
+        component = components[a];
+        let tabs = component.getElementsByClassName("accordion__tab");
+        let tab;
+        for (let b = tabs.length - 1; b >= 0; b--) {
+          tab = tabs[b];
+          tab.id = "accordionTab" + randomId();
+          // tab.setAttribute("aria-expanded", false);
+          let button = tab;
+          button.addEventListener("click", toggle);
+          let panel = tab.nextElementSibling;
+          if (panel) {
+            panel.id = "accordionPanel" + randomId();
+            panel.dataset.height = getHeight(tab, panel);
+            // -- Set Initial ARIA
+            tab.setAttribute("aria-controls", panel.id);
+            // tab.setAttribute("aria-expanded", false);
+            panel.setAttribute("aria-labelledby", tab.id);
+          }
         }
       }
     }
@@ -158,26 +169,30 @@ function accordionToggle(element) {
 }
 // -- Toggle Panels
 function toggle(e) {
-  e.preventDefault();
-  let component = this.parentNode.parentNode;
-  let tab = this;
-  let panel = tab.nextElementSibling;
-  if (component.dataset.multiselect == "false") {
-    let active = component.getElementsByClassName("accordion__tab--active")[0];
-    tab.classList.toggle("accordion__tab--active");
-    if (active?.nextElementSibling) {
-      active.classList.remove("accordion__tab--active");
-      active.nextElementSibling.style.height = 0;
-      tab.setAttribute("aria-expanded", "false");
+  if (this.parentNode.classList.contains('has__child')) {
+    e.preventDefault();
+    let component = this.parentNode.parentNode;
+    let tab = this;
+    let panel = tab.nextElementSibling;
+    if (component.dataset.multiselect == "false") {
+      let active = component.getElementsByClassName(
+        "accordion__tab--active"
+      )[0];
+      tab.classList.toggle("accordion__tab--active");
+      if (active?.nextElementSibling) {
+        active.classList.remove("accordion__tab--active");
+        active.nextElementSibling.style.height = 0;
+        // tab.setAttribute("aria-expanded", "false");
+      }
+    } else tab.classList.toggle("accordion__tab--active");
+    // Set the aria-expanded
+    if (tab.classList.contains("accordion__tab--active") && panel) {
+      panel.style.height = panel.dataset.height;
+      // this.setAttribute("aria-expanded", "true");
+    } else if (panel) {
+      panel.style.height = 0;
+      // this.setAttribute("aria-expanded", "false");
     }
-  } else tab.classList.toggle("accordion__tab--active");
-  // Set the aria-expanded
-  if (tab.classList.contains("accordion__tab--active") && panel) {
-    panel.style.height = panel.dataset.height;
-    this.setAttribute("aria-expanded", "true");
-  } else if (panel) {
-    panel.style.height = 0;
-    this.setAttribute("aria-expanded", "false");
   }
 }
 // -- Get the natural height of the element
@@ -190,9 +205,42 @@ function getHeight(tab, panel) {
 
 //Swiper Sliders Function
 function swiperLoops() {
+  let swiperTestimonials, swiperCards;
+  // Section Testimonials Carousel
+  if (document.querySelector(".testimonials-tpl-swiper")) {
+    swiperTestimonials = new Swiper(".testimonials-tpl-swiper .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: ".testimonials-tpl-swiper .swiper .swiper-button-next",
+        prevEl: ".testimonials-tpl-swiper .swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".testimonials-tpl-swiper .swiper .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
   // Section Interest Carousel
   if (document.querySelector(".cards-tpl-swiper")) {
-    let swiper = new Swiper(".cards-tpl-swiper .swiper", {
+    swiperCards = new Swiper(".cards-tpl-swiper .swiper", {
       slidesPerView: 1,
       spaceBetween: 15,
       navigation: {
@@ -221,27 +269,21 @@ function swiperLoops() {
         },
       },
     });
-    return swiper;
   }
+  return { swiperTestimonials, swiperCards }
 }
 
 //Footer Function
 function footerAccordion() {
   if (document.querySelector(".prv-footer .menu-accordion")) {
-    let acc = document.querySelectorAll(
-      ".prv-footer .menu-accordion .menu-accordion__header"
-    );
+    let acc = document.querySelectorAll(".prv-footer .menu-accordion .menu-accordion__header");
     let i;
     for (i = 0; i < acc.length; i++) {
       acc[i].onclick = function (e) {
         e.preventDefault();
         let panel = this.nextElementSibling;
-        let coursePanel = document.getElementsByClassName(
-          "menu-accordion__collapse"
-        );
-        let courseAccordionActive = document.getElementsByClassName(
-          "menu-accordion__header active"
-        );
+        let coursePanel = document.getElementsByClassName("menu-accordion__collapse");
+        let courseAccordionActive = document.getElementsByClassName("menu-accordion__header active");
 
         if (panel.style.height) {
           panel.style.height = null;
@@ -263,6 +305,22 @@ function footerAccordion() {
   }
 }
 
+//DataLayer Push
+function porvenirDataLayer() {
+  //variables dataset
+  const dataSet = this.dataset;
+  //Variable dataEvent
+  const event = dataSet.event ? dataSet.event : "";
+  //delete object event
+  delete dataSet.event
+  //datalayerPush
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    event,
+    gtm: { ...dataSet, uniqueEventId: 1 }
+  });
+}
+
 //Window Resize
 function widthChangeCallback() {
   const navigation = document.querySelector(".nav__menu#navigation");
@@ -280,191 +338,77 @@ function widthChangeCallback() {
       .querySelector(".header--quicklinks")
       .setAttribute("id", "mainQuicklinks");
   }
-  if (window.innerWidth > 992) {
+  if (window.innerWidth < 992) {
+    document.querySelector(".nav__menu").classList.remove("nav__accessible");
+    document.querySelector(".navigation--menu").insertAdjacentElement("beforeEnd", navigation);
+    document.querySelector(".nav__menu").classList.add("nav__accordion");
+    if(document.querySelector(".nav__menu .menu--list .menu--item").classList.contains('has__child')){
+      document.querySelector(".nav__menu .menu--list").classList.add("accordion");
+      if (document.querySelector(".nav__menu .menu--list").classList.contains('accordion')) {
+        document.querySelector(".nav__menu .menu--list .menu--item .link").classList.add('accordion__tab');
+        document.querySelector(".nav__menu .menu--list .menu--item .submenu--list").classList.add('accordion__panel');
+        accordionToggle('accordion');
+      }
+    }
+  } else {
+    document.querySelector(".nav__menu").classList.add("nav__accessible");
     document.querySelector(".nav__menu").classList.remove("nav__accordion");
     document.querySelector(".navigation--menu").classList.remove("show");
-    document
-      .querySelector(".navigation--action .btn--menu")
-      .classList.remove("open");
+    document.querySelector(".navigation--action .btn--menu").classList.remove("open");
     document.querySelector(".nav__menu").removeAttribute("style");
-    document.querySelector(".nav__menu").classList.add("nav__accessible");
-  } else {
-    document.querySelector(".nav__menu").classList.add("nav__accordion");
-    document.querySelector(".nav__menu").classList.remove("nav__accessible");
-    document
-      .querySelector(".navigation--menu")
-      .insertAdjacentElement("beforeEnd", navigation);
+    if(document.querySelector(".nav__menu .menu--list .menu--item").classList.contains('has__child')){
+      document.querySelector(".nav__menu .menu--list").classList.remove("accordion");
+      document.querySelector(".nav__menu .menu--list .menu--item .link").classList.remove('accordion__tab');
+      document.querySelector(".nav__menu .menu--list .menu--item .submenu--list").classList.remove('accordion__panel');
+    }
   }
 }
 
-//  sticky
-(function () {
-  let d = document;
-
-  function init() {
-    let links = document.querySelectorAll(".btn__navigatelink");
-    links.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        let anchor = this.getAttribute("data-navigatelink");
-        anchor = document.querySelector(`[data-navigateanchor='${anchor}']`);
-        scrollTo(anchor, e);
-      });
-    });
-  }
-
-  var requestAnimFrame = (function () {
-    return (
-      window.requestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      function (callback) {
-        window.setTimeout(callback, 1000 / 60);
-      }
-    );
-  })();
-
-  function scrollTo(to, callback, duration = 500) {
-    if (isDomElement(to)) {
-      // console.log('this is an element:', to); //DEBUG
-      to = to.offsetTop;
+function directAccess() {
+  if (document.querySelector(".prv-direct-access-tpl")) {
+    let certificados__items = document.querySelectorAll(".direct-access-tpl--item");
+    let boton_vermas = document.querySelector(".direct-access-tpl--view-all .btn-view-all");
+    if (certificados__items.length <= 4) {
+      boton_vermas.style.display = "none";
     }
-    /*else {
-			// console.log('this is NOT an element:', to); //DEBUG
-		}*/
-
-    // because it's so fucking difficult to detect the scrolling element, just move them all
-    function move(amount) {
-      // document.scrollingElement.scrollTop = amount; //FIXME Test that
-      document.documentElement.scrollTop = amount;
-      document.body.parentNode.scrollTop = amount;
-      document.body.scrollTop = amount;
-    }
-
-    function position() {
-      console.log("anchor position", to);
-      return (
-        // document.documentElement.offsetTop ||
-        // document.body.parentNode.offsetTop ||
-        // document.body.offsetTop
-        document.body.getBoundingClientRect().top * -1
-      );
-    }
-
-    var start = position(),
-      change = to - start,
-      currentTime = 0,
-      increment = 20;
-    console.log("start:", start); //DEBUG
-    console.log("to:", to); //DEBUG
-    console.log("change:", change); //DEBUG
-
-    var animateScroll = function () {
-      // increment the time
-      currentTime += increment;
-      // find the value with the quadratic in-out easing function
-      var val = Math.easeInOutQuad(currentTime, start, change, duration);
-      // move the document.body
-      move(val);
-      // do the animation unless its over
-      if (currentTime < duration) {
-        requestAnimFrame(animateScroll);
-      } else {
-        if (callback && typeof callback === "function") {
-          // the animation is done so lets callback
-          callback();
+    if (certificados__items.length > 4) {
+      certificados__items.forEach((elem, i) => {
+        if (i > 3) {
+          certificados__items[i].classList.add("item-disabled");
         }
-      }
-    };
-
-    animateScroll();
-  }
-
-  init();
-})();
-
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) {
-    return (c / 2) * t * t + b;
-  }
-  t--;
-  return (-c / 2) * (t * (t - 2) - 1) + b;
-};
-
-Math.easeInCubic = function (t, b, c, d) {
-  var tc = (t /= d) * t * t;
-  return b + c * tc;
-};
-
-Math.inOutQuintic = function (t, b, c, d) {
-  var ts = (t /= d) * t,
-    tc = ts * t;
-  return b + c * (6 * tc * ts + -15 * ts * ts + 10 * tc);
-};
-
-function isDomElement(obj) {
-  return obj instanceof Element;
-}
-
-function isMouseEvent(obj) {
-  return obj instanceof MouseEvent;
-}
-
-function findScrollingElement(element) {
-  //FIXME Test this too
-  do {
-    if (
-      element.clientHeight < element.scrollHeight ||
-      element.clientWidth < element.scrollWidth
-    ) {
-      return element;
+      });
     }
-  } while ((element = element.parentNode));
-}
+    boton_vermas.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (boton_vermas.classList.contains("active")) {
+        boton_vermas.classList.remove("active");
+        certificados__items.forEach((elem, i) => {
+          if (i > 3) {
+            boton_vermas.textContent = "Ver más";
+            certificados__items[i].classList.add("item-disabled");
+          }
+        });
 
-// ver mas
-let certificados__items = document.querySelectorAll(".prv__certificados--item");
-let boton_vermas = document.querySelector(".prv__certificados--vermas");
-if (certificados__items.length <= 4) {
-  boton_vermas.style.display = "none";
-}
-if (certificados__items.length > 4) {
-  certificados__items.forEach((elem, i) => {
-    if (i > 3) {
-      certificados__items[i].classList.add("desactive");
-    }
-  });
-}
-boton_vermas.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (boton_vermas.classList.contains("active")) {
-    boton_vermas.classList.remove("active");
-    certificados__items.forEach((elem, i) => {
-      if (i > 3) {
-        boton_vermas.textContent = "Ver más";
-        certificados__items[i].classList.add("desactive");
+        boton_vermas.blur();
+        setTimeout(function () {
+          certificados__items[0]
+            .querySelector(".direct-access-tpl--link")
+            .focus();
+        }, 50);
+      } else {
+        boton_vermas.classList.add("active");
+        certificados__items.forEach((elem, i) => {
+          boton_vermas.textContent = "Ver menos";
+          certificados__items[i].classList.remove("item-disabled");
+        });
+
+        boton_vermas.blur();
+        setTimeout(function () {
+          certificados__items[4]
+            .querySelector(".direct-access-tpl--link")
+            .focus();
+        }, 50);
       }
     });
-
-    boton_vermas.blur();
-    setTimeout(function () {
-      certificados__items[0]
-        .querySelector(".prv__certificados--item--link")
-        .focus();
-    }, 50);
-  } else {
-    boton_vermas.classList.add("active");
-    certificados__items.forEach((elem, i) => {
-      boton_vermas.textContent = "Ver menos";
-      certificados__items[i].classList.remove("desactive");
-    });
-
-    boton_vermas.blur();
-    setTimeout(function () {
-      certificados__items[4]
-        .querySelector(".prv__certificados--item--link")
-        .focus();
-    }, 50);
   }
-});
+}
