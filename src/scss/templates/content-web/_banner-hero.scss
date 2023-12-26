@@ -49,16 +49,23 @@
   }
   &--btn {
     margin-bottom: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     @media (min-width: 1023px) {
       display: inline-block;
       margin-bottom: 0px;
     }
   }
-  &.pvr__banner--bkg-green {
-    background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
-  }
-  &.pvr__banner--bkg-orange {
-    background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
+
+  &.pvr__banner{
+    &--bkg-green{
+      background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
+    }
+    &--bkg-orange {
+      background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
+    }
+    &--bkg-black-green{
+      background: linear-gradient(90deg, #353535 0%, #8A9B7C 56.25%, #A4BA91 72.97%, #92AB46 87.06%, #819E00 100%);
+    }
   }
 
   &.pvr__banner--v2 {
@@ -87,6 +94,13 @@
         }
       }
     }
+    &.pvr__banner--bkg-black-green{
+      .pvr__banner--content {
+        @media (min-width: 1023px){
+          background: linear-gradient(90deg, #353535 0%, #8A9B7C 56.25%, #A4BA91 72.97%, #92AB46 87.06%, #819E00 100%);
+        }
+      }
+    }
   }
   .title {
     color: var(--color-white);
@@ -95,6 +109,7 @@
     font-family: var(--fontBanda);
     line-height: normal;
     margin-bottom: 8px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @media (min-width: 1023px) {
       font-size: 50px;
       margin-bottom: 16px;
