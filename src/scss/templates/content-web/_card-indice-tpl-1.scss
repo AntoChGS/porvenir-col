@@ -1,0 +1,52 @@
+.pvr-card-indice {
+    position: relative;
+    padding: 16px 0px;
+
+    @media (min-width: 992px) {
+        padding: 0px;
+    }
+
+    .card-indice {
+        &__content {
+            height: 100%;
+
+            &.front-content-mobile {
+                @media (max-width: 991.98px) {
+                    margin-top: -45px;
+                }
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            justify-content: center;
+        }
+
+        &__item {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 15px 0;
+            padding: 0 15px;
+
+            @media (min-width: 768px) {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            @media (min-width: 1200px) {
+                width: 33.33333333%;
+            }
+
+            .prv-card {
+                max-width: 385px;
+                margin: 0 auto;
+
+                @media (min-width: 768px) {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

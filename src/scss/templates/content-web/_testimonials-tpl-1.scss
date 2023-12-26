@@ -44,9 +44,11 @@
                 &-mobile {
                     .swiper-wrapper {
                         @media (min-width: 992px) {
+                            width: auto;
                             justify-content: center;
                             flex-wrap: wrap;
                             transform: none !important;
+                            margin: 0 -15px;
                         }
 
                         >* {
@@ -81,8 +83,10 @@
                 &-desktop {
                     .swiper-wrapper {
                         @media (max-width: 991.98px) {
+                            width: auto;
                             flex-wrap: wrap;
                             transform: none !important;
+                            margin: 0 -15px;
                         }
 
                         >* {
@@ -122,10 +126,6 @@
 
             .prv-card {
                 height: 100%;
-
-                @media (min-width: 768px) {
-                    align-items: center;
-                }
             }
 
             .testimonials-tpl-slider-controls {
