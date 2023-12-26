@@ -1,14 +1,45 @@
-.prv-cards-tpl {
-    &.prv-style-1 {
-        .cards-tpl-row {
+.pvr-testimonials-tpl {
+    position: relative;
+
+    .testimonials-tpl {
+        &__title {
+            text-align: center;
+
+        }
+
+        &__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
             justify-content: center;
 
-            .prv-card {
-                margin-bottom: 15px;
+            .testimonials-tpl {
+                &__col {
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 0 0 15px 0 !important;
+                    padding: 0 15px;
+
+                    @media (min-width: 768px) {
+                        flex: 0 0 auto;
+                        width: 50% !important;
+                    }
+
+                    @media (min-width: 1200px) {
+                        width: 33.33333333% !important;
+                    }
+
+                    .prv-card {
+                        @media (min-width: 768px) {
+                            height: 100%;
+                            align-items: center;
+                        }
+                    }
+                }
             }
         }
 
-        .cards-tpl-swiper {
+        &-swiper {
             &.swiper-only {
                 &-mobile {
                     .swiper-wrapper {
@@ -34,13 +65,13 @@
                             flex: 0 0 auto;
                             width: 50% !important;
                         }
-
+    
                         @media (min-width: 1200px) {
                             width: 33.33333333% !important;
                         }
                     }
 
-                    .cards-tpl-slider-controls {
+                    .testimonials-tpl-slider-controls {
                         @media (min-width: 992px) {
                             display: none;
                         }
@@ -77,7 +108,7 @@
                         }
                     }
 
-                    .cards-tpl-slider-controls {
+                    .testimonials-tpl-slider-controls {
                         @media (max-width: 991.98px) {
                             display: none;
                         }
@@ -85,7 +116,19 @@
                 }
             }
 
-            .cards-tpl-slider-controls {
+            .swiper-slide {
+                height: auto;
+            }
+
+            .prv-card {
+                height: 100%;
+
+                @media (min-width: 768px) {
+                    align-items: center;
+                }
+            }
+
+            .testimonials-tpl-slider-controls {
                 position: relative;
                 display: flex;
                 justify-content: center;
@@ -93,7 +136,7 @@
                 margin-top: 25px;
             }
 
-            .cards-tpl-slider-btn {
+            .testimonials-tpl-slider-btn {
                 transition: .5s;
                 position: relative;
                 width: 24px;

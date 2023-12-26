@@ -8,9 +8,11 @@
     &::after {
         box-sizing: border-box;
     }
-
-    &:focus {
-        outline: 2px solid var(--color-blue);
+    &:focus{
+        outline: inherit;
+        @media (min-width: 768px){
+            outline: 2px solid var(--color-blue);
+        }
     }
 }
 
@@ -40,8 +42,18 @@ h6 {
     margin-bottom: 0.5rem;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
-h1, h2, h3, h4, h5, h6 {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     color: var(--color-gray-500);
 }
@@ -111,14 +123,14 @@ p {
 
 a {
     word-wrap: break-word;
-    color: --color-blue;
+    color: var(--color-orange-300);
     -webkit-tap-highlight-color: var(--transparent);
     transition: all ease 300ms;
     text-decoration: none;
 
     &:hover,
     &:active {
-        color: var(--color-blue);
+        color: var(--color-orange-300);
         text-decoration: underline;
     }
 }
@@ -142,6 +154,12 @@ img {
 
 button {
     font-family: var(--fontNunito);
+    &:focus{
+        outline: inherit;
+        @media (min-width: 768px){
+            outline: 2px solid var(--color-blue);
+        }
+    }
 }
 
 form {

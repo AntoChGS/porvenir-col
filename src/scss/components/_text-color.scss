@@ -1,0 +1,23 @@
+.prv-txt {
+    &-white {
+        color: var(--color-white);
+    }
+
+    &-black {
+        color: var(--color-black);
+    }
+
+    &-green-700 {
+        color: var(--color-green-700);
+    }
+
+    &-orange {
+        &-300 {
+            color: var(--color-orange-300);
+        }
+
+        &-400 {
+            color: var(--color-orange-400);
+        }
+    }
+}
