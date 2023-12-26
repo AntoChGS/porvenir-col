@@ -1,121 +1,135 @@
 .pvr__banner {
-    overflow: hidden;
+  overflow: hidden;
+  @media (min-width: 1023px) {
+    height: 456px;
+  }
+  &--content {
+    width: 360px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 32px 20px 0px;
+    position: relative;
     @media (min-width: 1023px) {
-      height: 456px;
-    }
-    &--content {
-      width: 360px;
-      height: 100%;
-      margin: 0 auto;
-      padding: 32px 20px 0px;
-      position: relative;
-      @media (min-width: 1023px) {
-        display: flex;
-        width: 95%;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-      @media (min-width: 1222px) {
-        width: 1222px;
-        padding: 0px;
-      }
-    }
-    &--left {
-      @media (min-width: 1023px) {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-    }
-    &--right {
       display: flex;
+      width: 95%;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    @media (min-width: 1222px) {
+      width: 1222px;
+      padding: 0px;
+    }
+  }
+  &--left {
+    @media (min-width: 1023px) {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      @media (min-width: 1023px) {
-        height: 100%;
-        align-items: end;
-      }
     }
-    &--image {
-      bottom: 0px;
-      @media (min-width: 1023px) {
-        position: inherit;
-      }
-      .picture {
-        width: auto;
-        height: auto;
-      }
+  }
+  &--right {
+    display: flex;
+    justify-content: center;
+    @media (min-width: 1023px) {
+      height: 100%;
+      align-items: end;
     }
-    &--btn {
-      margin-bottom: 16px;
+  }
+  &--image {
+    bottom: 0px;
+    @media (min-width: 1023px) {
+      position: inherit;
+    }
+    .picture {
+      width: auto;
+      height: auto;
+    }
+  }
+  &--btn {
+    margin-bottom: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    @media (min-width: 1023px) {
+      display: inline-block;
+      margin-bottom: 0px;
+    }
+  }
+
+  &.pvr__banner{
+    &--bkg-green{
+      background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
+    }
+    &--bkg-orange {
+      background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
+    }
+    &--bkg-black-green{
+      background: linear-gradient(90deg, #353535 0%, #8A9B7C 56.25%, #A4BA91 72.97%, #92AB46 87.06%, #819E00 100%);
+    }
+  }
+
+  &.pvr__banner--v2 {
+    height: 384px;
+    @media (min-width: 1023px) {
+      height: 335px;
+      background: transparent;
+    }
+    .pvr__banner--content {
       @media (min-width: 1023px) {
-        display: inline-block;
-        margin-bottom: 0px;
+        border-radius: 16px;
+        padding: 0px 120px;
       }
     }
     &.pvr__banner--bkg-green {
-      background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
-    }
-    &.pvr__banner--bkg-orange {
-      background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
-    }
-  
-    &.pvr__banner--v2 {
-      height: 384px;
-      @media (min-width: 1023px) {
-        height: 335px;
-        background: transparent;
-      }
       .pvr__banner--content {
         @media (min-width: 1023px) {
-          border-radius: 16px;
-          padding: 0px 120px;
-        }
-      }
-      &.pvr__banner--bkg-green {
-        .pvr__banner--content {
-          @media (min-width: 1023px) {
-            background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
-          }
-        }
-      }
-      &.pvr__banner--bkg-orange {
-        .pvr__banner--content {
-          @media (min-width: 1023px) {
-            background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
-          }
+          background: linear-gradient(90deg, #517c13 0%, #8baf43 100%);
         }
       }
     }
-    .title {
-      color: var(--color-white);
-      font-size: 36px;
-      font-weight: 700;
-      font-family: var(--fontBanda);
-      line-height: normal;
-      margin-bottom: 8px;
-      @media (min-width: 1023px) {
-        font-size: 50px;
-        margin-bottom: 16px;
-      }
-      @media (min-width: 1200px) {
-        font-size: 64px;
-        margin-bottom: 16px;
+    &.pvr__banner--bkg-orange {
+      .pvr__banner--content {
+        @media (min-width: 1023px) {
+          background: linear-gradient(90deg, #fc802a 0%, #fabc2d 100%);
+        }
       }
     }
-    .text {
-      font-size: 16px;
-      line-height: 20px;
-      color: #ffffff;
-      margin-bottom: 16px;
-      @media (min-width: 1023px) {
-        display: block;
-        color: var(--color-white);
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 24px;
+    &.pvr__banner--bkg-black-green{
+      .pvr__banner--content {
+        @media (min-width: 1023px){
+          background: linear-gradient(90deg, #353535 0%, #8A9B7C 56.25%, #A4BA91 72.97%, #92AB46 87.06%, #819E00 100%);
+        }
       }
     }
   }
-  
+  .title {
+    color: var(--color-white);
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--fontBanda);
+    line-height: normal;
+    margin-bottom: 8px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (min-width: 1023px) {
+      font-size: 50px;
+      margin-bottom: 16px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+  }
+  .text {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-bottom: 16px;
+    @media (min-width: 1023px) {
+      display: block;
+      color: var(--color-white);
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
