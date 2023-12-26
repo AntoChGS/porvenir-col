@@ -86,6 +86,16 @@
                         height: 3px;
                     }
                 }
+
+                &:focus, > *:focus {
+                    outline: 0;
+                    background-color: var(--color-white-300);
+                }
+
+                *:focus {
+                    outline: 0;
+                    background-color: transparent;
+                }
             }
         }
     }

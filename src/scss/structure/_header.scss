@@ -639,6 +639,12 @@
               transform: rotate(0deg);
             }
           }
+          &:focus{
+            text-decoration: underline;
+            @media (min-width: 768px){
+              text-decoration: none;
+            }
+          }
         }
   
         .accordion__tab--active + .accordion__panel {
