@@ -240,7 +240,40 @@ function swiperLoops() {
       },
     });
   }
-  return { swiperTestimonials, swiperCards }
+
+  // Section Interest Carousel
+  if (document.querySelector(".cards-swiper-01")) {
+    swiperCards01 = new Swiper(".cards-swiper-01 .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: ".cards-swiper-01 .swiper .swiper-button-next",
+        prevEl: ".cards-swiper-01 .swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".cards-swiper-01 .swiper .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        },
+        1200: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 70,
+        },
+      },
+    });
+  }
+  return { swiperTestimonials, swiperCards, swiperCards01 }
 }
 
 // Tabs
