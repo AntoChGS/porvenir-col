@@ -579,4 +579,96 @@
             }
         }
     }
+
+    &.prv-style-6 {
+        position: relative;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        padding: 14px 12px;
+        border-radius: 24px;
+        width: 100%;
+        max-width: 142px;
+        margin: 0 auto;
+
+        @media (min-width: 992px) {
+            padding: 14px 12px;
+        }
+
+        &.prv-card {
+            &--green-600 {
+                background: var(--color-green-600);
+
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                color: var(--color-green-700);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--yellow {
+                background: var(--color-yellow);
+
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                color: var(--color-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .prv-card {
+            &__image {
+                display: block;
+                margin: 0;
+                margin-bottom: 15px;
+
+                >img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    max-width: 32px;
+                    margin: 0 auto;
+
+                    @media (min-width: 992px) {
+                        max-width: 48px;
+                    }
+                }
+            }
+
+            &__body {
+                .card {
+                    &__title {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.2;
+                        text-align: center;
+                        margin: 0;
+                        height: 50px;
+
+                        @media (min-width: 992px) {
+                            font-size: 16px;
+                            height: 60px;
+                        }
+
+                        &.title__ellipsis {
+                            display: block;
+                            display: -webkit-box;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

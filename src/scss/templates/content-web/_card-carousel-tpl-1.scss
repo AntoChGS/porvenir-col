@@ -1,0 +1,32 @@
+.prv-card-carousel-tpl {
+    &.prv-style-1 {
+        .card-carousel-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -7px;
+            justify-content: center;
+        }
+
+        .card-carousel-col {
+            width: 100%;
+            max-width: 50%;
+            margin: 0 0 15px 0;
+            padding: 0 7px;
+
+            @media (min-width: 1200px) {
+                flex: 0 0 auto;
+                width: 20%;
+            }
+
+            @media (min-width: 992px) {
+                flex: 0 0 auto;
+                width: 33.33333333%;
+            }
+
+            @media (min-width: 576px) {
+                flex: 0 0 auto;
+                width: 33.33333333%;
+            }
+        }
+    }
+}
