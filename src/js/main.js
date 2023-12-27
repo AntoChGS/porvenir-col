@@ -414,9 +414,9 @@ function widthChangeCallback() {
 }
 
 function directAccess() {
-  if (document.querySelector(".prv-direct-access-tpl")) {
-    let certificados__items = document.querySelectorAll(".direct-access-tpl--item");
-    let boton_vermas = document.querySelector(".direct-access-tpl--view-all .btn-view-all");
+  if (document.querySelector(".prv__certificados")) {
+    let certificados__items = document.querySelectorAll(".prv__certificados--item");
+    let boton_vermas = document.querySelector(".prv__certificados--view-all .btn-view-all");
     if (certificados__items.length <= 4) {
       boton_vermas.style.display = "none";
     }
@@ -441,7 +441,7 @@ function directAccess() {
         boton_vermas.blur();
         setTimeout(function () {
           certificados__items[0]
-            .querySelector(".direct-access-tpl--link")
+            .querySelector(".prv__certificados--link")
             .focus();
         }, 50);
       } else {
@@ -454,7 +454,7 @@ function directAccess() {
         boton_vermas.blur();
         setTimeout(function () {
           certificados__items[4]
-            .querySelector(".direct-access-tpl--link")
+            .querySelector(".prv__certificados--item--link")
             .focus();
         }, 50);
       }

@@ -125,7 +125,7 @@
 
 .prv__certificados {
   padding: 16px 0px;
-  &--vermas--content {
+  &--view-all {
     width: 320px;
     margin: 0 auto;
     display: flex;
@@ -133,7 +133,7 @@
     @media (min-width: 992px) {
       width: 780px;
     }
-    .prv__certificados--vermas {
+    .btn-view-all {
       text-decoration: underline;
       padding-right: 0px;
       &:hover {
@@ -220,7 +220,7 @@
     right: 8px;
     top: calc(50% - 12px);
   }
-  &.desactive {
+  &.item-disabled {
     overflow: hidden;
     height: 0;
     visibility: hidden;
