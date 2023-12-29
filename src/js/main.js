@@ -273,13 +273,15 @@ function swiperLoops() {
       },
     });
   }
-  return { swiperTestimonials, swiperCards, swiperCards01 }
+  //return { swiperTestimonials, swiperCards, swiperCards01 }
 }
 
 // Tabs
-if (document.querySelector("#fragment-2-aywy")) {
-  var fragmentElement = document.querySelector("#fragment-2-aywy");
-  var fragmentNamespace = "aywy";
+function tabsSection(element1, element2) {
+  const prvTabsId = "#" + element1.id;
+  const prvTabsPaneId = element2.getAttribute("data-fragment-namespace");
+  var fragmentElement = document.querySelector(prvTabsId);
+  var fragmentNamespace = prvTabsPaneId;
 
   const tabItems = [].slice.call(
     fragmentElement.querySelectorAll(
@@ -353,6 +355,7 @@ if (document.querySelector("#fragment-2-aywy")) {
       });
     }
   }
+  mainTabs();
 }
 
 //Footer Function
@@ -524,7 +527,13 @@ if (elemDataLayer) {
 directAccess();
 
 // Tabs Section
-mainTabs();
+if (document.querySelector(".prv-tabs-container")) {
+  let prvTabs = document.querySelector(".prv-tabs-container");
+  let prvTabsPane = document.querySelector(
+    ".prv-tabs-container .prv-tab-pane"
+  );
+  tabsSection(prvTabs, prvTabsPane);
+}
 
 // Footer Menu accordion
 footerAccordion();
