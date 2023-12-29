@@ -175,7 +175,7 @@ function getHeight(tab, panel) {
 
 //Swiper Sliders Function
 function swiperLoops() {
-  let swiperTestimonials, swiperCards;
+  let swiperTestimonials, swiperCards, swiperCards01;
   // Section Testimonials Carousel
   if (document.querySelector(".testimonials-tpl-swiper")) {
     swiperTestimonials = new Swiper(".testimonials-tpl-swiper .swiper", {
