@@ -111,16 +111,19 @@
       border-top-left-radius: 24px;
       border-top-right-radius: 24px;
       .prv-nav-tab {
+        margin: 0;
         .tab__item {
           .tab__link {
             background-color: var(--color-gray-100);
             color: var(--color-orange-300);
+            padding: 6px 12px;
+            line-height: 1.2;
+            &::after {
+              display: none;
+            }
             &.active {
               background-color: var(--color-yellow-80);
               color: var(--color-orange-300);
-              &::after {
-                display: none;
-              }
             }
           }
         }
@@ -131,6 +134,9 @@
       background-color: var(--color-yellow-80);
       border-bottom-left-radius: 24px;
       border-bottom-right-radius: 24px;
+      .prv-tab-pane {
+        padding: 16px;
+      }
     }
   }
 }
