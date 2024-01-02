@@ -175,7 +175,7 @@ function getHeight(tab, panel) {
 
 //Swiper Sliders Function
 function swiperLoops() {
-  let swiperTestimonials, swiperCards, swiperCards01;
+  let swiperTestimonials, swiperCards, swiperCards01, swiperCards05;
   // Section Testimonials Carousel
   if (document.querySelector(".testimonials-tpl-swiper")) {
     swiperTestimonials = new Swiper(".testimonials-tpl-swiper .swiper", {
@@ -269,6 +269,36 @@ function swiperLoops() {
           slidesPerView: 2,
           slidesPerGroup: 2,
           spaceBetween: 70,
+        },
+      },
+    });
+  }
+
+  // Section Carousel Variante 05
+  if (document.querySelector(".cards-swiper-05")) {
+    swiperCards05 = new Swiper(".cards-swiper-05 .swiper", {
+      slidesPerView: 3,
+      spaceBetween: 6,
+      navigation: {
+        nextEl: ".cards-swiper-05 .swiper .swiper-button-next",
+        prevEl: ".cards-swiper-05 .swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".cards-swiper-05 .swiper .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 14,
         },
       },
     });
