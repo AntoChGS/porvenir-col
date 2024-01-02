@@ -672,4 +672,145 @@
             }
         }
     }
+    &.prv-style-7 {
+        position: relative;
+        border: 2px solid #FC802A;
+        padding: 14px 14px;
+        border-radius: 24px;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            padding: 0;
+            max-width: 925px;
+            overflow: hidden;
+        }
+
+        &.prv-card {
+            &--green-600 {
+                background: var(--color-green-600);
+
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                color: var(--color-green-700);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--yellow {
+                background: var(--color-yellow);
+
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                color: var(--color-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .prv-card {
+            &__image {
+                display: block;
+                margin: 0;
+                margin-bottom: 15px;
+                margin-top: 3px;
+
+                >img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    max-width: 315px;
+                    margin: 0 auto;
+
+                    @media (min-width: 1024px) {
+                        max-width: 100%;
+                    }
+                }
+
+                @media (min-width: 1024px) {
+                    width: 50%;
+                    margin:auto;
+                }
+            }
+
+            &__body {
+
+                @media (min-width: 1024px) {
+                    width: 50%;
+                    margin: 55px auto;
+                }
+
+                .card {
+                    &__title {
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 1.2;
+                        text-align: center;
+                        margin: 0;
+                        height: 40px;
+
+                        @media (min-width: 1024px) {
+                            font-size: 36px;
+                            margin: 0px 35px;
+                            height: auto;
+                            padding-bottom: 15px;
+                            text-align: left;
+                        }
+
+                        &.title__ellipsis {
+                            display: block;
+                            display: -webkit-box;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                    
+                    &__description {
+                        display: block;
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        font-size: 18px;
+                        line-height: 1.25;
+                        margin-bottom: 0;
+                        color: var(--color-gray-500);
+                        max-height: 100px;
+
+                        @media (min-width: 1024px) {
+                            font-size: 18px;
+                            margin: 0px 35px;
+                        }
+
+                        >* {
+                            font-size: 18px;
+                            line-height: 1.25;
+                            color: var(--color-gray-500);
+
+                            @media (min-width: 1024px) {
+                                font-size: 18px;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
