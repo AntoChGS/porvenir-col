@@ -15,7 +15,9 @@
         }
     }
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: var(--fontNunito);
     font-size: 16px;

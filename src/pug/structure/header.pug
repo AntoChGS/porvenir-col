@@ -27,7 +27,7 @@ header.pvr__header
                         img(src="images/header/brand-mobile.png", alt="Logo Porvenir", srcset="images/header/brand-mobile.png" class="image")
 
             .navigation
-                .navigation--desktop              
+                .navigation--desktop                  
                 .navigation--login
                     a(href="#" class="btn--login") 
                         span.text Iniciar sesión 
@@ -44,35 +44,35 @@ header.pvr__header
 
     .global__navigation      
         nav.nav__menu#navigation
-            ul.menu--list.accordion__list(data-multiselect="false")
-                li.menu--item
-                    a(href="/pensiones-obligatorias" class="link accordion__tab") 
+            ul.menu--list(data-multiselect="false")
+                li.menu--item.has__child
+                    a(href="/pensiones-obligatorias" class="link") 
                         span.icon: svg: use(xlink:href=iconPath+'piggy-bank') 
                         span.text Pensiones Obligatorias
                         span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
-                    ul.submenu--list.accordion__panel
+                    ul.submenu--list
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Articulo de interés
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Preguntas frecuentes
-                li.menu--item
-                    a(href="/cesantias" class="link accordion__tab") 
+                li.menu--item.has__child
+                    a(href="/cesantias" class="link") 
                         span.icon: svg: use(xlink:href=iconPath+'home') 
                         span.text Cesantías
                         span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
-                    ul.submenu--list.accordion__panel
+                    ul.submenu--list
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Articulo de interés
-                li.menu--item
-                    a(href="pensiones voluntarias" class="link accordion__tab") 
+                li.menu--item.has__child
+                    a(href="pensiones voluntarias" class="link") 
                         span.icon: svg: use(xlink:href=iconPath+'coins') 
                         span.text Pensiones Voluntarias
                         span.icon.icon--toggle: svg: use(xlink:href=iconPath+'chevron-down')
-                    ul.submenu--list.accordion__panel
+                    ul.submenu--list
                         li.submenu--item 
                             a(href="/", target="_blank", rel="noopener noreferrer", class="sub-link") Servicios en línea       
 
