@@ -109,7 +109,6 @@
     max-width: 804px;
     margin: 0 auto;
     .prv-tab-horizontal {
-      background-color: var(--color-yellow-80);
       border-top-left-radius: 24px;
       border-top-right-radius: 24px;
       .prv-nav-tab {
@@ -125,7 +124,11 @@
             }
             &.active {
               background-color: var(--color-yellow-80);
+              background-color: var(--color-white);
               color: var(--color-orange-300);
+              @media (min-width: 992px) {
+                background-color: var(--color-yellow-80);
+              }
             }
           }
         }
@@ -133,9 +136,12 @@
     }
 
     .prv-tab-content {
-      background-color: var(--color-yellow-80);
+      background-color: var(--color-white);
       border-bottom-left-radius: 24px;
       border-bottom-right-radius: 24px;
+      @media (min-width: 992px) {
+        background-color: var(--color-yellow-80);
+      }
       .prv-tab-pane {
         padding: 16px;
       }
