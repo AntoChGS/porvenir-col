@@ -249,10 +249,10 @@ h2(style="font-size:18px;margin:0;padding:10px 15px;border-top: 1px solid #000;b
 h2(style="font-size:18px;margin:0;padding:10px 15px;border-top: 1px solid #000;border-bottom: 1px solid #000;background:#000;color:#fff") Variente 07
 .prv-card-carousel-tpl.prv-style-2.prv-bg-white.prv-sp-d24-m16
     .container
-        h2.prv-title.prv-txt-green-700 ¿Cómo puedes administrar el ahorro de tus cesantías?
-        p.prv-subtitle Cuentas con dos portafolios: Largo Plazo y Corto Plazo. Tú decides cómo distribuir tu ahorro en estos portafolios según tus objetivos, perfil de inversión y el momento en que  esperas utilizarlas.
-        p.prv-subtitle Si no has elegido tu portafolio, las cesantías pagadas en febrero ingresan al Corto Plazo. En agosto el saldo total pasa al Largo plazo. Para elegir tu portafolio 
-            a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn--link") haz click aquí.    
+        .prv-title-content
+            h2.prv-title.prv-txt-green-700 ¿Cómo puedes administrar el ahorro de tus cesantías?
+            .prv-subtitle
+                p Cuentas con dos portafolios: Largo Plazo y Corto Plazo. Tú decides cómo distribuir tu ahorro en estos portafolios según tus objetivos, perfil de inversión y el momento en que  esperas utilizarlas.    
         .cards-swiper-07
             .swiper
                 .swiper-wrapper
@@ -287,13 +287,17 @@ h2(style="font-size:18px;margin:0;padding:10px 15px;border-top: 1px solid #000;b
                         <svg class="svg--inline" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" role="img">
                         <path d="M0.999989 0.710632C0.609989 1.10063 0.609989 1.73063 0.999989 2.12063L4.87999 6.00063L0.999989 9.88063C0.609989 10.2706 0.609989 10.9006 0.999989 11.2906C1.38999 11.6806 2.01999 11.6806 2.40999 11.2906L6.99999 6.70063C7.38999 6.31063 7.38999 5.68063 6.99999 5.29063L2.40999 0.700632C2.02999 0.320632 1.38999 0.320632 0.999989 0.710632Z" fill="currentColor"/>
                         </svg>
-
+        
+        p Si no has elegido tu portafolio, las cesantías pagadas en febrero ingresan al Corto Plazo. En agosto el saldo total pasa al Largo plazo. Para elegir tu portafolio 
+            a.prv-btn--link(href="#", target="_blank", rel="noopener noreferrer") haz click aquí.
 
 .prv-card-carousel-tpl.prv-style-2.prv-bg-white.prv-sp-d24-m16
     .container
-        h2.prv-title.prv-txt-green-700 Lorem ipsum dolor it
-        p.prv-subtitle Cuentas con dos portafolios: Largo Plazo y Corto Plazo.
-        p.prv-subtitle Si no has elegido tu portafolio, las cesantías pagadas en febrero ingresan.  
+        .prv-title-content
+            h2.prv-title.prv-txt-green-700 Lorem ipsum dolor it
+            .prv-subtitle
+                p Cuentas con dos portafolios: Largo Plazo y Corto Plazo.
+                p Si no has elegido tu portafolio, las cesantías pagadas en febrero ingresan.  
         .cards-swiper-01
             .swiper
                 .swiper-wrapper

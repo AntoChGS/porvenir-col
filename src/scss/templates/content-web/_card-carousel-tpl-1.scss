@@ -31,22 +31,10 @@
     }
 
     &.prv-style-2 {
-        .container {
-            @media (min-width: 1024px) {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-
-                .prv-subtitle:nth-of-type(2) {
-                    order: 3;
-                }
-            }
-        }
-
         .swiper-wrapper {
             @media (min-width: 1024px) {
                 flex-wrap: wrap;
-                gap: 40px;
+                gap: 24px;
                 justify-content: center;
             }
 
