@@ -196,7 +196,7 @@ function getHeight(tab, panel) {
 
 //Swiper Sliders Function
 function swiperLoops() {
-  let swiperTestimonials, swiperCards, swiperCards01, swiperCards05;
+  let swiperTestimonials, swiperCards, swiperCards01, swiperCards05, swiperCards07;
   // Section Testimonials Carousel
   if (document.querySelector(".testimonials-tpl-swiper")) {
     swiperTestimonials = new Swiper(".testimonials-tpl-swiper .swiper", {
@@ -320,6 +320,39 @@ function swiperLoops() {
         1200: {
           slidesPerView: 5,
           spaceBetween: 14,
+        },
+      },
+    });
+  }
+
+  // Section Interest Carousel
+  if (document.querySelector(".cards-swiper-07")) {
+    swiperCards07 = new Swiper(".cards-swiper-07 .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: ".cards-swiper-07 .swiper .swiper-button-next",
+        prevEl: ".cards-swiper-07 .swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".cards-swiper-07 .swiper .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        },
+        1200: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 70,
         },
       },
     });
