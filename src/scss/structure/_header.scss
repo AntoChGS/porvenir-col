@@ -776,8 +776,11 @@
 }
 
 body.signed-in {
+  .pvr__header.scroll--head .header--navigation .navigation--menu{
+    top: 150px;
+  }
   .pvr__header .header--navigation .navigation--menu {
-    top: 149px;
+    top: 106px;
   }
   .pvr__header.scroll--head .header--navigation{
     top: 49px;
