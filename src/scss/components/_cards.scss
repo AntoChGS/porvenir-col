@@ -245,7 +245,7 @@
             &__image {
                 display: block;
                 margin: 0;
-                margin-bottom: 12px;
+                margin-bottom: 15px;
 
                 >img {
                     display: block;
@@ -295,7 +295,7 @@
                         line-height: 1.25;
                         margin-bottom: 0;
                         color: var(--color-gray-500);
-                        max-height: 80px;
+                        max-height: 90px;
 
                         @media (min-width: 992px) {
                             font-size: 18px;
@@ -645,7 +645,11 @@
             &__image {
                 display: block;
                 margin: 0;
-                margin-bottom: 15px;
+                margin-bottom: 5px;
+
+                @media (min-width: 992px) {
+                    margin-bottom: 15px;
+                }
 
                 >img {
                     display: block;
