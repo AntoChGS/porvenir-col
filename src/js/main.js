@@ -104,6 +104,17 @@ function showMenuHamburguer() {
       }
     });
   });
+  document.querySelectorAll('.menu--list .menu--item').forEach((element) => {
+    console.log(element)
+    if (element.childNodes[3]) {
+      let childrenMenu = element.children[1].querySelectorAll('.submenu--item');
+      childrenMenu.forEach(el => {
+          el.querySelector('.sub-link').addEventListener('click', () => {
+              document.querySelector('body').removeAttribute('style');
+          });
+      });
+    }
+  });
 }
 
 //Scroll Header
