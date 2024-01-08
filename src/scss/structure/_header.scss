@@ -709,14 +709,14 @@
 
   .submenu {
     &--list {
+      min-width: 262px;
       height: 0;
       visibility: hidden;
       overflow: hidden;
       transition: height, visibility;
       transition-duration: 250ms, 0ms;
       transition-delay: 0ms, 250ms;
-      transition-timing-function: ease-in, ease-in;
-
+      transition-timing-function: ease-in, ease-in;      
       @media (min-width: 992px) {
         position: absolute;
         visibility: hidden;
