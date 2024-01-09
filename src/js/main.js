@@ -108,23 +108,23 @@ function showMenuHamburguer() {
     if (element.childNodes[3]) {
       let childrenMenu = element.children[1].querySelectorAll('.submenu--item');
       childrenMenu.forEach(el => {
-          el.querySelector('.sub-link').addEventListener('click', () => {
-              document.querySelector('body').removeAttribute('style');
-          });
+        el.querySelector('.sub-link').addEventListener('click', () => {
+          document.querySelector('body').removeAttribute('style');
+        });
       });
     }
   });
 }
 
 //Scroll Header
-function scrollFunction(){
+function scrollFunction() {
   window.onscroll = () => {
     scroll_position = window.scrollY;
-    if(scroll_position >= 45){
+    if (scroll_position >= 45) {
       document.querySelector('.pvr__header').classList.add('scroll--head');
-    }else{
+    } else {
       document.querySelector('.pvr__header').classList.remove('scroll--head');
-    }	
+    }
   };
 }
 
@@ -163,27 +163,27 @@ function accordionToggle(element) {
 }
 // -- Toggle Panels
 function toggle(e) {
-    e.preventDefault();
-    let component = this.parentNode.parentNode;
-    let tab = this;
-    let panel = tab.nextElementSibling;
-    if (component.dataset.multiselect == "false") {
-      let active = component.getElementsByClassName("accordion__tab--active")[0];
-      tab.classList.toggle("accordion__tab--active");
-      if (active?.nextElementSibling) {
-        active.classList.remove("accordion__tab--active");
-        active.nextElementSibling.style.height = 0;
-        // tab.setAttribute("aria-expanded", "false");
-      }
-    } else tab.classList.toggle("accordion__tab--active");
-    // Set the aria-expanded
-    if (tab.classList.contains("accordion__tab--active") && panel) {
-      panel.style.height = panel.dataset.height;
-      // this.setAttribute("aria-expanded", "true");
-    } else if (panel) {
-      panel.style.height = 0;
-      // this.setAttribute("aria-expanded", "false");
+  e.preventDefault();
+  let component = this.parentNode.parentNode;
+  let tab = this;
+  let panel = tab.nextElementSibling;
+  if (component.dataset.multiselect == "false") {
+    let active = component.getElementsByClassName("accordion__tab--active")[0];
+    tab.classList.toggle("accordion__tab--active");
+    if (active?.nextElementSibling) {
+      active.classList.remove("accordion__tab--active");
+      active.nextElementSibling.style.height = 0;
+      // tab.setAttribute("aria-expanded", "false");
     }
+  } else tab.classList.toggle("accordion__tab--active");
+  // Set the aria-expanded
+  if (tab.classList.contains("accordion__tab--active") && panel) {
+    panel.style.height = panel.dataset.height;
+    // this.setAttribute("aria-expanded", "true");
+  } else if (panel) {
+    panel.style.height = 0;
+    // this.setAttribute("aria-expanded", "false");
+  }
 }
 // -- Get the natural height of the element
 function getHeight(tab, panel) {
@@ -263,32 +263,38 @@ function swiperLoops() {
 
   // Section Interest Carousel
   if (document.querySelector(".cards-swiper-01")) {
-    swiperCards01 = new Swiper(".cards-swiper-01 .swiper", {
+    const swpCardC01 = document.querySelector(".cards-swiper-01");
+    const dataLgCardC01 = swpCardC01.getAttribute("data-slide-lg");
+    const dataMdCardC01 = swpCardC01.getAttribute("data-slide-md");
+    const dataSmCardC01 = swpCardC01.getAttribute("data-slide-sm");
+    const swpCardC01Id = "#" + swpCardC01.id;
+
+    swiperCards01 = new Swiper(swpCardC01Id + " .swiper", {
       slidesPerView: 1,
       spaceBetween: 15,
       navigation: {
-        nextEl: ".cards-swiper-01 .swiper .swiper-button-next",
-        prevEl: ".cards-swiper-01 .swiper .swiper-button-prev",
+        nextEl: swpCardC01Id + " .swiper .swiper-button-next",
+        prevEl: swpCardC01Id + " .swiper .swiper-button-prev",
       },
       pagination: {
-        el: ".cards-swiper-01 .swiper .swiper-pagination",
+        el: swpCardC01Id + " .swiper-pagination",
         clickable: true,
       },
       breakpoints: {
         640: {
-          slidesPerView: 2,
+          slidesPerView: dataSmCardC01,
           slidesPerGroup: 2,
-          spaceBetween: 30,
+          spaceBetween: 15,
         },
         1024: {
-          slidesPerView: 2,
+          slidesPerView: dataMdCardC01,
           slidesPerGroup: 2,
-          spaceBetween: 50,
+          spaceBetween: 15,
         },
         1200: {
-          slidesPerView: 2,
+          slidesPerView: dataLgCardC01,
           slidesPerGroup: 2,
-          spaceBetween: 70,
+          spaceBetween: 15,
         },
       },
     });
@@ -363,8 +369,8 @@ function swiperLoops() {
 function tabsSection(element1, element2) {
   const prvTabsId = "#" + element1.id;
   const prvTabsPaneId = element2.getAttribute("data-fragment-namespace");
-  var fragmentElement = document.querySelector(prvTabsId);
-  var fragmentNamespace = prvTabsPaneId;
+  const fragmentElement = document.querySelector(prvTabsId);
+  const fragmentNamespace = prvTabsPaneId;
 
   const tabItems = [].slice.call(
     fragmentElement.querySelectorAll(
@@ -524,7 +530,7 @@ function widthChangeCallback() {
     document.querySelector(".navigation--action .btn--menu").classList.remove("open");
     document.querySelector(".nav__menu").removeAttribute("style");
     document.querySelector(".nav__menu .menu--list").classList.remove("accordion");
-    if (!document.querySelector(".nav__menu .menu--list").classList.contains('accordion')){
+    if (!document.querySelector(".nav__menu .menu--list").classList.contains('accordion')) {
       document.querySelectorAll(".menu--list .has__child").forEach((element) => {
         element.querySelector('.link').classList.remove('accordion__tab');
         element.querySelector('.submenu--list').classList.remove('accordion__panel');
@@ -622,9 +628,7 @@ directAccess();
 // Tabs Section
 if (document.querySelector(".prv-tabs-container")) {
   let prvTabs = document.querySelector(".prv-tabs-container");
-  let prvTabsPane = document.querySelector(
-    ".prv-tabs-container .prv-tab-pane"
-  );
+  let prvTabsPane = document.querySelector(".prv-tabs-container .prv-tab-pane");
   tabsSection(prvTabs, prvTabsPane);
 }
 
