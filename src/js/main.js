@@ -265,12 +265,13 @@ function swiperLoops() {
   if (document.querySelector(".cards-swiper-01")) {
     const buildSwpCardC01 = swpCardC01 => {
       const swpCardC01Id = "#" + swpCardC01.id;
-      const dataLgCardC01 = swpCardC01.getAttribute("data-slide-lg");
-      const dataMdCardC01 = swpCardC01.getAttribute("data-slide-md");
+      const dataXsCardC01 = swpCardC01.getAttribute("data-slide-xs");
       const dataSmCardC01 = swpCardC01.getAttribute("data-slide-sm");
+      const dataMdCardC01 = swpCardC01.getAttribute("data-slide-md");
+      const dataLgCardC01 = swpCardC01.getAttribute("data-slide-lg");
 
       return new Swiper(swpCardC01Id + " .swiper", {
-        slidesPerView: 1,
+        slidesPerView: dataXsCardC01,
         spaceBetween: 15,
         navigation: {
           nextEl: swpCardC01Id + " .swiper .swiper-button-next",
@@ -309,12 +310,13 @@ function swiperLoops() {
   if (document.querySelector(".cards-swiper-05")) {
     const buildSwpCardC05 = swpCardC05 => {
       const swpCardC05Id = "#" + swpCardC05.id;
-      const dataLgCardC05 = swpCardC05.getAttribute("data-slide-lg");
-      const dataMdCardC05 = swpCardC05.getAttribute("data-slide-md");
+      const dataXsCardC05 = swpCardC05.getAttribute("data-slide-xs");
       const dataSmCardC05 = swpCardC05.getAttribute("data-slide-sm");
+      const dataMdCardC05 = swpCardC05.getAttribute("data-slide-md");
+      const dataLgCardC05 = swpCardC05.getAttribute("data-slide-lg");
 
       return new Swiper(swpCardC05Id + " .swiper", {
-        slidesPerView: 3,
+        slidesPerView: dataXsCardC05,
         spaceBetween: 6,
         navigation: {
           nextEl: swpCardC05Id + " .swiper .swiper-button-next",
@@ -350,12 +352,13 @@ function swiperLoops() {
   if (document.querySelector(".cards-swiper-07")) {
     const buildSwpCardC07 = swpCardC07 => {
       const swpCardC07Id = "#" + swpCardC07.id;
-      const dataLgCardC07 = swpCardC07.getAttribute("data-slide-lg");
-      const dataMdCardC07 = swpCardC07.getAttribute("data-slide-md");
+      const dataXsCardC07 = swpCardC07.getAttribute("data-slide-xs");
       const dataSmCardC07 = swpCardC07.getAttribute("data-slide-sm");
+      const dataMdCardC07 = swpCardC07.getAttribute("data-slide-md");
+      const dataLgCardC07 = swpCardC07.getAttribute("data-slide-lg");
 
       return new Swiper(swpCardC07Id + " .swiper", {
-        slidesPerView: 1,
+        slidesPerView: dataXsCardC07,
         spaceBetween: 15,
         navigation: {
           nextEl: swpCardC07Id + " .swiper .swiper-button-next",
@@ -389,7 +392,7 @@ function swiperLoops() {
 
     allSlidersCardC07.forEach(sliderCardC07 => buildSwpCardC07(sliderCardC07));
   }
-  
+
   //return { swiperTestimonials, swiperCards, swiperCards01 }
 }
 
