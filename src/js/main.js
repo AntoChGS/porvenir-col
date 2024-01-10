@@ -261,107 +261,135 @@ function swiperLoops() {
     });
   }
 
-  // Section Interest Carousel
+  // Section Card Carousel 01
   if (document.querySelector(".cards-swiper-01")) {
-    const swpCardC01 = document.querySelector(".cards-swiper-01");
-    const dataLgCardC01 = swpCardC01.getAttribute("data-slide-lg");
-    const dataMdCardC01 = swpCardC01.getAttribute("data-slide-md");
-    const dataSmCardC01 = swpCardC01.getAttribute("data-slide-sm");
-    const swpCardC01Id = "#" + swpCardC01.id;
+    const buildSwpCardC01 = swpCardC01 => {
+      const swpCardC01Id = "#" + swpCardC01.id;
+      const dataLgCardC01 = swpCardC01.getAttribute("data-slide-lg");
+      const dataMdCardC01 = swpCardC01.getAttribute("data-slide-md");
+      const dataSmCardC01 = swpCardC01.getAttribute("data-slide-sm");
 
-    swiperCards01 = new Swiper(swpCardC01Id + " .swiper", {
-      slidesPerView: 1,
-      spaceBetween: 15,
-      navigation: {
-        nextEl: swpCardC01Id + " .swiper .swiper-button-next",
-        prevEl: swpCardC01Id + " .swiper .swiper-button-prev",
-      },
-      pagination: {
-        el: swpCardC01Id + " .swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: dataSmCardC01,
-          slidesPerGroup: 2,
-          spaceBetween: 15,
+      return new Swiper(swpCardC01Id + " .swiper", {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        navigation: {
+          nextEl: swpCardC01Id + " .swiper .swiper-button-next",
+          prevEl: swpCardC01Id + " .swiper .swiper-button-prev",
         },
-        1024: {
-          slidesPerView: dataMdCardC01,
-          slidesPerGroup: 2,
-          spaceBetween: 15,
+        pagination: {
+          el: swpCardC01Id + " .swiper-pagination",
+          clickable: true,
         },
-        1200: {
-          slidesPerView: dataLgCardC01,
-          slidesPerGroup: 2,
-          spaceBetween: 15,
+        breakpoints: {
+          640: {
+            slidesPerView: dataSmCardC01,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: dataMdCardC01,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: dataLgCardC01,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
         },
-      },
-    });
+      });
+    }
+
+    const allSlidersCardC01 = document.querySelectorAll('.cards-swiper-01');
+
+    allSlidersCardC01.forEach(sliderCardC01 => buildSwpCardC01(sliderCardC01));
   }
 
-  // Section Carousel Variante 05
+  // Section Card Carousel 05
   if (document.querySelector(".cards-swiper-05")) {
-    swiperCards05 = new Swiper(".cards-swiper-05 .swiper", {
-      slidesPerView: 3,
-      spaceBetween: 6,
-      navigation: {
-        nextEl: ".cards-swiper-05 .swiper .swiper-button-next",
-        prevEl: ".cards-swiper-05 .swiper .swiper-button-prev",
-      },
-      pagination: {
-        el: ".cards-swiper-05 .swiper .swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 10,
+    const buildSwpCardC05 = swpCardC05 => {
+      const swpCardC05Id = "#" + swpCardC05.id;
+      const dataLgCardC05 = swpCardC05.getAttribute("data-slide-lg");
+      const dataMdCardC05 = swpCardC05.getAttribute("data-slide-md");
+      const dataSmCardC05 = swpCardC05.getAttribute("data-slide-sm");
+
+      return new Swiper(swpCardC05Id + " .swiper", {
+        slidesPerView: 3,
+        spaceBetween: 6,
+        navigation: {
+          nextEl: swpCardC05Id + " .swiper .swiper-button-next",
+          prevEl: swpCardC05Id + " .swiper .swiper-button-prev",
         },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 10,
+        pagination: {
+          el: swpCardC05Id + " .swiper-pagination",
+          clickable: true,
         },
-        1200: {
-          slidesPerView: 5,
-          spaceBetween: 14,
+        breakpoints: {
+          640: {
+            slidesPerView: dataSmCardC05,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: dataMdCardC05,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: dataLgCardC05,
+            spaceBetween: 15,
+          },
         },
-      },
-    });
+      });
+    }
+
+    const allSlidersCardC05 = document.querySelectorAll('.cards-swiper-05');
+
+    allSlidersCardC05.forEach(sliderCardC05 => buildSwpCardC05(sliderCardC05));
   }
 
-  // Section Interest Carousel
+  // Section Card Carousel 07
   if (document.querySelector(".cards-swiper-07")) {
-    swiperCards07 = new Swiper(".cards-swiper-07 .swiper", {
-      slidesPerView: 1,
-      spaceBetween: 15,
-      navigation: {
-        nextEl: ".cards-swiper-07 .swiper .swiper-button-next",
-        prevEl: ".cards-swiper-07 .swiper .swiper-button-prev",
-      },
-      pagination: {
-        el: ".cards-swiper-07 .swiper .swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 30,
+    const buildSwpCardC07 = swpCardC07 => {
+      const swpCardC07Id = "#" + swpCardC07.id;
+      const dataLgCardC07 = swpCardC07.getAttribute("data-slide-lg");
+      const dataMdCardC07 = swpCardC07.getAttribute("data-slide-md");
+      const dataSmCardC07 = swpCardC07.getAttribute("data-slide-sm");
+
+      return new Swiper(swpCardC07Id + " .swiper", {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        navigation: {
+          nextEl: swpCardC07Id + " .swiper .swiper-button-next",
+          prevEl: swpCardC07Id + " .swiper .swiper-button-prev",
         },
-        1024: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 50,
+        pagination: {
+          el: swpCardC07Id + " .swiper-pagination",
+          clickable: true,
         },
-        1200: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 70,
+        breakpoints: {
+          640: {
+            slidesPerView: dataSmCardC07,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: dataMdCardC07,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: dataLgCardC07,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
         },
-      },
-    });
+      });
+    }
+
+    const allSlidersCardC07 = document.querySelectorAll('.cards-swiper-07');
+
+    allSlidersCardC07.forEach(sliderCardC07 => buildSwpCardC07(sliderCardC07));
   }
+  
   //return { swiperTestimonials, swiperCards, swiperCards01 }
 }
 
