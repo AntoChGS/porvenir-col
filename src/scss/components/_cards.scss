@@ -583,16 +583,20 @@
     &.prv-style-6 {
         position: relative;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 14px 6px;
         border-radius: 24px;
         width: 100%;
-        max-width: 125px;
+        max-width: 115px;
+        height: 115px;
         margin: 0 auto;
 
         @media (min-width: 992px) {
             padding: 14px 12px;
-            max-width: 151px;
+            max-width: 152px;
+            height: 152px;
         }
 
         &.prv-card {
@@ -672,11 +676,11 @@
                         line-height: 1.2;
                         text-align: center;
                         margin: 0;
-                        height: 50px;
+                        max-height: 50px;
 
                         @media (min-width: 992px) {
                             font-size: 16px;
-                            height: 60px;
+                            max-height: 60px;
                         }
 
                         &.title__ellipsis {
