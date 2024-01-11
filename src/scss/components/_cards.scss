@@ -135,6 +135,26 @@
             display: flex;
         }
 
+        &.prv-card--horizontal {
+            display: flex;
+            align-items: center;
+
+            .prv-card {
+                &__image {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: 100%;
+                    order: 2;
+                    margin: 0 0 0 8px;
+                }
+
+                &__body {
+                    flex: 1;
+                }
+            }
+        }
+
         .prv-card {
             @media (min-width: 768px) {
                 align-items: flex-start;
@@ -155,10 +175,13 @@
 
                 >img {
                     display: block;
-                    width: auto;
+                    width: 100%;
                     height: auto;
-                    max-width: 100%;
+                    max-width: 88px;
                     margin: 0 auto;
+                    @media (min-width: 992px) {
+                        max-width: 132px;
+                    }
                 }
             }
 
