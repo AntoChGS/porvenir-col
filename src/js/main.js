@@ -661,6 +661,6 @@ if (document.querySelector(".tab__carousel-container")) {
   let prvTabsPane = document.querySelector(".tab__carousel-container .prv-tab-pane");
   tabsSection(prvTabs, prvTabsPane);
 }
-
+ 
 // Footer Menu accordion
 footerAccordion();
