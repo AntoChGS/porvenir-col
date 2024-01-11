@@ -60,8 +60,8 @@ $container-max-widths-prv: (
   sm: 540px,
   md: 720px,
   lg: 1100px,
-  xl: 1252px,
-  xxl: 1254px
+  xl: 1262px,
+  xxl: 1264px
 ) !default;
 // scss-docs-end container-max-widths-prv
 
@@ -73,7 +73,7 @@ $container-max-widths-prv: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width-prv:           1.875rem !default;
+$grid-gutter-width-prv:           2.5rem !default;
 $grid-row-columns:            6 !default;
 
 // Container padding

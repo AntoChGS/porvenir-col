@@ -656,9 +656,9 @@ if (elemDataLayer) {
 directAccess();
 
 // Tabs Section
-if (document.querySelector(".prv-tabs-container")) {
-  let prvTabs = document.querySelector(".prv-tabs-container");
-  let prvTabsPane = document.querySelector(".prv-tabs-container .prv-tab-pane");
+if (document.querySelector(".tab__carousel-container")) {
+  let prvTabs = document.querySelector(".tab__carousel-container");
+  let prvTabsPane = document.querySelector(".tab__carousel-container .prv-tab-pane");
   tabsSection(prvTabs, prvTabsPane);
 }
 
