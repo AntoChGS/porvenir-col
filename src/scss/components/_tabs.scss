@@ -110,6 +110,7 @@
         position: relative;
         border-radius: 24px;
         overflow: hidden;
+
         .prv {
             &-tab {
                 &-horizontal {
@@ -120,6 +121,7 @@
 
                 &-content {
                     background-color: var(--color-yellow-80);
+
                     >.prv-tab-pane {
                         padding: 16px;
 
@@ -146,6 +148,11 @@
                             &.active {
                                 color: var(--color-orange-300);
                                 background-color: var(--color-yellow-80);
+
+                                &:focus,
+                                >*:focus {
+                                    background-color: var(--color-yellow-80);
+                                }
                             }
                         }
                     }
