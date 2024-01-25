@@ -1,4 +1,12 @@
 .prv-card-carousel-tpl {
+
+    .cards-swiper-01,
+    .cards-swiper-05 {
+        .swiper-slide {
+            padding: 0 5px;
+        }
+    }
+
     &.prv-style-1 {
         .card-carousel-row {
             display: flex;
@@ -70,14 +78,6 @@
                 &:last-child {
                     margin-bottom: 0;
                 }
-            }
-        }
-    }
-
-    &.prv-style-3 {
-        .cards-swiper-01 {
-            .swiper-slide {
-                padding: 0 5px;
             }
         }
     }
