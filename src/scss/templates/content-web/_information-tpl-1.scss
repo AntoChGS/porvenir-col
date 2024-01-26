@@ -1,0 +1,48 @@
+.pvr-information-tpl {
+    position: relative;
+
+    &.prv-style-2 {
+        .information {
+            &__title {
+                font-size: 20px;
+
+                @media (min-width: 768px) {
+                    font-size: 24px;
+                }
+            }
+
+            &__picture {
+                margin-bottom: 24px;
+
+                @media (min-width: 768px) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+
+    .information {
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__subtitle {
+            font-family: var(--fontBanda);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    }
+
+    picture {
+        display: block;
+    }
+
+    img {
+        border-radius: 16px;
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

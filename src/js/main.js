@@ -108,23 +108,23 @@ function showMenuHamburguer() {
     if (element.childNodes[3]) {
       let childrenMenu = element.children[1].querySelectorAll('.submenu--item');
       childrenMenu.forEach(el => {
-          el.querySelector('.sub-link').addEventListener('click', () => {
-              document.querySelector('body').removeAttribute('style');
-          });
+        el.querySelector('.sub-link').addEventListener('click', () => {
+          document.querySelector('body').removeAttribute('style');
+        });
       });
     }
   });
 }
 
 //Scroll Header
-function scrollFunction(){
+function scrollFunction() {
   window.onscroll = () => {
     scroll_position = window.scrollY;
-    if(scroll_position >= 45){
+    if (scroll_position >= 45) {
       document.querySelector('.pvr__header').classList.add('scroll--head');
-    }else{
+    } else {
       document.querySelector('.pvr__header').classList.remove('scroll--head');
-    }	
+    }
   };
 }
 
@@ -163,27 +163,27 @@ function accordionToggle(element) {
 }
 // -- Toggle Panels
 function toggle(e) {
-    e.preventDefault();
-    let component = this.parentNode.parentNode;
-    let tab = this;
-    let panel = tab.nextElementSibling;
-    if (component.dataset.multiselect == "false") {
-      let active = component.getElementsByClassName("accordion__tab--active")[0];
-      tab.classList.toggle("accordion__tab--active");
-      if (active?.nextElementSibling) {
-        active.classList.remove("accordion__tab--active");
-        active.nextElementSibling.style.height = 0;
-        // tab.setAttribute("aria-expanded", "false");
-      }
-    } else tab.classList.toggle("accordion__tab--active");
-    // Set the aria-expanded
-    if (tab.classList.contains("accordion__tab--active") && panel) {
-      panel.style.height = panel.dataset.height;
-      // this.setAttribute("aria-expanded", "true");
-    } else if (panel) {
-      panel.style.height = 0;
-      // this.setAttribute("aria-expanded", "false");
+  e.preventDefault();
+  let component = this.parentNode.parentNode;
+  let tab = this;
+  let panel = tab.nextElementSibling;
+  if (component.dataset.multiselect == "false") {
+    let active = component.getElementsByClassName("accordion__tab--active")[0];
+    tab.classList.toggle("accordion__tab--active");
+    if (active?.nextElementSibling) {
+      active.classList.remove("accordion__tab--active");
+      active.nextElementSibling.style.height = 0;
+      // tab.setAttribute("aria-expanded", "false");
     }
+  } else tab.classList.toggle("accordion__tab--active");
+  // Set the aria-expanded
+  if (tab.classList.contains("accordion__tab--active") && panel) {
+    panel.style.height = panel.dataset.height;
+    // this.setAttribute("aria-expanded", "true");
+  } else if (panel) {
+    panel.style.height = 0;
+    // this.setAttribute("aria-expanded", "false");
+  }
 }
 // -- Get the natural height of the element
 function getHeight(tab, panel) {
@@ -195,7 +195,6 @@ function getHeight(tab, panel) {
 
 //Swiper Sliders Function
 function swiperLoops() {
-  let swiperTestimonials, swiperCards, swiperCards01, swiperCards05, swiperCards07;
   // Section Testimonials Carousel
   if (document.querySelector(".testimonials-tpl-swiper")) {
     swiperTestimonials = new Swiper(".testimonials-tpl-swiper .swiper", {
@@ -261,101 +260,138 @@ function swiperLoops() {
     });
   }
 
-  // Section Interest Carousel
+  // Section Card Carousel 01
   if (document.querySelector(".cards-swiper-01")) {
-    swiperCards01 = new Swiper(".cards-swiper-01 .swiper", {
-      slidesPerView: 1,
-      spaceBetween: 15,
-      navigation: {
-        nextEl: ".cards-swiper-01 .swiper .swiper-button-next",
-        prevEl: ".cards-swiper-01 .swiper .swiper-button-prev",
-      },
-      pagination: {
-        el: ".cards-swiper-01 .swiper .swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 30,
+    const buildSwpCardC01 = swpCardC01 => {
+      const swpCardC01Id = "#" + swpCardC01.id;
+      const dataXsCardC01 = swpCardC01.getAttribute("data-slide-xs");
+      const dataSmCardC01 = swpCardC01.getAttribute("data-slide-sm");
+      const dataMdCardC01 = swpCardC01.getAttribute("data-slide-md");
+      const dataLgCardC01 = swpCardC01.getAttribute("data-slide-lg");
+
+      return new Swiper(swpCardC01Id + " .swiper", {
+        slidesPerView: dataXsCardC01,
+        spaceBetween: 15,
+        navigation: {
+          nextEl: swpCardC01Id + " .swiper .swiper-button-next",
+          prevEl: swpCardC01Id + " .swiper .swiper-button-prev",
         },
-        1024: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 50,
+        pagination: {
+          el: swpCardC01Id + " .swiper-pagination",
+          clickable: true,
         },
-        1200: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 70,
+        breakpoints: {
+          640: {
+            slidesPerView: dataSmCardC01,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: dataMdCardC01,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: dataLgCardC01,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
         },
-      },
-    });
+      });
+    }
+
+    const allSlidersCardC01 = document.querySelectorAll('.cards-swiper-01');
+
+    allSlidersCardC01.forEach(sliderCardC01 => buildSwpCardC01(sliderCardC01));
   }
 
-  // Section Carousel Variante 05
+  // Section Card Carousel 05
   if (document.querySelector(".cards-swiper-05")) {
-    swiperCards05 = new Swiper(".cards-swiper-05 .swiper", {
-      slidesPerView: 3,
-      spaceBetween: 6,
-      navigation: {
-        nextEl: ".cards-swiper-05 .swiper .swiper-button-next",
-        prevEl: ".cards-swiper-05 .swiper .swiper-button-prev",
-      },
-      pagination: {
-        el: ".cards-swiper-05 .swiper .swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 10,
+    const buildSwpCardC05 = swpCardC05 => {
+      const swpCardC05Id = "#" + swpCardC05.id;
+      const dataXsCardC05 = swpCardC05.getAttribute("data-slide-xs");
+      const dataSmCardC05 = swpCardC05.getAttribute("data-slide-sm");
+      const dataMdCardC05 = swpCardC05.getAttribute("data-slide-md");
+      const dataLgCardC05 = swpCardC05.getAttribute("data-slide-lg");
+
+      return new Swiper(swpCardC05Id + " .swiper", {
+        slidesPerView: dataXsCardC05,
+        spaceBetween: 6,
+        navigation: {
+          nextEl: swpCardC05Id + " .swiper .swiper-button-next",
+          prevEl: swpCardC05Id + " .swiper .swiper-button-prev",
         },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 10,
+        pagination: {
+          el: swpCardC05Id + " .swiper-pagination",
+          clickable: true,
         },
-        1200: {
-          slidesPerView: 5,
-          spaceBetween: 14,
+        breakpoints: {
+          640: {
+            slidesPerView: dataSmCardC05,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: dataMdCardC05,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: dataLgCardC05,
+            spaceBetween: 15,
+          },
         },
-      },
-    });
+      });
+    }
+
+    const allSlidersCardC05 = document.querySelectorAll('.cards-swiper-05');
+
+    allSlidersCardC05.forEach(sliderCardC05 => buildSwpCardC05(sliderCardC05));
   }
 
-  // Section Interest Carousel
+  // Section Card Carousel 07
   if (document.querySelector(".cards-swiper-07")) {
-    swiperCards07 = new Swiper(".cards-swiper-07 .swiper", {
-      slidesPerView: 1,
-      spaceBetween: 15,
-      navigation: {
-        nextEl: ".cards-swiper-07 .swiper .swiper-button-next",
-        prevEl: ".cards-swiper-07 .swiper .swiper-button-prev",
-      },
-      pagination: {
-        el: ".cards-swiper-07 .swiper .swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 30,
+    const buildSwpCardC07 = swpCardC07 => {
+      const swpCardC07Id = "#" + swpCardC07.id;
+      const dataXsCardC07 = swpCardC07.getAttribute("data-slide-xs");
+      const dataSmCardC07 = swpCardC07.getAttribute("data-slide-sm");
+      const dataMdCardC07 = swpCardC07.getAttribute("data-slide-md");
+      const dataLgCardC07 = swpCardC07.getAttribute("data-slide-lg");
+
+      return new Swiper(swpCardC07Id + " .swiper", {
+        slidesPerView: dataXsCardC07,
+        spaceBetween: 15,
+        navigation: {
+          nextEl: swpCardC07Id + " .swiper .swiper-button-next",
+          prevEl: swpCardC07Id + " .swiper .swiper-button-prev",
         },
-        1024: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 50,
+        pagination: {
+          el: swpCardC07Id + " .swiper-pagination",
+          clickable: true,
         },
-        1200: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 70,
+        breakpoints: {
+          640: {
+            slidesPerView: dataSmCardC07,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: dataMdCardC07,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: dataLgCardC07,
+            slidesPerGroup: 2,
+            spaceBetween: 15,
+          },
         },
-      },
-    });
+      });
+    }
+
+    const allSlidersCardC07 = document.querySelectorAll('.cards-swiper-07');
+
+    allSlidersCardC07.forEach(sliderCardC07 => buildSwpCardC07(sliderCardC07));
   }
+
   //return { swiperTestimonials, swiperCards, swiperCards01 }
 }
 
@@ -363,8 +399,8 @@ function swiperLoops() {
 function tabsSection(element1, element2) {
   const prvTabsId = "#" + element1.id;
   const prvTabsPaneId = element2.getAttribute("data-fragment-namespace");
-  var fragmentElement = document.querySelector(prvTabsId);
-  var fragmentNamespace = prvTabsPaneId;
+  const fragmentElement = document.querySelector(prvTabsId);
+  const fragmentNamespace = prvTabsPaneId;
 
   const tabItems = [].slice.call(
     fragmentElement.querySelectorAll(
@@ -524,7 +560,7 @@ function widthChangeCallback() {
     document.querySelector(".navigation--action .btn--menu").classList.remove("open");
     document.querySelector(".nav__menu").removeAttribute("style");
     document.querySelector(".nav__menu .menu--list").classList.remove("accordion");
-    if (!document.querySelector(".nav__menu .menu--list").classList.contains('accordion')){
+    if (!document.querySelector(".nav__menu .menu--list").classList.contains('accordion')) {
       document.querySelectorAll(".menu--list .has__child").forEach((element) => {
         element.querySelector('.link').classList.remove('accordion__tab');
         element.querySelector('.submenu--list').classList.remove('accordion__panel');
@@ -620,13 +656,11 @@ if (elemDataLayer) {
 directAccess();
 
 // Tabs Section
-if (document.querySelector(".prv-tabs-container")) {
-  let prvTabs = document.querySelector(".prv-tabs-container");
-  let prvTabsPane = document.querySelector(
-    ".prv-tabs-container .prv-tab-pane"
-  );
+if (document.querySelector(".tab__carousel-container")) {
+  let prvTabs = document.querySelector(".tab__carousel-container");
+  let prvTabsPane = document.querySelector(".tab__carousel-container .prv-tab-pane");
   tabsSection(prvTabs, prvTabsPane);
 }
-
+ 
 // Footer Menu accordion
 footerAccordion();
