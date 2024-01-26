@@ -26,30 +26,27 @@
 .pvr__afiliarte
     .container
         .row.no-gutters
-            .col-md-4.order-md-2
-                .pvr-menu_navigation
-                    .pvr-menu_navigation--content
-                        ul.pvr-menu_navigation--list
-                            li.pvr-menu_navigation--item
-                                .pvr-menu_navigation--item--content
-                                    h2.title Aquí encontrarás
-                                    ul.btn__list
-                                        li
-                                            a(href="#"  data-navigatelink="historias").btn__navigatelink.btn__item#anchor1Link
-                                                span.btn__item--info
-                                                    span.btn__item--number 01
-                                                    span.btn__item--text Button
-                                        li
-                                            a(href="#" data-navigatelink="preguntas" ).btn__navigatelink.btn__item
-                                                span.btn__item--info
-                                                    span.btn__item--number 02
-                                                    span.btn__item--text Button
-                                        li
-                                            a(href="#" data-navigatelink="intereses" ).btn__navigatelink.btn__item
-                                                span.btn__item--info
-                                                    span.btn__item--number 03
-                                                    span.btn__item--text Button                   
-            .col-md-8.order-md-1
+            .col-lg-4.order-lg-2
+                .pvr__hub-navigation
+                    .content
+                        h2.title Aquí encontrarás
+                        ul.navigation__list
+                            li.navigation__item
+                                a(href="#"  data-navigatelink="historias" class="link")
+                                    span.item--info
+                                        span.item--number 01
+                                        span.item--text Button
+                            li.navigation__item
+                                a(href="#" data-navigatelink="preguntas" class="link")
+                                    span.item--info
+                                        span.item--number 02
+                                        span.item--text Button
+                            li.navigation__item
+                                a(href="#" data-navigatelink="intereses" class="link")
+                                    span.item--info
+                                        span.item--number 03
+                                        span.item--text Button                   
+            .col-lg-8.order-lg-1
                 .pvr__information
                     .container 
                         h2.title Proceso de afiliación
