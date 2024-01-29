@@ -271,7 +271,7 @@ function swiperLoops() {
 
       return new Swiper(swpCardC01Id + " .swiper", {
         slidesPerView: dataXsCardC01,
-        spaceBetween: 15,
+        spaceBetween: 5,
         navigation: {
           nextEl: swpCardC01Id + " .swiper .swiper-button-next",
           prevEl: swpCardC01Id + " .swiper .swiper-button-prev",
@@ -284,17 +284,17 @@ function swiperLoops() {
           640: {
             slidesPerView: dataSmCardC01,
             slidesPerGroup: 2,
-            spaceBetween: 15,
+            spaceBetween: 5,
           },
           1024: {
             slidesPerView: dataMdCardC01,
             slidesPerGroup: 2,
-            spaceBetween: 15,
+            spaceBetween: 5,
           },
           1200: {
             slidesPerView: dataLgCardC01,
             slidesPerGroup: 2,
-            spaceBetween: 15,
+            spaceBetween: 5,
           },
         },
       });
@@ -316,7 +316,7 @@ function swiperLoops() {
 
       return new Swiper(swpCardC05Id + " .swiper", {
         slidesPerView: dataXsCardC05,
-        spaceBetween: 6,
+        spaceBetween: 0,
         navigation: {
           nextEl: swpCardC05Id + " .swiper .swiper-button-next",
           prevEl: swpCardC05Id + " .swiper .swiper-button-prev",
@@ -328,15 +328,15 @@ function swiperLoops() {
         breakpoints: {
           640: {
             slidesPerView: dataSmCardC05,
-            spaceBetween: 15,
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: dataMdCardC05,
-            spaceBetween: 15,
+            spaceBetween: 10,
           },
           1200: {
             slidesPerView: dataLgCardC05,
-            spaceBetween: 15,
+            spaceBetween: 10,
           },
         },
       });
