@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Web Design</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="description" content="{page-description}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link(rel='apple-touch-icon' sizes="180x180" href='images/favicon/apple-touch-icon.png')-->
+        <!--link(rel='icon' type='image/png' sizes="32x32" href='images/favicon/favicon-32x32.png')-->
+        <!--link(rel='icon' type='image/png' sizes="16x16" href='images/favicon/favicon-16x16.png')-->
+        <!--link(rel='manifest' href='images/favicon/manifest.json')-->
+        <!--link(rel='mask-icon' href='images/favicon/safari-pinned-tab.svg' color='#4eb500')-->
+        <!--link(rel='shortcut icon' href='images/favicon/favicon.ico')-->
+        <!--meta(name='msapplication-TileColor' content='#4eb500')-->
+        <!--meta(name='msapplication-config' content='images/favicon/browserconfig.xml')-->
+        <!--meta(name='theme-color' content='#0044bd')-->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="body">
+        <h1 class="visually--hidden">Porvenir Colombia</h1>
+        <header class="pvr__header"> 
+            <div class="header--quicklinks">
+                <div class="dropdown">
+                    <button class="dropdown--toggle" href="/personas"> <span class="text">Personas </span><span class="icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-chevron-down">              </use>
+                            </svg></span></button>
+                    <ul class="dropdown--menu" id="quickLinks">
+                        <li class="dropdown--item active"><a class="link" href="/inicio.html" target="_blank" rel="noopener noreferrer">Personas</a></li>
+                        <li class="dropdown--item"><a class="link" href="/empresas.html" target="_blank" rel="noopener noreferrer">Empresas</a></li>
+                        <li class="dropdown--item"><a class="link" href="/prensionados.html" target="_blank" rel="noopener noreferrer">Pensionados</a></li>
+                        <li class="dropdown--item offset--item"><a class="link" href="/servicios.html" target="_blank" rel="noopener noreferrer">Servicios en línea</a></li>
+                        <li class="dropdown--item"><a class="link" href="/certificados.html" target="_blank" rel="noopener noreferrer">Certificados y extractos </a></li>
+                        <li class="dropdown--item"><a class="link" href="/ayuda.html" target="_blank" rel="noopener noreferrer">Ayuda </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header--navigation">
+                <div class="content">
+                    <div class="brand"> <a class="brand__link" href="/"> 
+                            <picture> 
+                                <source media="(min-width: 992px)" srcset="images/header/brand-desktop.png"><img class="image" src="images/header/brand-mobile.png" alt="Logo Porvenir" srcset="images/header/brand-mobile.png">
+                            </picture></a></div>
+                    <div class="navigation">
+                        <div class="navigation--desktop">                 </div>
+                        <div class="navigation--login"><a class="btn--login" href="#"> <span class="text">Iniciar sesión </span><span class="icon">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-arrow-right"></use>
+                                    </svg></span></a></div>
+                        <div class="navigation--action">
+                            <button class="btn--search" type="button"> <span class="text">buscar </span><span class="icon">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-search"> </use>
+                                    </svg></span></button>
+                            <button class="btn--menu" type="button" id="btnNav"> <span class="text">Menu</span><span class="icon-left"></span><span class="icon-right"></span></button>
+                        </div>
+                    </div>
+                    <div class="navigation--menu">  </div>
+                </div>
+            </div>
+            <div class="global__navigation">     
+                <nav class="nav__menu" id="navigation">
+                    <ul class="menu--list" data-multiselect="false">
+                        <li class="menu--item has__child"><a class="link" href="/pensiones-obligatorias"> <span class="icon">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-piggy-bank"> </use>
+                                    </svg></span><span class="text">Pensiones Obligatorias</span><span class="icon icon--toggle">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                    </svg></span></a>
+                            <ul class="submenu--list">
+                                <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Servicios en línea</a></li>
+                                <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Articulo de interés</a></li>
+                                <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Preguntas frecuentes</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu--item has__child"><a class="link" href="/cesantias"> <span class="icon">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-home"> </use>
+                                    </svg></span><span class="text">Cesantías</span><span class="icon icon--toggle">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                    </svg></span></a>
+                            <ul class="submenu--list">
+                                <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Servicios en línea</a></li>
+                                <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Articulo de interés</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu--item has__child"><a class="link" href="pensiones voluntarias"> <span class="icon">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-coins"> </use>
+                                    </svg></span><span class="text">Pensiones Voluntarias</span><span class="icon icon--toggle">
+                                    <svg>
+                                        <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                    </svg></span></a>
+                            <ul class="submenu--list">
+                                <li class="submenu--item"> <a class="sub-link" href="/" target="_blank" rel="noopener noreferrer">Servicios en línea       </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navigation--search">
+                    <form action="" method="get"> 
+                        <input class="search__input" type="search" id="search" name="q">
+                        <label class="search__label" for="search">Buscar</label>
+                        <button class="search__btn" type="submit" value="Buscar"> <span class="text">buscar</span><span class="icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-search"> </use>
+                                </svg></span></button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main role="main">
+            <div class="prv-tab-frg-section prv-bg-white">
+                <div class="container"> 
+                    <div class="prv-title-content">
+                        <h2 class="prv-title prv-txt-green-700">Tabs 6</h2>
+                        <p class="prv-subtitle">Lorem ipsum</p>
+                    </div>
+                    <div class="prv-tabs prv-style-1 tab__carousel-container" id="fragment-2-aywy">
+                        <div class="prv-tab-collapse prv-tab-horizontal">
+                            <ul class="prv-nav-tab" role="tablist"> 
+                                <li class="tab__item" role="presentation">
+                                    <button class="tab__link active" type="button" aria-controls="tueTabPanel1" aria-selected="true" data-fragment-namespace="aywy" id="tab1" role="tab"> <span>Porvenir</span></button>
+                                </li>
+                                <li class="tab__item" role="presentation">
+                                    <button class="tab__link" type="button" aria-controls="tueTabPanel2" aria-selected="false" data-fragment-namespace="aywy" id="tab2" role="tab"> <span>Fondo Público</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="prv-tab-content">
+                            <div class="prv-tab-pane" aria-labelledby="tab1" data-fragment-namespace="aywy" id="tueTabPanel1" role="tabpanel" tabindex="0">
+                                <div class="prv-cards-tpl prv-style-1 prv-bg-transparent"> 
+                                    <div class="container-full">
+                                        <div class="prv-style-3__body">
+                                            <ul class="prv-style-3__body--list">
+                                                <li class="prv-style-3__body--item">
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--left"> 
+                                                        <p class="text">Semanas de cotización</p>
+                                                    </div>
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--right"> 
+                                                        <p class="text"><span>1.150 </span><br><b>(23 años)</b></p>
+                                                    </div>
+                                                </li>
+                                                <li class="prv-style-3__body--item">
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--left"> 
+                                                        <p class="text">¿El ahorro pensional es heredable?</p>
+                                                    </div>
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--right"> 
+                                                        <p class="text">Sí. El ahorro pensional lo pueden heredar tus familiares.</p>
+                                                    </div>
+                                                </li>
+                                                <li class="prv-style-3__body--item">
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--left"> 
+                                                        <p class="text">¿Me devuelven mi dinero con rendimientos si no me pensiono?</p>
+                                                    </div>
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--right"> 
+                                                        <p class="text">Sí. Si no te pensionas te devolvemos tu dinero con rendimientos.</p>
+                                                    </div>
+                                                </li>
+                                                <li class="prv-style-3__body--item">
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--left"> 
+                                                        <p class="text">¿La pensión es vitalicia?</p>
+                                                    </div>
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--right"> 
+                                                        <p class="text">Sí. Tu pensión es para toda la vida.</p>
+                                                    </div>
+                                                </li>
+                                                <li class="prv-style-3__body--item">
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--left"> 
+                                                        <p class="text">¿Puedo perder mi dinero?</p>
+                                                    </div>
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--right"> 
+                                                        <p class="text">En Porvenir no perderás tu dinero.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prv-tab-pane prv-tab-pane--none" aria-labelledby="tab2" data-fragment-namespace="aywy" id="tueTabPanel2" role="tabpanel" tabindex="0">
+                                <div class="prv-cards-tpl prv-style-1 prv-bg-transparent"> 
+                                    <div class="container-full">
+                                        <div class="prv-style-3__body">
+                                            <ul class="prv-style-3__body--list">
+                                                <li class="prv-style-3__body--item">
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--left"> 
+                                                        <p class="text">Item</p>
+                                                    </div>
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--right"> 
+                                                        <p class="text">Item</p>
+                                                    </div>
+                                                </li>
+                                                <li class="prv-style-3__body--item">
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--left"> 
+                                                        <p class="text">Item</p>
+                                                    </div>
+                                                    <div class="prv-style-3__body--card prv-style-3__body--card--right"> 
+                                                        <p class="text">Item</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="prv-footer">
+            <div class="footer__nav">
+                <div class="container">
+                    <div class="nav__wrapper">
+                        <div class="nav__brand">
+                            <div class="footer__logo"><a class="logo__link" href="https://www.porvenir.com.co/" title="Porvenir"> 
+                                    <picture class="logo__picture"> 
+                                        <source media="(min-width: 768px)" srcset="images/logo/logo-porvenir-blanco.png"><img src="images/logo/logo-porvenir-blanco.png" alt="logo porvenir" width="113" heigh="87">
+                                    </picture></a></div>
+                            <div class="footer__social">
+                                <p class="menu__title">Síguenos en:</p>
+                                <ul class="social__list"> 
+                                    <li><a href="#" target="_blank" rel="noopener noreferrer" title="Twitter"><span class="icon">
+                                                <svg>
+                                                    <use xlink:href="images/icons/icons.svg#icon-twitter"> </use>
+                                                </svg></span></a></li>
+                                    <li><a href="#" target="_blank" rel="noopener noreferrer" title="Facebook"><span class="icon">
+                                                <svg>
+                                                    <use xlink:href="images/icons/icons.svg#icon-facebook"></use>
+                                                </svg></span></a></li>
+                                    <li><a href="#" target="_blank" rel="noopener noreferrer" title="Instagram"><span class="icon">
+                                                <svg>
+                                                    <use xlink:href="images/icons/icons.svg#icon-instagram"></use>
+                                                </svg></span></a></li>
+                                    <li><a href="#" target="_blank" rel="noopener noreferrer" title="Youtube"><span class="icon">
+                                                <svg>
+                                                    <use xlink:href="images/icons/icons.svg#icon-youtube"></use>
+                                                </svg></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav__menu">
+                            <div class="nav__wrapper">
+                                <div class="nav__column">
+                                    <div class="footer__menu menu-accordion"> 
+                                        <p class="menu-accordion__header menu__title"> 
+                                            <button class="menu-accordion__button">Documentación<span class="icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-arrow-down"></use>
+                                                    </svg></span></button>
+                                        </p>
+                                        <div class="menu-accordion__collapse">
+                                            <div class="menu-accordion__body">
+                                                <ul class="menu__links"> 
+                                                    <li><a href="#">Ir a todos los documentos</a></li>
+                                                    <li><a href="#">Comisiones de Administración</a></li>
+                                                    <li><a href="#">Consulta de solicitudes y quejas</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="menu-accordion__header menu__title"> 
+                                            <button class="menu-accordion__button">Noticias<span class="icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-arrow-down"></use>
+                                                    </svg></span></button>
+                                        </p>
+                                        <div class="menu-accordion__collapse">
+                                            <div class="menu-accordion__body">
+                                                <ul class="menu__links"> 
+                                                    <li><a href="#">Todas las noticias</a></li>
+                                                    <li><a href="#">Comunicados de prensa</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__column"> 
+                                    <div class="footer__menu menu-accordion"> 
+                                        <p class="menu-accordion__header menu__title"> 
+                                            <button class="menu-accordion__button" type="button">Corporativo<span class="icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-arrow-down"></use>
+                                                    </svg></span></button>
+                                        </p>
+                                        <div class="menu-accordion__collapse">
+                                            <div class="menu-accordion__body">
+                                                <ul class="menu__links"> 
+                                                    <li><a href="#">Mapa del sitio</a></li>
+                                                    <li><a href="#">Sobre nosotros</a></li>
+                                                    <li><a href="#">Estados financieros</a></li>
+                                                    <li><a href="#">Reconocimientos</a></li>
+                                                    <li><a href="#">Inclusión a la diversidad y a los afiliados con discapacidades</a></li>
+                                                    <li><a href="#">Sostenibilidad</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__column"> 
+                                    <div class="footer__menu menu-accordion"> 
+                                        <p class="menu-accordion__header menu__title"> 
+                                            <button class="menu-accordion__button" type="button">Legal<span class="icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-arrow-down"></use>
+                                                    </svg></span></button>
+                                        </p>
+                                        <div class="menu-accordion__collapse">
+                                            <div class="menu-accordion__body">
+                                                <ul class="menu__links"> 
+                                                    <li><a href="#">Línea ética</a></li>
+                                                    <li><a href="#">Transparencia y acceso a la información</a></li>
+                                                    <li><a href="#">Protección de datos personales</a></li>
+                                                    <li><a href="#">Sistema de atención al consumidor</a></li>
+                                                    <li><a href="#">Defensor del consumidor financiero</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__column">
+                                    <div class="footer__menu menu-accordion">
+                                        <p class="menu-accordion__header menu__title"> 
+                                            <button class="menu-accordion__button" type="button">Productos<span class="icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-arrow-down"></use>
+                                                    </svg></span></button>
+                                        </p>
+                                        <div class="menu-accordion__collapse">
+                                            <div class="menu-accordion__body">
+                                                <ul class="menu__links"> 
+                                                    <li><a href="#">Pensiones Obligatorias</a></li>
+                                                    <li><a href="#">Rentabilidad y fichas Pensiones Obligatorias</a></li>
+                                                    <li><a href="#">Cesantías</a></li>
+                                                    <li><a href="#">Rentabilidad y fichas Cesantías</a></li>
+                                                    <li><a href="#">Pensiones Voluntarias</a></li>
+                                                    <li><a href="#">Rentabilidad y fichas Pensiones Voluntarias</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <div class="copyright__text"> 
+                        <p>Para cualquier contacto con nuestra entidad escríbenos a <a href="https://contacto.porvenir.com.co/" target="_blank" rel="noopener noreferrer">Ventanilla Virtual</a> Para notificaciones judiciales, escríbenos a <a href="mailto:notificacionesjudiciales@porvenir.com.co">notificacionesjudiciales@porvenir.com.co</a> o consulta información en nuestra página haciendo clic <a href="https://www.porvenir.com.co/web/personas/notificaciones-judiciales" target="_blank" rel="noopener noreferrer">aquí</a> Cuentas con un Defensor del Consumidor Financiero, Dra. Ana María Giraldo Rincón ubicado en la carrera 10 # 97A-13 Oficina 502 en Bogotá, Teléfono: 601 610 81 64, <a href="mailto:defensoriaporvenir@legalcrc.com">defensoriaporvenir@legalcrc.com</a>, quien dará trámite a tu queja de forma objetiva y gratuita. © 2021, Todos los derechos reservados por Porvenir S.A</p>
+                    </div>
+                    <div class="footer__groups">
+                        <div class="groups__item"><a class="groups__link" href="https://www.grupoaval.com/" target="_blank" rel="noopener noreferrer"> 
+                                <picture class="groups__image"> 
+                                    <source media="(min-width: 768px)" srcset="images/logo/logo-grupo-aval.png"><img src="images/logo/logo-grupo-aval-mobile.png" alt="logo grupo aval" width="164" heigh="33">
+                                </picture></a></div>
+                        <div class="groups__item"><a class="groups__link" href="#" target="_blank" rel="noopener noreferrer"> 
+                                <picture class="groups__image"> 
+                                    <source media="(min-width: 768px)" srcset="images/logo/logo-CCCE-blanco.png"><img src="images/logo/logo-CCCE-blanco-mobile.png" alt="logo ccce" width="164" heigh="53">
+                                </picture></a></div>
+                        <div class="groups__item"><a class="groups__link" href="https://www.superfinanciera.gov.co/" target="_blank" rel="noopener noreferrer"> 
+                                <picture class="groups__image"> 
+                                    <source media="(min-width: 768px)" srcset="images/logo/logo-vigilado-superintendencia-financiera-de-colombia-blanco.png"><img src="images/logo/logo-vigilado-superintendencia-financiera-de-colombia-blanco-mobile.png" alt="logo vigilado superintendencia financiera de colombia" width="304" heigh="21">
+                                </picture></a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
