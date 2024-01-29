@@ -3,7 +3,8 @@
   max-width: 100%;
   z-index: 8;
   border-radius: 26px;
-  box-shadow: -2px -2px 0px 0px rgba(0, 0, 0, 0.04), 2px 2px 4px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: -2px -2px 0px 0px rgba(0, 0, 0, 0.04),
+    2px 2px 4px 0px rgba(0, 0, 0, 0.08);
   padding: 29px 20px;
 
   @media (min-width: 992px) {
@@ -66,29 +67,23 @@
     }
 
     .link {
-      cursor: pointer;
-      border: none;
-      background-color: #ffffff;
-      border-bottom: 0.5px solid #ababab;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
       width: 100%;
-      padding: 12px 2px;
+      padding: 12px 0px;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-white);
+      border: none;
       color: #000;
+      cursor: pointer;
       text-decoration: none;
+      border-bottom: 0.5px solid #ababab;
 
       &:hover {
-        background: #faefe8;
+        background: var(--color-yellow-80);
       }
 
       .item {
-        &--info {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
         &--number {
           display: flex;
           justify-content: center;
@@ -96,16 +91,12 @@
           font-size: 14px;
           font-weight: 700;
           line-height: 1.1;
-          width: 29px;
+          width: 100%;
+          max-width: 30px;
           height: 21px;
           background-color: #fdde96;
           color: #000000;
-          margin-right: 8px;
           border-radius: 30px;
-
-          @media (min-width: 1222px) {
-            margin-right: 8px;
-          }
         }
 
         &--text {
