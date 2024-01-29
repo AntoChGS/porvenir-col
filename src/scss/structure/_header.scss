@@ -1,24 +1,29 @@
 .pvr {
   &__header {
-    width: 100%;      
+    width: 100%;
     position: relative;
     height: 102px;
+
     @media (min-width: 992px) {
       height: 155px;
+
       &:hover,
       &:focus,
       &:focus-within {
         z-index: 9;
       }
     }
+
     .header {
       &--quicklinks {
         position: relative;
         margin: 0;
-        z-index: 1;  
+        z-index: 1;
+
         @media (min-width: 768px) {
           background: var(--color-yellow);
         }
+
         .dropdown {
           @media (min-width: 768px) {
             display: flex;
@@ -87,8 +92,10 @@
           }
 
           &--menu {
-            margin: 0;
             position: absolute;
+            margin: 0;
+            padding: 0;
+            list-style: none;
             background: var(--color-white);
             width: 100%;
             z-index: 1;
@@ -144,10 +151,12 @@
                   background-color: var(--color-white-300);
                 }
               }
-              @media (min-width: 768px){
+
+              @media (min-width: 768px) {
                 color: var(--color-black-80);
                 padding: 0 16px;
               }
+
               @media (min-width: 992px) {
                 height: 49px;
                 font-size: 16px;
@@ -171,6 +180,7 @@
         position: relative;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
         background: var(--color-white);
+
         @media (min-width: 992px) {
           background: var(--color-white-300);
         }
@@ -182,6 +192,7 @@
           align-items: center;
           justify-content: space-between;
           gap: 16px;
+
           @media (min-width: 992px) {
             padding: 0 20px;
             max-width: 1366px;
@@ -229,6 +240,7 @@
           width: 100%;
           display: flex;
           justify-content: space-between;
+
           @media (min-width: 992px) {
             border-radius: 12px 12px 64px 12px;
             background: var(--color-white-60);
@@ -240,8 +252,10 @@
             gap: 16px;
             padding-left: 32px;
           }
+
           &--search {
             display: none;
+
             @media (min-width: 992px) {
               position: relative;
               flex-direction: column;
@@ -281,7 +295,7 @@
                 flex-shrink: 0;
 
                 &:focus {
-                  & + .search__label {
+                  &+.search__label {
                     display: none;
                   }
                 }
@@ -366,6 +380,7 @@
                 font-size: 20px;
                 padding: 16px 20px;
               }
+
               .icon {
                 @media (min-width: 992px) {
                   width: 24px;
@@ -375,12 +390,15 @@
               }
             }
           }
-          &--desktop{
+
+          &--desktop {
             display: none;
-            @media (min-width: 992px){
-                display: block;
+
+            @media (min-width: 992px) {
+              display: block;
             }
           }
+
           &--action {
             display: flex;
             align-items: center;
@@ -543,15 +561,18 @@
         }
       }
     }
-    &.scroll--head{
-      .header--navigation{
-        position:fixed;
-        top:0;
-        z-index:9
+
+    &.scroll--head {
+      .header--navigation {
+        position: fixed;
+        top: 0;
+        z-index: 9
       }
-      .header--navigation .navigation--menu{
+
+      .header--navigation .navigation--menu {
         top: 57px;
-        @media (min-width: 992px){
+
+        @media (min-width: 992px) {
           top: inherit;
         }
       }
@@ -567,7 +588,9 @@
 .nav__menu {
   .menu {
     &--list {
+      list-style: none;
       margin: 0;
+      padding: 0;
 
       @media (min-width: 992px) {
         width: 100%;
@@ -598,6 +621,7 @@
         line-height: normal;
         position: relative;
         text-decoration: none;
+
         @media (min-width: 992px) {
           justify-content: center;
           color: var(--color-black-80);
@@ -625,6 +649,7 @@
         .icon {
           font-size: 20px;
           width: 22px;
+
           img {
             filter: grayscale(100%);
           }
@@ -651,19 +676,22 @@
             transform: rotate(0deg);
           }
         }
-        &:focus{
+
+        &:focus {
           text-decoration: underline;
-          @media (min-width: 768px){
+
+          @media (min-width: 768px) {
             text-decoration: none;
           }
         }
       }
 
-      .accordion__tab--active + .accordion__panel {
+      .accordion__tab--active+.accordion__panel {
         height: auto;
         visibility: visible;
         transition-duration: 250ms, 0ms;
         transition-delay: 0ms, 0ms;
+
         .submenu--item {
           visibility: visible;
         }
@@ -677,6 +705,7 @@
         &:focus-within {
           .link {
             color: #3e6a27;
+
             .icon {
               img {
                 filter: grayscale(0);
@@ -697,9 +726,10 @@
           }
         }
       }
-      &.has__child{
-        @media (min-width: 992px){
-          .link{
+
+      &.has__child {
+        @media (min-width: 992px) {
+          .link {
             pointer-events: none;
           }
         }
@@ -709,6 +739,7 @@
 
   .submenu {
     &--list {
+      list-style: none;
       min-width: 262px;
       height: 0;
       visibility: hidden;
@@ -716,7 +747,8 @@
       transition: height, visibility;
       transition-duration: 250ms, 0ms;
       transition-delay: 0ms, 250ms;
-      transition-timing-function: ease-in, ease-in;      
+      transition-timing-function: ease-in, ease-in;
+
       @media (min-width: 992px) {
         position: absolute;
         visibility: hidden;
@@ -734,9 +766,11 @@
     &--item {
       width: 100%;
       visibility: hidden;
+
       @media (min-width: 992px) {
         visibility: inherit;
       }
+
       .sub-link {
         color: var(--color-gray-600);
         font-family: var(--fontNunito);
@@ -774,15 +808,18 @@
 }
 
 body.signed-in {
-  .pvr__header.scroll--head .header--navigation .navigation--menu{
+  .pvr__header.scroll--head .header--navigation .navigation--menu {
     top: 106px;
   }
+
   .pvr__header .header--navigation .navigation--menu {
     top: 150px;
   }
-  .pvr__header.scroll--head .header--navigation{
+
+  .pvr__header.scroll--head .header--navigation {
     top: 49px;
-    @media (min-width: 576px){
+
+    @media (min-width: 576px) {
       top: 57px;
     }
   }

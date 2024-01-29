@@ -140,9 +140,13 @@ strong {
     font-weight: 700;
 }
 
-ul {
-    padding: 0;
-    list-style-type: none;
+ol, ul {
+    padding-left: 2rem;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 img {
@@ -184,6 +188,7 @@ form {
 
 svg:not(:root) {
     overflow: hidden;
+    vertical-align: middle;
 }
 
 figure {
