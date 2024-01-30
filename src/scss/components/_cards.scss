@@ -179,6 +179,7 @@
                     height: auto;
                     max-width: 88px;
                     margin: 0 auto;
+
                     @media (min-width: 992px) {
                         max-width: 132px;
                     }
@@ -539,6 +540,8 @@
 
             &__list {
                 display: block;
+                padding: 0;
+                list-style: none;
 
                 .link-box {
                     cursor: pointer;
@@ -873,6 +876,96 @@
                             &:last-child {
                                 margin-bottom: 0;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.prv-style-8 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.08), -2px -2px 0px 0px rgba(0, 0, 0, 0.04);
+        padding: 0px 4px;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 320px;
+        height: 108px;
+        margin: 5px auto;
+
+        @media (min-width: 992px) {
+            padding: 5px 28px;
+            height: 172px;
+        }
+
+        &.prv-card--center {
+            .prv-card {
+                &__image {
+                    >img {
+                        margin: 0 auto;
+                    }
+                }
+
+                &__body {
+                    .card {
+                        &__title {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .prv-card {
+            &__content {
+                width: 100%;
+            }
+
+            &__image {
+                display: block;
+                margin: 0;
+                margin-bottom: 5px;
+
+                @media (min-width: 992px) {
+                    margin-bottom: 15px;
+                }
+
+                >img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    max-width: 30px;
+                    margin: 0;
+
+                    @media (min-width: 992px) {
+                        max-width: 80px;
+                    }
+                }
+            }
+
+            &__body {
+                .card {
+                    &__title {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.2;
+                        margin: 0;
+                        max-height: 50px;
+
+                        @media (min-width: 992px) {
+                            font-size: 16px;
+                            max-height: 58px;
+                        }
+
+                        &.title__ellipsis {
+                            display: block;
+                            display: -webkit-box;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
                         }
                     }
                 }

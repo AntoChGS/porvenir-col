@@ -3,7 +3,11 @@
     .cards-swiper-01,
     .cards-swiper-05 {
         .swiper-slide {
-            padding: 0 5px;
+            padding: 0 3px;
+
+            @media (min-width: 576px) {
+                padding: 0 5px;
+            }
         }
     }
 
