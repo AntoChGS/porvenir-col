@@ -624,6 +624,45 @@ function directAccess() {
   }
 }
 
+function offset(elt) {
+  var rect = elt.getBoundingClientRect(),
+    bodyElt = document.body;
+  return {
+    top: rect.top + bodyElt.scrollTop,
+    left: rect.left + bodyElt.scrollLeft
+  };
+}
+
+window.addEventListener("load", function(){
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+  if (document.querySelector("#sidebar")) {
+    const header = document.querySelector('.pvr__header');
+    const sidebar = document.querySelector("#sidebar");
+    const footer = document.querySelector("#footer");
+    const top = offset(sidebar).top;
+    const footTop = offset(footer).top;
+    const maxY = footTop - (header.offsetHeight + sidebar.offsetHeight);
+    window.addEventListener("scroll", function () {
+      let y = document.scrollingElement.scrollTop;
+      if (y > top) {
+        if (y < maxY) {
+          sidebar.classList.add("fixed");
+          sidebar.removeAttribute("style");
+        } else {
+          sidebar.classList.remove("fixed");
+          sidebar.setAttribute(
+            "style",
+            "position: absolute; top: " + (maxY - top) + "px"
+          );
+        }
+      } else {
+        sidebar.classList.remove("fixed");
+      }
+    });
+  }
+});
 
 //function resize
 window.addEventListener("resize", widthChangeCallback);
