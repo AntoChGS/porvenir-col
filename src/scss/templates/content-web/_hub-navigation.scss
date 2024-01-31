@@ -14,10 +14,11 @@
     top: 0 !important;
   }
   @media (min-width: 992px) {
-      max-width: 386px;
+      max-width: 380px;
       margin: 0 auto;
   }
   .content {
+    width: 100%;
       .navigation{
           &__list {
               position: relative;
@@ -77,7 +78,9 @@
       cursor: pointer;
       text-decoration: none;
       border-bottom: 0.5px solid #ababab;
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
           background: var(--color-yellow-80);
       }
       .item{
@@ -105,11 +108,6 @@
         }
       }
     }
-  }
-  &#sidebar.fixed {
-    position: fixed;
-    top: 130px;
-    margin-left: 8px;
   }
 }
 
