@@ -1,0 +1,10 @@
+.prv-tab-table {
+    &.prv-style-1 {
+        .tab-table-col-2 {
+            width: calc(50% - 8px);
+        }
+        .tab-table-col-3 {
+            width: calc(33.3% - 8px);
+        }
+    }
+}
