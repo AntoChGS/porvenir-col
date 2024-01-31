@@ -60,7 +60,12 @@
 @import "templates/content-web/hub-navigation";
 
 // Templates - Fragments
+<<<<<<< HEAD
 @import "templates/fragments/tabs-tpl-1";
+=======
+@import 'templates/fragments/tabs-tpl-1';
+@import 'templates/fragments/layout-tpl-1';
+>>>>>>> 943b4c4c5388ddeef34b0cddee7132ba7d33e612
 
 // Pages
 @import "pages/pagina1";

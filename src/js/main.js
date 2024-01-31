@@ -624,45 +624,35 @@ function directAccess() {
   }
 }
 
-function offset(elt) {
-  var rect = elt.getBoundingClientRect(),
-    bodyElt = document.body;
+//funcion para obtener posicion de elementos
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
   return {
-    top: rect.top + bodyElt.scrollTop,
-    left: rect.left + bodyElt.scrollLeft
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY
   };
 }
 
-window.addEventListener("load", function(){
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-  if (document.querySelector("#sidebar")) {
-    const header = document.querySelector('.pvr__header');
-    const sidebar = document.querySelector("#sidebar");
-    const footer = document.querySelector("#footer");
-    const top = offset(sidebar).top;
-    const footTop = offset(footer).top;
-    const maxY = footTop - (header.offsetHeight + sidebar.offsetHeight);
-    window.addEventListener("scroll", function () {
-      let y = document.scrollingElement.scrollTop;
-      if (y > top) {
-        if (y < maxY) {
-          sidebar.classList.add("fixed");
-          sidebar.removeAttribute("style");
-        } else {
-          sidebar.classList.remove("fixed");
-          sidebar.setAttribute(
-            "style",
-            "position: absolute; top: " + (maxY - top) + "px"
-          );
-        }
-      } else {
-        sidebar.classList.remove("fixed");
-      }
+//funcion ancla hub navegacion
+function scrollSpy(){
+  let anchors = document.querySelectorAll('.pvr__hub-navigation .link');
+  let headH = document.querySelector('.pvr__header').offsetHeight;
+  anchors.forEach(function(el){
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      let currentEl = this.getAttribute('href');
+      let sectionId = document.querySelector(currentEl);      
+      anchors.forEach(function(ele){
+        ele.classList.remove('active');
+      })
+      this.classList.add('active');
+      window.scrollTo({
+        top: getOffset(sectionId).top - headH, 
+        behavior: "smooth"
+      });
     });
-  }
-});
+  });
+}
 
 //function resize
 window.addEventListener("resize", widthChangeCallback);
@@ -679,6 +669,9 @@ showMenuHamburguer();
 
 //scroll function
 scrollFunction();
+
+//funcion ancla hub navegacion
+scrollSpy();
 
 // function swiper sliders
 swiperLoops();

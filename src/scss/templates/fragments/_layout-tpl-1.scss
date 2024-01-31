@@ -3,3 +3,19 @@
         position: relative;
     }
 }
+
+.prv-layout-sticky {
+    @media (min-width: 992px) {        
+        position: sticky;
+        align-self: flex-start;
+        top: 135px;
+    }
+}
+
+.signed-in{
+    .prv-layout-sticky{
+        @media (min-width: 992px){
+            top: 190px;
+        }
+    }
+}
