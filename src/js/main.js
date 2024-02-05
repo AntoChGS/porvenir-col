@@ -633,7 +633,7 @@ function offset(elt) {
   };
 }
 
-window.addEventListener("load", function(){
+/*window.addEventListener("load", function(){
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
@@ -662,7 +662,7 @@ window.addEventListener("load", function(){
       }
     });
   }
-});
+});*/
 
 //function resize
 window.addEventListener("resize", widthChangeCallback);
