@@ -719,7 +719,6 @@ function getOffset(el) {
     top: rect.top + window.scrollY,
   };
 }
-
 //funcion ancla hub navegacion
 function scrollSpy() {
   let anchors = document.querySelectorAll(".pvr__hub-navigation .link");
