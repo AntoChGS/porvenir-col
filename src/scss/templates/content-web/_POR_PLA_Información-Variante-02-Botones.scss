@@ -1,0 +1,65 @@
+.card__button.botones {
+    display: flex;
+    gap: 20px;
+}
+
+.card__button{
+    .botonUno{
+        border-radius: 20px 0px 20px 20px;
+        border: 2px solid #fc802a;
+        padding: 16px 12px 16px 12px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size:14px;
+        line-height:20px;
+    }
+
+    .botonDos{
+        border-radius: 20px 0px 20px 20px;
+        padding: 16px 12px 16px 12px;
+        background-color: #fc802a;
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+        font-size:14px;
+        line-height:20px;
+    }
+
+    .botonUno:hover{
+        background-color: #FC802A;
+        color: #FFFFFF;
+    }
+
+    .botonDos:hover{
+        background-color: #FB6903;
+    }
+
+    .botonUno:focus,
+    .botonDos:focus{
+        background-color: #FC802A;
+        color: #FFFFFF;
+        outline: 4px solid #FB6903;
+    }
+
+    .botonUno:disabled,
+    .botonDos:disabled{
+        background-color: #565656;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (min-width:1024px){
+  .card__button{
+    .botonUno{
+        padding: 16px 50px 16px 50px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+    .botonDos{
+        padding: 16px 50px 16px 50px;
+        font-size:16px;
+        line-height:24px;
+    }
+  }
+}
