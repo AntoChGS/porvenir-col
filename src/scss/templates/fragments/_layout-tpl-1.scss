@@ -1,6 +1,13 @@
 .prv-layout-frg-section {
-    .layout__container {
+    > .container {
         position: relative;
+        @media (min-width: 1023px){
+            max-width: 95%;
+        }
+        @media (min-width: 1222px){
+            width: 1222px;
+            max-width: 100%;
+        }
     }
 }
 
@@ -8,7 +15,7 @@
     @media (min-width: 992px) {        
         position: sticky;
         align-self: flex-start;
-        top: 135px;
+        top: 130px;
     }
 }
 
