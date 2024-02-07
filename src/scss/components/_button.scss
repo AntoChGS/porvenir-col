@@ -147,4 +147,59 @@
             opacity: 0.5;
         }
     }
+
+    &-outline {
+        &--orange {
+            border-color: var(--color-orange-300);
+            color: var(--color-orange-300);
+
+            &:hover,
+            &:active {
+                color: var(--color-white);
+                background: var(--color-orange-300);
+                text-decoration: none;
+            }
+
+            &:focus {
+                color: var(--color-white);
+                box-shadow: inset 0 0 0 4px var(--color-orange-400);
+                background: var(--color-orange-300);
+            }
+
+            &:disabled,
+            &.disabled {
+                pointer-events: none;
+                color: var(--color-white);
+                background: var(--color-gray-500);
+                text-decoration: none;
+                opacity: 0.5;
+            }
+        }
+
+        &--green {
+            border-color: var(--color-green-600);
+            color: var(--color-green-700);
+
+            &:hover,
+            &:active {
+                color: var(--color-green-700);
+                background: var(--color-green-600);
+                text-decoration: none;
+            }
+
+            &:focus {
+                color: var(--color-green-700);
+                box-shadow: inset 0 0 0 4px var(--color-green-400);
+                background: var(--color-green-600);
+            }
+
+            &:disabled,
+            &.disabled {
+                color: var(--color-white);
+                background: var(--color-gray-500);
+                text-decoration: none;
+                opacity: 0.5;
+            }
+        }
+    }
 }

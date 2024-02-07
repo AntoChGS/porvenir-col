@@ -38,6 +38,7 @@
 @import "components/tab-table";
 @import "components/text-align";
 @import "components/text-color";
+@import "components/list-v1";
 
 // Patterns
 @import "patterns/general";
@@ -61,8 +62,8 @@
 @import "templates/content-web/hub-navigation";
 
 // Templates - Fragments
-@import 'templates/fragments/tabs-tpl-1';
-@import 'templates/fragments/layout-tpl-1';
+@import "templates/fragments/tabs-tpl-1";
+@import "templates/fragments/layout-tpl-1";
 
 // Pages
 @import "pages/pagina1";
