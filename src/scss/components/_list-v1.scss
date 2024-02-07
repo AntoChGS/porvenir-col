@@ -66,7 +66,6 @@
   transition: all 0.2s ease-in-out;
   @media (min-width: 876px) {
     width: 240px;
-    // min-height: 285px;
     height: 285px;
     margin-right: 16px;
     padding: 16px 20px;
@@ -154,7 +153,6 @@
 
   &.item-disabled {
     overflow: hidden;
-    // min-height: 0px;
     height: 0px;
     visibility: hidden;
     margin-bottom: 0px;
