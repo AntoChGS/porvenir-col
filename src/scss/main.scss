@@ -29,22 +29,23 @@
 
 // Components
 @import "components/slider";
+@import "components/alerts";
 @import "components/background";
 @import "components/button";
 @import "components/cards";
-@import "components/section-padding";
+@import "components/section-spacing";
 @import "components/title";
 @import "components/tabs";
 @import "components/tab-table";
 @import "components/text-align";
 @import "components/text-color";
-@import "components/list-v1";
 
 // Patterns
 @import "patterns/general";
 
 // Structure
 @import "structure/header";
+@import "structure/breadcrumb";
 @import "structure/footer";
 
 // Templates - ADT
@@ -52,17 +53,19 @@
 
 // Templates - Content Web
 @import "templates/content-web/banner-hero";
-@import "templates/content-web/card-indice-tpl-1";
 @import "templates/content-web/card-carousel-tpl-1";
+@import "templates/content-web/card-indice-tpl-1";
 @import "templates/content-web/direct-access-tpl-1";
 @import "templates/content-web/faq-tpl-1";
 @import "templates/content-web/testimonials-tpl-1";
-@import "templates/content-web/information";
+@import "templates/content-web/information-tpl-1";
 @import "templates/content-web/hub-navigation";
+@import "templates/content-web/list-tpl-1";
 
 // Templates - Fragments
 @import "templates/fragments/tabs-tpl-1";
 @import "templates/fragments/layout-tpl-1";
+@import "templates/fragments/alert-tpl-1";
 
 // Pages
 @import "pages/pagina1";

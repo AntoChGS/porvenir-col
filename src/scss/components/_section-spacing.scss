@@ -31,10 +31,21 @@
         }
     }
 
-    &-d58-m24 {
+    &-d45-m24 {
         padding: 24px 0 24px;
+
         @media (min-width: 992px) {
-            padding: 58px 0 36px;
+            padding: 45px 0 36px;
+        }
+    }
+}
+
+.pvr-sm {
+    &-t-d0-m-60 {
+        margin-top: -60px;
+
+        @media (min-width: 992px) {
+            margin-top: 0;
         }
     }
 }
