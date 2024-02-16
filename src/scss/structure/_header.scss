@@ -178,7 +178,7 @@
       &--navigation {
         width: 100%;
         position: relative;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 2px 4px 0px rgba(170, 170, 170, 0.40);
         background: var(--color-white);
 
         @media (min-width: 992px) {
@@ -739,6 +739,7 @@
 
   .submenu {
     &--list {
+      padding: 0;
       list-style: none;
       min-width: 262px;
       height: 0;
@@ -760,6 +761,7 @@
         align-items: flex-start;
         gap: 8px;
         transition: opacity 0.2s ease-out;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
       }
     }
 
