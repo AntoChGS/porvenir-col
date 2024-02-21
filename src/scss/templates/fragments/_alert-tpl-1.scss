@@ -1,0 +1,54 @@
+.alertCard {
+    .alertCard-body{
+        display:flex;
+        background-color:#FEF4DC;
+        padding: 12px;
+        border-radius: 8px;
+        .alertCard-body__txt{
+            padding:0 8px;
+            width: 100%;
+            .txt-tit{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 25.44px;
+                font-family: var(--fontBanda);
+                margin-bottom: 8px;
+                @media (min-width: 1023px) {
+                    font-size: 24px;
+                    line-height: 29.28px;
+                    font-weight: 700;
+                }
+            }
+            .txt-des{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.82px;
+                margin-bottom: 0px;
+                @media (min-width: 1023px) {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+        }
+        .alertCard-body__btnClose{
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            background: 0;
+            border: 0;
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            line-height: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+        }
+    }
+    .alertCard-icon{
+        width:20px;
+        height:20px;
+    }
+}
