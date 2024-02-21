@@ -1066,6 +1066,7 @@
 
     &.prv-style-10 {
         position: relative;
+        border: 1px solid var(--color-green-700);
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.08), -2px -2px 0px 0px rgba(0, 0, 0, 0.04);
         padding: 32px 24px;
         border-radius: 12px;
@@ -1074,7 +1075,7 @@
         margin: 5px auto;
 
         @media (min-width: 992px) {
-            padding: 20px 32px;
+            padding: 20px 10px;
         }
 
         &.prv-card--center {
@@ -1107,7 +1108,7 @@
                     display: block;
                     width: 100%;
                     height: auto;
-                    max-width: 100px;
+                    max-width: 66px;
                     margin: 0;
                 }
             }
@@ -1121,13 +1122,12 @@
                         line-height: 1.2;
                         margin-left: auto;
                         margin-right: auto;
-                        margin-bottom: 10px;
+                        margin-bottom: 12px;
                         max-width: 235px;
                         max-height: 50px;
 
                         @media (min-width: 992px) {
-                            font-size: 24px;
-                            max-height: 58px;
+                            font-size: 20px;
                         }
 
                         &.title__ellipsis {
@@ -1145,25 +1145,25 @@
                         display: -webkit-box;
                         text-overflow: ellipsis;
                         overflow: hidden;
-                        -webkit-line-clamp: 4;
+                        -webkit-line-clamp: 5;
                         -webkit-box-orient: vertical;
-                        font-size: 16px;
-                        line-height: 1.25;
+                        font-size: 14px;
+                        line-height: 1.44;
                         margin-bottom: 0;
                         color: var(--color-gray-500);
-                        max-height: 90px;
+                        height: 100px;
 
                         @media (min-width: 992px) {
-                            font-size: 18px;
+                            font-size: 14px;
                         }
 
                         >* {
-                            font-size: 16px;
-                            line-height: 1.25;
+                            font-size: 14px;
+                            line-height: 1.44;
                             color: var(--color-gray-500);
 
                             @media (min-width: 992px) {
-                                font-size: 18px;
+                                font-size: 14px;
                             }
 
                             &:last-child {
@@ -1173,7 +1173,7 @@
                     }
 
                     &__button {
-                        margin-top: 12px;
+                        margin-top: 10px;
                         text-align: center;
                     }
                 }
