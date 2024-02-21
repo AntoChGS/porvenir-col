@@ -24,8 +24,8 @@ include ../structure/breadcrumb
             picture.pvr__banner--image
                 source(media="(min-width: 1024px)" srcset="images/Banner-Family-desktop.png")
                 img(src="images/Banner-Family-mobile.png", alt="").picture
-.prv-layout-frg-section.prv-sp-0.pvr-t-d0-m-60
-    .container.prv-bg-green-90deg-3.prv-bg-white
+.prv-layout-frg-section.prv-sp-d40-m20
+    .container
         .row
             .col-lg-4.order-lg-2.mb-4.mb-lg-0.prv-layout-sticky
                 .pvr__hub-navigation
@@ -45,6 +45,23 @@ include ../structure/breadcrumb
                                     span.item--number 03
                                     span.item--text ¿Cómo realizar la solicitud del beneficio pensional por este canal?                   
             .col-lg-8.order-lg-1
+                form(action="", method="get" id="formSearch" class="pvr__search") 
+                    input(type="search" id="search" name="q" class="search__input" placeholder="Busca un producto o servicio (pensión, certificado, cesantías...)" required)
+                    label(for="search" class="search__label") Buscar
+                    button(type="submit" value="Buscar" class="search__btn") 
+                        span.text buscar
+                        span.icon: svg: use(xlink:href=iconPath+'search')    
+                    button(type="button" value="limpiar" class="clear__btn" id="clearSearch") 
+                        span.icon
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.2997 0.710215C12.9097 0.320215 12.2797 0.320215 11.8897 0.710215L6.99973 5.59022L2.10973 0.700215C1.71973 0.310215 1.08973 0.310215 0.699727 0.700215C0.309727 1.09021 0.309727 1.72022 0.699727 2.11022L5.58973 7.00022L0.699727 11.8902C0.309727 12.2802 0.309727 12.9102 0.699727 13.3002C1.08973 13.6902 1.71973 13.6902 2.10973 13.3002L6.99973 8.41021L11.8897 13.3002C12.2797 13.6902 12.9097 13.6902 13.2997 13.3002C13.6897 12.9102 13.6897 12.2802 13.2997 11.8902L8.40973 7.00022L13.2997 2.11022C13.6797 1.73022 13.6797 1.09022 13.2997 0.710215Z" fill="#565656"/>
+                            </svg>
+                    button(type="button" value="cerrar" class="close__btn" id="closeSearch") 
+                        span.text Cerrar
+                        span.icon
+                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.03033 0.46967C7.32322 0.762563 7.32322 1.23744 7.03033 1.53033L2.56066 6L7.03033 10.4697C7.32322 10.7626 7.32322 11.2374 7.03033 11.5303C6.73744 11.8232 6.26256 11.8232 5.96967 11.5303L1.14645 6.70711C0.755922 6.31658 0.755922 5.68342 1.14645 5.29289L5.96967 0.46967C6.26256 0.176777 6.73744 0.176777 7.03033 0.46967Z" fill="#404040"/>
+                            </svg>                
                 .section.pvr__information#introduccion
                     .container 
                         h2.title Proceso de afiliación
