@@ -263,6 +263,7 @@
               background: transparent;
               text-align: right;
               transition: inherit;
+              z-index: inherit;
             }
             &.show {
               left: 0;
@@ -644,7 +645,8 @@
   }
 }
 
-.global__navigation {
+.global__navigation,
+.global__search {
   visibility: hidden;
   height: 0;
 }
@@ -683,6 +685,7 @@
 
     &--item {
       width: auto;
+      position: inherit;
       .link {
         display: flex;
         width: 100%;
