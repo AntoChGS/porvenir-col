@@ -217,17 +217,14 @@ function swiperLoops() {
       breakpoints: {
         640: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
           spaceBetween: 20,
         },
         1024: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
           spaceBetween: 20,
         },
         1200: {
           slidesPerView: 3,
-          slidesPerGroup: 3,
           spaceBetween: 30,
         },
       },
@@ -249,17 +246,14 @@ function swiperLoops() {
       breakpoints: {
         640: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
           spaceBetween: 20,
         },
         1024: {
           slidesPerView: 3,
-          slidesPerGroup: 3,
           spaceBetween: 25,
         },
         1200: {
           slidesPerView: 3,
-          slidesPerGroup: 3,
           spaceBetween: 40,
         },
       },
@@ -289,17 +283,14 @@ function swiperLoops() {
         breakpoints: {
           640: {
             slidesPerView: dataSmCardC01,
-            slidesPerGroup: 2,
             spaceBetween: 5,
           },
           1024: {
             slidesPerView: dataMdCardC01,
-            slidesPerGroup: 2,
             spaceBetween: 5,
           },
           1200: {
             slidesPerView: dataLgCardC01,
-            slidesPerGroup: 2,
             spaceBetween: 5,
           },
         },
