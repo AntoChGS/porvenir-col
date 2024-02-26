@@ -543,9 +543,9 @@ function widthChangeCallback() {
     document
       .querySelector(".navigation .navigation--column-1")
       .insertAdjacentElement("beforeEnd", navigation);
-    document
-      .querySelector(".navigation .navigation--login")
-      .insertAdjacentElement("beforebegin", search);
+    // document
+    //   .querySelector(".navigation .navigation--column-2")
+    //   .insertAdjacentElement("beforebegin", search);
   } else {
     document
       .querySelector(".header--quicklinks")

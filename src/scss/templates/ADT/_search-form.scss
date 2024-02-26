@@ -1,5 +1,14 @@
+.fieldset{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    .fieldset-legend{
+        display: none;
+        margin: 0;
+    }
+}
 .pvr__search{
-    position: relative;
+    position: relative;    
     .search{
         &__input{        
             width: 100%;

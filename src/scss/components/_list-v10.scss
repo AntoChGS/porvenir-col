@@ -1,0 +1,106 @@
+.pvr__canales {
+  .pvr__canales--title {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 8px;
+    @media (min-width: 992px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  .pvr__canales--subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 16px;
+    @media (min-width: 992px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+  }
+  .pvr__canales__content {
+    width: 320px;
+    // margin: 0 auto;
+    @media (min-width: 992px) {
+      width: 774px;
+    }
+  }
+}
+.pvr__canales__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pvr__canales__item {
+  width: 96px;
+  height: 108px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.08),
+    -2px -2px 0px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 5px 10px;
+  padding: 4px;
+  position: relative;
+  @media (min-width: 992px) {
+    width: 248px;
+    height: 172px;
+    margin: 0 10px 10px 0px;
+  }
+  .pvr__canales__item--top {
+    margin-bottom: 4px;
+    @media (min-width: 992px) {
+      margin-bottom: 12px;
+    }
+    .pvr__canales__item--image {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+  .pvr__canales__item--text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    color: var(--color-gray-500);
+    text-align: center;
+    text-decoration: none !important;
+    @media (min-width: 992px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.pvr__canales__item-v2 {
+    @media (min-width: 992px) {
+      width: 173px;
+      height: 155px;
+      margin: 0 24px 24px 0px;
+    }
+    &:nth-child(4n) {
+      @media (min-width: 992px) {
+        margin-right: 0px;
+      }
+    }
+    .pvr__canales__item--top {
+      margin-bottom: 10px;
+    }
+    .pvr__canales__item--text {
+      font-size: 12px;
+      @media (min-width: 992px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
