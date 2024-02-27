@@ -85,4 +85,26 @@
             }
         }
     }
+
+    &.prv-style-3 {
+        .prv-title {
+            font-size: 20px;
+
+            @media (min-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        .prv-subtitle {
+            @media (max-width: 767.98px) {
+                font-size: 14px;
+            }
+
+            >* {
+                @media (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }
