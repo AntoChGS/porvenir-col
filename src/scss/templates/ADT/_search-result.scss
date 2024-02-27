@@ -1,0 +1,184 @@
+.pvr{
+    &__search-result{
+        position: relative;
+        padding: 10px 0 0;
+        border-bottom: 1px solid var(--color-gray-60);
+        .container{
+            @media (min-width:992px) {
+                max-width: 804px;
+            }
+        }
+        .search__total-label{
+            font-size: 18px;
+            line-height: 24px;
+            color: var(--color-gray-300);
+            padding: 16px 0 8px;
+        }
+        .search__list{
+            .list__group{
+                padding: 0;
+                margin: 0;
+            }
+            .list__group-item{
+                list-style: none;
+                margin-bottom: 8px;
+                .section{
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                }
+                .content{
+                    width: 100%;
+                    .title{
+                        font-size: 20px;
+                        line-height: 25px;
+                        @media (min-width:992px){
+                            font-size: 24px;
+                            line-height: 29.28px;
+                        }
+                        .link{
+                            color: var(--color-green-700);
+                        }
+                        margin-bottom: 8px;
+                    }
+                    .text-box{
+                        .text{
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: var(--color-gray-500);
+                            margin-bottom: 0;
+                            @media (min-width:992px) {
+                                font-size: 18px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }   
+                .thumbnail{
+                    width: 100%;
+                    max-width: 80px;
+                    margin-left: 16px;
+                    border-radius: 8px;
+                    text-align: center;
+                    @media (min-width:992px){
+                        max-width: 101px;
+                    }
+                }         
+                .footer{
+                    width: 100%;
+                    .link{
+                        padding: 12px 0;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: var(--color-green-400);
+                        display: flex;
+                        align-items: center;
+                        @media (min-width:992px) {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                        .icon{
+                            margin-right: 8px;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}
+
+.pagination-bar{
+    justify-content: center;
+    .pagination-items-per-page{
+        display: none;
+    }
+    .pagination-results{
+        display: none;
+    }
+    .pagination{
+        width: 100%;
+        justify-content: center;
+        margin: 3px 0;
+        border-radius: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.875rem;
+        list-style: none;
+        padding-left: 0;
+    }
+    .page-item {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+    
+    .page-link{
+        width: 44px;
+        height: 44px;
+        color: var(--color-gray-500);
+        border-radius: 100px;
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        line-height: 1;
+        margin-left: 0;
+        padding-bottom: 0;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        padding-top: 0;
+        position: relative;
+        transition: box-shadow 0.15s ease-in-out;
+        .lfr-portal-tooltip{
+            color: var(--color-gray-600);
+        }
+    }
+    .sr-only {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+    .lexicon-icon {
+        display: inline-block;
+        fill: currentColor;
+        height: 1em;
+        margin-top: -3px;
+        vertical-align: middle;
+        width: 1em;
+    }
+    .page-item.active .page-link, .nav-underline .tab.active a.page-item .page-link{
+        background-color: var(--color-orange-300);
+        border-color: transparent;
+        color: #fff;
+        cursor: default;
+        z-index: 3;
+    }
+
+    .page-item.disabled .page-link{
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        color: #6b6c7e;
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: auto;
+        z-index: 0;
+    }
+    
+    .page-link:hover, .page-link.hover{
+        background-color: var(--color-orange-300);
+        color: var(--color-white);
+    }
+    .page-item:last-child .page-link:hover, .page-link-last:hover,
+    .page-item:first-child .page-link:hover, .page-link-first:hover{
+        background-color: transparent;
+    }
+}
+
+.portlet-layout .portlet-header{
+    margin: 0;
+}

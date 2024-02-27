@@ -52,6 +52,7 @@
 // Templates - ADT
 @import "templates/ADT/cards-tpl-1";
 @import "templates/ADT/search-form";
+@import "templates/ADT/search-result";
 
 // Templates - Content Web
 @import "templates/content-web/banner-hero";
@@ -67,12 +68,8 @@
 // Templates - Fragments
 @import "templates/fragments/tabs-tpl-1";
 @import "templates/fragments/layout-tpl-1";
-<<<<<<< HEAD
 @import "templates/fragments/alert-tpl-1";
 @import "templates/fragments/section-search";
-=======
-// @import "templates/fragments/alert-tpl-1";
->>>>>>> c545eb3175295aeb1dee60b2e7013c14bd7052a6
 
 // Pages
 @import "pages/pagina1";
