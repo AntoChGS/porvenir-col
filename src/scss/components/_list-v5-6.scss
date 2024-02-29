@@ -1,0 +1,117 @@
+.pvr__puntosclave {
+    .pvr__puntosclave--title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 16px;
+      @media (min-width: 992px) {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 24px;
+      }
+    }
+    .pvr__puntosclave--subtitle {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 16px;
+      @media (min-width: 992px) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+    }
+   
+  }
+.pvr__puntosclave__list{
+    padding-top: 16px;
+    @media (min-width: 992px){
+        padding: 8px 20px;
+    }
+    &.pvr__puntosclave__list--v2{
+        @media (min-width: 992px){
+            padding: 0px 0px 8px 0px;
+        }
+    }
+}
+.pvr__puntosclave__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 274px;
+    font-family: var(--fontBanda);
+    margin-bottom: 16px;
+    @media (min-width: 992px){
+        flex-direction: row;
+        justify-content: start;
+    }
+    .pvr__puntosclave__item--top{
+        width: 56px;
+        height: 56px;
+        background-color: var(--color-yellow-50);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        @media (min-width: 992px){
+            margin-right: 64px;
+            width: 70px;
+            height: 70px;
+            margin-bottom: 0px;
+        }
+        p{
+            font-size: 36px;
+            color: var(--color-orange-300);
+            margin: 0px;
+            @media (min-width: 992px){
+                font-size: 43px;
+            }
+        }
+    }
+    .pvr__puntosclave__item--text{
+        font-size: 20px;
+        color: var(--color-gray-600);
+        @media (min-width: 992px){
+            font-size: 24px;
+        }
+        p{
+            margin: 0px;
+        }
+    }
+    &.pvr__puntosclave__item--v2{
+        flex-direction: row;
+        justify-content: start;
+        padding: 16px 8px;
+        border-bottom: 1px solid #ABABAB;
+        margin-bottom: 0px;
+        @media (min-width: 992px){
+            padding: 16px;
+        }
+        .pvr__puntosclave__item--top{
+            min-width: 40px;
+            max-width: 40px;
+            margin-right: 8px;
+            height: auto;
+            margin-bottom: 0px;
+            @media (min-width: 992px){
+                min-width: 56px;
+                max-width: 56px;
+                margin-right: 16px;
+            }
+            img{
+                width: auto;
+                height: auto;
+            }
+        }
+        .pvr__puntosclave__item--text{
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--color-black);
+            @media (min-width: 992px){
+                font-size: 16px;
+            }
+        }
+    }
+}
