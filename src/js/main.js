@@ -810,8 +810,9 @@ if(document.getElementById('navigation')){
 searchMobile();
 closeSearchBar();
 
+//modal function
 const openModalButtons = document.querySelectorAll('.open-modal'),
-      modal = document.querySelector('.modal'),
+      modal = document.querySelector('.pvr__modal'),
       closeModalButtons = document.querySelectorAll('.close-modal');
 
 openModalButtons.forEach(openBtn => {

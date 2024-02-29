@@ -1,4 +1,4 @@
-.modal {
+.pvr__modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,19 +6,22 @@
     padding: 2rem;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 999;
-    .modal-backdrop {
+    .modal--backdrop {
       background: rgba(#000, 0.7);
       height: 100%;
       width: 100%;
       position: fixed;
     }
   
-    .modal-content {
+    .modal--content {
       background: #fff;
       border-radius: 24px;
       width: 100%;
@@ -39,7 +42,7 @@
       }
     }
   
-    .modal-header {  
+    .modal--header {  
       .close-modal {
         padding: 0;
         margin: 0;
@@ -62,13 +65,13 @@
       }
     }
   
-    .modal-body {
+    .modal--body {
       text-align: center;
       max-width: 754px;
       margin: 0 auto;
     }
 
-    .modal-footer {
+    .modal--footer {
       text-align: center;
       margin-top: 10px;
       @media (min-width: 768px){
@@ -80,7 +83,7 @@
       opacity: 1;
       visibility: visible;
   
-      .modal-content {
+      .modal--content {
         top: 25%;
       }
     }
