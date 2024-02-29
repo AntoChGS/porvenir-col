@@ -18,7 +18,7 @@ include ../structure/breadcrumb
             h1.title Afíliate a pensiones
             p.text Asegura tu futuro, vive el presente
             .pvr__banner--btn--content
-                a(href="#").pvr__banner--btn.prv-btn.prv-btn--round-corner.prv-btn--orange Afiliarme
+                a(href="#").pvr__banner--btn.prv-btn.prv-btn--round-corner.prv-btn--orange.open-modal Afiliarme
             
         .pvr__banner--right 
             picture.pvr__banner--image
@@ -48,26 +48,25 @@ include ../structure/breadcrumb
                 .pvr__section-search.prv-sp-d40-m32
                     .container 
                         h2.title.prv-txt-green-700 ¿En qué te podemos ayudar?
-                        form(action="", method="get" id="formSearch")
-                            fieldset.fieldset.pvr__search 
-                                legend.fieldset-legend
-                                    span.legend Hola Mundo
-                                input(type="search" id="search" name="q" class="search__input" placeholder="Busca un producto o servicio (pensión, certificado, cesantías...)" required)
-                                label(for="search" class="search__label") Buscar
-                                button(type="submit" value="Buscar" class="search__btn") 
-                                    span.text buscar
-                                    span.icon: svg: use(xlink:href=iconPath+'search')    
-                                button(type="button" value="limpiar" class="clear__btn" id="clearSearch") 
-                                    span.icon
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13.2997 0.710215C12.9097 0.320215 12.2797 0.320215 11.8897 0.710215L6.99973 5.59022L2.10973 0.700215C1.71973 0.310215 1.08973 0.310215 0.699727 0.700215C0.309727 1.09021 0.309727 1.72022 0.699727 2.11022L5.58973 7.00022L0.699727 11.8902C0.309727 12.2802 0.309727 12.9102 0.699727 13.3002C1.08973 13.6902 1.71973 13.6902 2.10973 13.3002L6.99973 8.41021L11.8897 13.3002C12.2797 13.6902 12.9097 13.6902 13.2997 13.3002C13.6897 12.9102 13.6897 12.2802 13.2997 11.8902L8.40973 7.00022L13.2997 2.11022C13.6797 1.73022 13.6797 1.09022 13.2997 0.710215Z" fill="#565656"/>
-                                        </svg>
-                                button(type="button" value="cerrar" class="close__btn" id="closeSearch") 
-                                    span.text Cerrar
-                                    span.icon
-                                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.03033 0.46967C7.32322 0.762563 7.32322 1.23744 7.03033 1.53033L2.56066 6L7.03033 10.4697C7.32322 10.7626 7.32322 11.2374 7.03033 11.5303C6.73744 11.8232 6.26256 11.8232 5.96967 11.5303L1.14645 6.70711C0.755922 6.31658 0.755922 5.68342 1.14645 5.29289L5.96967 0.46967C6.26256 0.176777 6.73744 0.176777 7.03033 0.46967Z" fill="#404040"/>
-                                        </svg>                
+                        .navigation--search.pvr__search
+                            form(action="", method="get" class="form") 
+                                .search__control
+                                    input(type="search" id="searchNav" name="q" class="search__input" onfocus="inputSearchFocus(this);" onblur="inputSearchBlur(this);" placeholder="Busca un producto o servicio (pensión, certificado, cesantías...)" required)
+                                    label(for="searchNav" class="search__label") Buscar
+                                    button(type="submit" value="Buscar" class="search__btn") 
+                                        span.text buscar
+                                        span.icon: svg: use(xlink:href=iconPath+'search')    
+                                    button(type="button" value="limpiar" class="clear__btn" id="clearSearch" onclick="clearBtnSearch(this);") 
+                                        span.icon
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.2997 0.710215C12.9097 0.320215 12.2797 0.320215 11.8897 0.710215L6.99973 5.59022L2.10973 0.700215C1.71973 0.310215 1.08973 0.310215 0.699727 0.700215C0.309727 1.09021 0.309727 1.72022 0.699727 2.11022L5.58973 7.00022L0.699727 11.8902C0.309727 12.2802 0.309727 12.9102 0.699727 13.3002C1.08973 13.6902 1.71973 13.6902 2.10973 13.3002L6.99973 8.41021L11.8897 13.3002C12.2797 13.6902 12.9097 13.6902 13.2997 13.3002C13.6897 12.9102 13.6897 12.2802 13.2997 11.8902L8.40973 7.00022L13.2997 2.11022C13.6797 1.73022 13.6797 1.09022 13.2997 0.710215Z" fill="#565656"/>
+                                            </svg>
+                                    button(type="button" value="cerrar" class="close__btn" id="closeSearch") 
+                                        span.text Cerrar
+                                        span.icon
+                                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.03033 0.46967C7.32322 0.762563 7.32322 1.23744 7.03033 1.53033L2.56066 6L7.03033 10.4697C7.32322 10.7626 7.32322 11.2374 7.03033 11.5303C6.73744 11.8232 6.26256 11.8232 5.96967 11.5303L1.14645 6.70711C0.755922 6.31658 0.755922 5.68342 1.14645 5.29289L5.96967 0.46967C6.26256 0.176777 6.73744 0.176777 7.03033 0.46967Z" fill="#404040"/>
+                                            </svg>   
                 .section.pvr__information#introduccion
                     .container 
                         h2.title Proceso de afiliación
@@ -99,3 +98,21 @@ include ../structure/breadcrumb
                         p Lorem ipsum dolor sit amet, consectetur .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
 
                         p Lorem ipsum dolor sit amet, consectetur .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+
+.modal
+  span.modal-backdrop.close-modal
+  .modal-content
+    .modal-header
+        button.close-modal 
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.875 7.13749C22.3875 6.64999 21.6 6.64999 21.1125 7.13749L15 13.2375L8.88752 7.12499C8.40002 6.63749 7.61252 6.63749 7.12502 7.12499C6.63752 7.61249 6.63752 8.39999 7.12502 8.88749L13.2375 15L7.12502 21.1125C6.63752 21.6 6.63752 22.3875 7.12502 22.875C7.61252 23.3625 8.40002 23.3625 8.88752 22.875L15 16.7625L21.1125 22.875C21.6 23.3625 22.3875 23.3625 22.875 22.875C23.3625 22.3875 23.3625 21.6 22.875 21.1125L16.7625 15L22.875 8.88749C23.35 8.41249 23.35 7.61249 22.875 7.13749Z" fill="#3E6A27"/>
+            </svg>
+    .modal-body
+        .picture.mb-2.mb-md-3
+            picture
+                source(media="(min-width: 992px)", srcset="images/modal/icon-message.png")
+                img(src="images/modal/icon-message.png", alt="imagen message", srcset="images/modal/icon-message.png")
+        h3.prv-title.prv-txt-green-700.mb-3 Chat Porvenir
+        p.prv-subtitle.prv-txt-gray-500 Aquí podrás actualizar tus datos, consultar tus saldos y generar certificados y extractos. Si tienes más consultas allí podrás recibir atención personalizada.
+    .modal-footer
+        a(href="http://", target="_blank", rel="noopener noreferrer", class="close-modal prv-btn prv-btn--round-corner prv-btn--orange open-modal") Ingresa al canal

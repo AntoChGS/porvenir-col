@@ -40,7 +40,11 @@
 @import "components/text-align";
 @import "components/text-color";
 @import "components/list-v10";
+<<<<<<< HEAD
 @import "components/list-v5-6";
+=======
+@import "components/modal";
+>>>>>>> 5e3a51d589b8f4173de0dd8403744bfc0bcccc0c
 
 // Patterns
 @import "patterns/general";
@@ -53,6 +57,7 @@
 // Templates - ADT
 @import "templates/ADT/cards-tpl-1";
 @import "templates/ADT/search-form";
+@import "templates/ADT/search-result";
 
 // Templates - Content Web
 @import "templates/content-web/banner-hero";
