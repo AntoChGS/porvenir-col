@@ -72,11 +72,6 @@
     align-items: start;
   }
 
-  &:nth-child(3n) {
-    @media (min-width: 876px) {
-      margin-right: 0px;
-    }
-  }
 
   &--content {
     display: flex;
