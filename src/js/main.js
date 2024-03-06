@@ -765,6 +765,14 @@ function closeSearchBar(){
   });
 }
 
+function openModal() {
+  modal.classList.add('visible');
+}
+
+function closeModal() {
+  modal.classList.remove('visible');
+}
+
 //function resize
 window.addEventListener("resize", widthChangeCallback);
 widthChangeCallback();
@@ -801,6 +809,19 @@ if(document.getElementById('navigation')){
 }
 searchMobile();
 closeSearchBar();
+
+//modal function
+const openModalButtons = document.querySelectorAll('.open-modal'),
+      modal = document.querySelector('.pvr__modal'),
+      closeModalButtons = document.querySelectorAll('.close-modal');
+
+openModalButtons.forEach(openBtn => {
+  openBtn.addEventListener('click', openModal)
+});
+
+closeModalButtons.forEach(closeBtn => {
+  closeBtn.addEventListener('click', closeModal)
+});
 
 // invoke function DataLayer
 const elemDataLayer = document.querySelectorAll('*[class^="datalayer"]');

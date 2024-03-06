@@ -43,8 +43,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
-    width: 760px;
-    // margin: 0 auto;
     padding-left: 5px;
     align-items: start;
   }
@@ -74,11 +72,6 @@
     align-items: start;
   }
 
-  &:nth-child(3n) {
-    @media (min-width: 876px) {
-      margin-right: 0px;
-    }
-  }
 
   &--content {
     display: flex;
