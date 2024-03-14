@@ -1,27 +1,29 @@
 .prv-layout-frg-section {
-    > .container {
+    >.container {
         position: relative;
-        @media (min-width: 1023px){
+
+        /*@media (min-width: 1023px) {
             max-width: 95%;
         }
-        @media (min-width: 1222px){
-            width: 1222px;
+
+        @media (min-width: 1200px) {
+            width: 1262px;
             max-width: 100%;
-        }
+        }*/
     }
 }
 
 .prv-layout-sticky {
-    @media (min-width: 992px) {        
+    @media (min-width: 992px) {
         position: sticky;
         align-self: flex-start;
         top: 130px;
     }
 }
 
-.signed-in{
-    .prv-layout-sticky{
-        @media (min-width: 992px){
+.signed-in {
+    .prv-layout-sticky {
+        @media (min-width: 992px) {
             top: 190px;
         }
     }

@@ -4,7 +4,11 @@
     }
 
     .prv-subtitle {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 24px;
+        }
     }
 }
 

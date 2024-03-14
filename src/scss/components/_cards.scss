@@ -5,17 +5,16 @@
         border-radius: 16px;
         box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
         overflow: hidden;
-        height: 426px;
+        height: 410px;
         max-width: 320px;
         margin: 0 auto;
 
         @media (min-width: 768px) {
-            height: 500px;
+            height: 450px;
         }
 
         @media (min-width: 576px) {
-            max-width: inherit;
-            margin: 0;
+            max-width: 385px;
         }
 
         @media (min-width: 1024px) {
@@ -47,13 +46,11 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                gap: 14px;
 
                 @media (min-width: 1024px) {
                     height: 336px;
                     padding: 0px 25px;
                     justify-content: center;
-                    gap: auto;
                 }
 
                 .card {
@@ -69,16 +66,12 @@
                     }
 
                     &__box {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 13px;
-                        flex-shrink: 0;
-                        align-self: stretch;
+                        position: relative;
+                        overflow: hidden;
+                        display: block;
 
                         @media (min-width: 1024px) {
                             height: 160px;
-                            padding: 8px 0px 24px 0px;
-                            gap: 8px;
                         }
                     }
 
@@ -117,6 +110,9 @@
                                 margin-bottom: 0;
                             }
                         }
+                    }
+                    &__button {
+                        margin-top: 12px;
                     }
                 }
             }
@@ -360,7 +356,7 @@
         overflow: hidden;
 
         @media (min-width: 992px) {
-            padding: 32px 16px;
+            padding: 20px 16px;
             height: 118px;
         }
 

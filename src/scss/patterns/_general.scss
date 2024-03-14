@@ -8,9 +8,11 @@
     &::after {
         box-sizing: border-box;
     }
-    &:focus{
+
+    &:focus {
         outline: inherit;
-        @media (min-width: 768px){
+
+        @media (min-width: 768px) {
             outline: 2px solid var(--color-blue);
         }
     }
@@ -140,11 +142,14 @@ strong {
     font-weight: 700;
 }
 
-ol, ul {
+ol,
+ul {
     padding-left: 2rem;
 }
 
-dl, ol, ul {
+dl,
+ol,
+ul {
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -158,12 +163,18 @@ img {
 
 button {
     font-family: var(--fontNunito);
-    &:focus{
+
+    &:focus {
         outline: inherit;
-        @media (min-width: 768px){
+
+        @media (min-width: 768px) {
             outline: 2px solid var(--color-blue);
         }
     }
+}
+
+iframe {
+    border: 0;
 }
 
 form {
@@ -229,7 +240,6 @@ legend {
     border: 0;
 }
 
-.highlight{
-    background: var(--color-yellow-80);
-    margin: 0 1px;
+.portlet-journal-content.portlet-barebone .portlet .portlet-header {
+    z-index: 4;
 }

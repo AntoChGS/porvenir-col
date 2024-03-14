@@ -9,22 +9,9 @@
         margin-bottom: 24px;
       }
     }
-    .pvr__puntosclave--subtitle {
-      font-size: 16px;
-      line-height: 22px;
-      margin-bottom: 16px;
-      @media (min-width: 992px) {
-        font-size: 18px;
-        line-height: 24px;
-      }
-      p {
-        margin-bottom: 16px;
-      }
-    }
-   
+    
   }
 .pvr__puntosclave__list{
-    padding-top: 16px;
     @media (min-width: 992px){
         padding: 8px 20px;
     }
@@ -40,7 +27,6 @@
     align-items: center;
     flex-direction: column;
     min-width: 274px;
-    font-family: var(--fontBanda);
     margin-bottom: 16px;
     @media (min-width: 992px){
         flex-direction: row;
@@ -55,13 +41,14 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 8px;
+        font-family: var(--fontBanda);
         @media (min-width: 992px){
             margin-right: 64px;
             width: 70px;
             height: 70px;
             margin-bottom: 0px;
         }
-        p{
+        *{
             font-size: 36px;
             color: var(--color-orange-300);
             margin: 0px;
@@ -71,13 +58,13 @@
         }
     }
     .pvr__puntosclave__item--text{
-        font-size: 20px;
-        color: var(--color-gray-600);
-        @media (min-width: 992px){
-            font-size: 24px;
-        }
-        p{
+        *{
             margin: 0px;
+            font-size: 20px;
+            color: var(--color-gray-600);
+            @media (min-width: 992px){
+                font-size: 24px;
+            }
         }
     }
     &.pvr__puntosclave__item--v2{
@@ -95,6 +82,7 @@
             margin-right: 8px;
             height: auto;
             margin-bottom: 0px;
+            background-color: transparent;
             @media (min-width: 992px){
                 min-width: 56px;
                 max-width: 56px;
@@ -106,12 +94,16 @@
             }
         }
         .pvr__puntosclave__item--text{
-            font-size: 14px;
-            line-height: 20px;
-            color: var(--color-black);
-            @media (min-width: 992px){
-                font-size: 16px;
+            *{
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--color-black);
+                font-weight: normal;
+                @media (min-width: 992px){
+                    font-size: 16px;
+                } 
             }
+            
         }
     }
 }

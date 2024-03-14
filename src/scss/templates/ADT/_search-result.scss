@@ -177,6 +177,95 @@
     .page-item:first-child .page-link:hover, .page-link-first:hover{
         background-color: transparent;
     }
+    .page-link[aria-expanded='true'], .page-link.show{
+        background-color: var(--color-orange-300);
+        color: var(--color-white);
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown > .dropdown-menu{
+        position: absolute;
+    }
+    .page-item .dropdown-menu, .pagination-items-per-page .dropdown-menu{
+        margin-bottom: 0.625rem;
+        margin-top: 0.625rem;
+    }
+    .dropdown-menu.show{
+        display: block;
+    }
+    .dropdown-menu{
+        border: 1px solid #e7e7ed;
+    }
+    .dropdown-menu-top-center {
+        bottom: 100% !important;
+        left: 50% !important;
+        margin-top: 0;
+        margin-bottom: 0.3125rem;
+        right: auto !important;
+        top: auto !important;
+        transform: translateX(-50%) !important;
+        will-change: auto !important;
+    }
+    .dropdown-menu {
+        background-clip: padding-box;
+        background-color: #fff;
+        border-color: #e7e7ed;
+        border-radius: 0.25rem;
+        border-style: solid;
+        border-width: 0px;
+        box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3);
+        color: #272833;
+        display: none;
+        float: left;
+        font-size: 0.875rem;
+        left: 0;
+        list-style: none;
+        margin: 0.3125rem 0 0;
+        max-height: 500px;
+        max-width: 240px;
+        min-height: 40px;
+        min-width: 240px;
+        overflow: auto;
+        padding: 0.375rem 0;
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        z-index: 1000;
+    }
+    .dropdown-menu .inline-scroller{
+        max-height: 200px;
+    }
+    .inline-scroller {
+        -webkit-overflow-scrolling: touch;
+        list-style: none;
+        margin: 0;
+        max-height: 125px;
+        overflow: auto;
+        padding: 0;
+    }
+    .dropdown-item, .dropdown-menu > li > a, .dropdown-menu .link-list > li > a{
+        background-color: transparent;
+        border-radius: 0px;
+        border-width: 0px;
+        clear: both;
+        color: #6b6c7e;
+        cursor: pointer;
+        display: block;
+        font-weight: 400;
+        overflow: hidden;
+        padding-bottom: 0.34375rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.34375rem;
+        position: relative;
+        text-align: inherit;
+        transition: none;
+        width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        font-size: inherit;
+    }
 }
 
 .portlet-layout .portlet-header{
