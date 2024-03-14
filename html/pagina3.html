@@ -160,7 +160,7 @@
                             </div>
                         </div>
                         <div class="col-lg-8 order-lg-1">
-                            <div class="pvr__section-search prv-sp-d40-m32">
+                            <div class="pvr__section-search">
                                 <div class="container"> 
                                     <h2 class="title prv-txt-green-700">¿En qué te podemos ayudar?</h2>
                                     <div class="navigation--search pvr__search">
@@ -177,9 +177,135 @@
 </svg></span></button>
                                                 <button class="close__btn" type="button" value="cerrar" id="closeSearch"> <span class="text">Cerrar</span><span class="icon"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.03033 0.46967C7.32322 0.762563 7.32322 1.23744 7.03033 1.53033L2.56066 6L7.03033 10.4697C7.32322 10.7626 7.32322 11.2374 7.03033 11.5303C6.73744 11.8232 6.26256 11.8232 5.96967 11.5303L1.14645 6.70711C0.755922 6.31658 0.755922 5.68342 1.14645 5.29289L5.96967 0.46967C6.26256 0.176777 6.73744 0.176777 7.03033 0.46967Z" fill="#404040"/>
-</svg>   </span></button>
+</svg>  </span></button>
                                             </div>
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pvr__offices prv-sp-d40-m32">
+                                <div class="container"> 
+                                    <h2 class="title">Nuestras oficinas</h2>
+                                    <p class="text">Contamos con 51 oficinas a nivel nacional en donde encontrarás a los mejores asesores, quienes estarán dispuestos a ayudarte con todos los trámites relacionados a tus productos. </p>
+                                    <form class="form" action=""> 
+                                        <fieldset class="form__fieldset"> 
+                                            <legend class="form__legend">Por favor selecciona la ciudad donde te encuentras:</legend>
+                                            <div class="pvr__select" id="selectCity"><span class="label">Ciudad</span>
+                                                <button class="select--button" onclick="selectCustom(this);" type="button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown"><span class="select--value">Seleccionar</span><span class="arrow icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                                        </svg></span></button>
+                                                <ul class="select--dropdown">
+                                                    <li class="select--item disabled">
+                                                        <input type="radio" id="defaultCity" name="defaultCity">
+                                                        <label for="defaultCity">Seleccionar</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="pvr__select" id="selectTown"><span class="label">Localidad/comuna</span>
+                                                <button class="select--button" disabled onclick="selectCustom(this);" type="button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown"><span class="select--value">Seleccionar</span><span class="arrow icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                                        </svg></span></button>
+                                                <ul class="select--dropdown">
+                                                    <li class="select--item disabled">
+                                                        <input type="radio" id="defaultTown" name="defaultTown">
+                                                        <label for="defaultTown">Seleccionar</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <div class="results"> 
+                                        <div class="title--result">Nuestra oficina más cercana a ti</div>
+                                        <div class="result__row"> 
+                                            <div class="result__column"> 
+                                                <div class="content"> <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-location"></use>
+                                                        </svg></span>
+                                                    <div class="description"> <span class="name">Porvenir Pensiones y Cesantías</span><span class="address">#0000</span><span class="journal">Jornada continua</span></div>
+                                                </div>
+                                                <div class="footer"> <a class="link" href="http://" target="_blank" rel="noopener noreferrer">Cómo llegar        </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pvr__transact prv-sp-d40-m32">
+                                <div class="container"> 
+                                    <h2 class="title">Realiza tu trámite</h2>
+                                    <form class="form" action=""> 
+                                        <fieldset class="form__fieldset">
+                                            <div class="pvr__select" id="selectProduct"><span class="label">Producto</span>
+                                                <button class="select--button" onclick="selectCustom(this);" type="button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown"><span class="select--value">Elige un producto</span><span class="arrow icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                                        </svg></span></button>
+                                                <ul class="select--dropdown">
+                                                    <li class="select--item disabled">
+                                                        <input type="radio" id="defaultProduct" name="defaultProduct">
+                                                        <label for="defaultProduct">Elige un producto</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="pvr__select" id="selectService"><span class="label">Servicio</span>
+                                                <button class="select--button" disabled onclick="selectCustom(this);" type="button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown"><span class="select--value">Elige un servicio </span><span class="arrow icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                                        </svg></span></button>
+                                                <ul class="select--dropdown">
+                                                    <li class="select--item disabled">
+                                                        <input type="radio" id="defaultService" name="defaultService">
+                                                        <label for="defaultService">Elige un servicio </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <div class="results"> <span class="text--result">Estos son los canales recomendados para realizar tu trámite.</span>
+                                        <div class="result__row"> 
+                                            <div class="result__column"> 
+                                                <div class="prv-card prv-card--center prv-style-3">
+                                                    <picture class="prv-card__image"> 
+                                                        <source media="(min-width: 992px)" srcset="images/selector/icon-prueba.png"><img src="images/selector/icon-prueba-mobile.png" alt="imagen prueba" srcset="images/selector/icon-prueba-mobile.png">
+                                                    </picture>
+                                                    <div class="prv-card__body"> <span class="card__title title__ellipsis prv-txt-green-500">Lorem ipsum</span>
+                                                        <div class="card__button"><a class="prv-btn prv-btn--link" href="http://" target="_blank" rel="noopener noreferrer">Button </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result__column"> 
+                                                <div class="prv-card prv-card--center prv-style-3">
+                                                    <picture class="prv-card__image"> 
+                                                        <source media="(min-width: 992px)" srcset="images/selector/icon-prueba.png"><img src="images/selector/icon-prueba-mobile.png" alt="imagen prueba" srcset="images/selector/icon-prueba-mobile.png">
+                                                    </picture>
+                                                    <div class="prv-card__body"> <span class="card__title title__ellipsis prv-txt-green-500">Lorem ipsum</span>
+                                                        <div class="card__button"><a class="prv-btn prv-btn--link" href="http://" target="_blank" rel="noopener noreferrer">Button </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result__column"> 
+                                                <div class="prv-card prv-card--center prv-style-3">
+                                                    <picture class="prv-card__image"> 
+                                                        <source media="(min-width: 992px)" srcset="images/selector/icon-prueba.png"><img src="images/selector/icon-prueba-mobile.png" alt="imagen prueba" srcset="images/selector/icon-prueba-mobile.png">
+                                                    </picture>
+                                                    <div class="prv-card__body"> <span class="card__title title__ellipsis prv-txt-green-500">Lorem ipsum</span>
+                                                        <div class="card__button"><a class="prv-btn prv-btn--link" href="http://" target="_blank" rel="noopener noreferrer">Button </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result__column"> 
+                                                <div class="prv-card prv-card--center prv-style-3">
+                                                    <picture class="prv-card__image"> 
+                                                        <source media="(min-width: 992px)" srcset="images/selector/icon-prueba.png"><img src="images/selector/icon-prueba-mobile.png" alt="imagen prueba" srcset="images/selector/icon-prueba-mobile.png">
+                                                    </picture>
+                                                    <div class="prv-card__body"> <span class="card__title title__ellipsis prv-txt-green-500">Lorem ipsum</span>
+                                                        <div class="card__button"><a class="prv-btn prv-btn--link" href="http://" target="_blank" rel="noopener noreferrer">Button </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

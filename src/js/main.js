@@ -773,6 +773,271 @@ function closeModal() {
   modal.classList.remove('visible');
 }
 
+//request Json
+function getJson(rqUrlJson, loadFunction){
+  const requestUrl = rqUrlJson;
+  const request = new XMLHttpRequest();
+  request.open("GET", requestUrl);
+  request.responseType = "json";
+  request.send();
+
+  request.onload = function () {
+    const rqObject = request.response;
+    loadFunction(rqObject);
+  }
+}
+
+function loadOffices(jsonObj){
+  const cities = jsonObj['ciudades'];
+  const selectCity = document.getElementById('selectCity');
+  const listCities = selectCity.querySelector('.select--dropdown');
+  const selectTown = document.getElementById('selectTown');
+  const listTowns = selectTown.querySelector('.select--dropdown');
+
+  //variables resultado
+  let conResult = document.querySelector('.pvr__offices .result__row');
+  let contResultName = conResult.querySelector('.result__column .name');
+  let contResultAddress = conResult.querySelector('.result__column .address');
+  let contResultJournal = conResult.querySelector('.result__column .journal');
+  let contResultLink = conResult.querySelector('.result__column .footer .link');
+
+  let dataCities = cities.sort((a, b) => {
+    if (a.nombre < b.nombre) {
+      return -1;
+    }
+  });
+
+  //carga de ciudades
+  for(let i = 0; i < dataCities.length; i++){
+    let innerObject = dataCities[i];
+    let id = innerObject.id;
+    let city = innerObject.nombre;
+    listCities.innerHTML += `
+      <li class="select--item">
+        <input type="radio" id="${id}" name="city" value="${city}">
+        <label for="${id}">${city}</label>
+      </li>    
+    `;
+  }
+
+  //cargar ciudad y localidad por defecto  
+  const checkFirstEl = listCities.querySelector(".select--item #C001");
+  checkFirstEl.checked = true;
+  if(checkFirstEl.checked == true){
+    selectCity.querySelector('.select--value').textContent = checkFirstEl.value;
+    let getCheckFirstEl = checkFirstEl.getAttribute('id');
+    for(let i = 0; i < cities.length; i++){
+      let innerObject = cities[i];
+      if(innerObject.id == getCheckFirstEl){
+        let locations = innerObject.locaciones;      
+        if(locations){
+          selectTown.querySelector('.select--button').removeAttribute('disabled');
+          conResult.innerHTML = '';
+          for(let j = 0; j < locations.length; j++){
+            listTowns.innerHTML += `
+              <li class="select--item">
+                <input type="radio" id="${locations[j].id}" name="town" value="${locations[j].locacion}">
+                <label for="${locations[j].id}">${locations[j].locacion}</label>
+              </li> 
+            `;
+            conResult.innerHTML += `
+              <div class="result__column"> 
+                <div class="content"> <span class="icon">
+                        <svg>
+                            <use xlink:href="images/icons/icons.svg#icon-location"></use>
+                        </svg></span>
+                    <div class="description"> 
+                      <span class="name">${locations[j].locacion}</span>
+                      <span class="address">${locations[j].informacion.direccion}</span>
+                      <span class="journal">${locations[j].informacion.jornada}</span></div>
+                </div>
+                <div class="footer"> <a class="link" href="#" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+              </div>              
+            `
+          }
+        }else{
+          let ciudad = innerObject;
+          let informacion = ciudad.informacion;
+          if(informacion){
+            contResultName.textContent = ciudad.nombre;
+            contResultAddress.textContent = informacion.direccion;
+            contResultJournal.textContent = informacion.jornada;
+          }else{
+            document.querySelector('.results .title--result').textContent = 'Para la búsqueda que estás realizando no se encontraron resultados';
+          }
+        }
+      }
+    }
+  }
+
+  //capturar cambio de valor
+  let inputRadio = selectCity.querySelectorAll('.select--dropdown input[type=radio]');
+  inputRadio.forEach(function(el){
+    el.addEventListener('change', function(e){
+      let idSelectCity = e.target.id;
+      selectTown.querySelector('.select--value').textContent = 'Seleccionar';
+      selectTown.querySelector('.select--button').setAttribute('disabled', true);
+      listTowns.innerHTML = `
+        <li class="select--item disabled">
+          <input type="radio" id="" name="offices" value="">
+          <label for="">Seleccionar</label>
+        </li>  
+      `;
+      for(let i = 0; i < cities.length; i++){
+        let innerObject = cities[i];
+        if(innerObject.id == idSelectCity){
+          let locations = innerObject.locaciones;
+          if(locations){
+            selectTown.querySelector('.select--button').removeAttribute('disabled');
+            conResult.innerHTML = '';
+            for(let j = 0; j < locations.length; j++){
+              listTowns.innerHTML += `
+                <li class="select--item">
+                  <input type="radio" id="${locations[j].id}" name="town" value="${locations[j].locacion}">
+                  <label for="${locations[j].id}">${locations[j].locacion}</label>
+                </li>
+              `;
+              document.querySelector('.results .title--result').textContent = 'Nuestra oficina más cercana a ti';
+              conResult.innerHTML += `
+                <div class="result__column"> 
+                  <div class="content"> <span class="icon">
+                          <svg>
+                              <use xlink:href="images/icons/icons.svg#icon-location"></use>
+                          </svg></span>
+                      <div class="description"> 
+                        <span class="name">${locations[j].locacion}</span>
+                        <span class="address">${locations[j].informacion.direccion}</span>
+                        <span class="journal">${locations[j].informacion.jornada}</span></div>
+                  </div>
+                  <div class="footer"> <a class="link" href="#" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+                </div>              
+              `;
+            }
+          }else{
+            document.querySelector('.results .title--result').textContent = 'Nuestra oficina más cercana a ti';
+            conResult.innerHTML = '';
+            let ciudad = innerObject;
+            let informacion = ciudad.informacion;
+            if(informacion){
+              conResult.innerHTML += `
+                <div class="result__column"> 
+                  <div class="content"> <span class="icon">
+                          <svg>
+                              <use xlink:href="images/icons/icons.svg#icon-location"></use>
+                          </svg></span>
+                      <div class="description"> 
+                        <span class="name">${ciudad.nombre}</span>
+                        <span class="address">${informacion.direccion}</span>
+                        <span class="journal">${informacion.jornada}</span></div>
+                  </div>
+                  <div class="footer"> <a class="link" href="#" target="_blank" rel="noopener noreferrer">Cómo llegar</a></div>
+                </div>              
+              `;
+            }else{
+              document.querySelector('.results .title--result').textContent = 'Para la búsqueda que estás realizando no se encontraron resultados';
+            }
+          }
+        }
+      }
+    });
+  });
+}
+
+function loadTransact(jsonObj){
+  const transact = jsonObj['productos'];
+  const selectProduct = document.getElementById('selectProduct');
+  const listProduct = selectProduct.querySelector('.select--dropdown');
+  const selectService = document.getElementById('selectService');
+  const listService = selectService.querySelector('.select--dropdown');
+
+  //variables resultado
+  let conResult = document.querySelector('.pvr__transact .result__row');
+
+  //carga de productos
+  for(let i = 0; i < transact.length; i++){
+    let innerObject = transact[i];
+    let id = innerObject.id;
+    let product = innerObject.nombre;
+    listProduct.innerHTML += `
+      <li class="select--item">
+        <input type="radio" id="${id}" name="product" value="${product}">
+        <label for="${id}">${product}</label>
+      </li>    
+    `;
+  }
+
+  //capturar cambio de valor
+  let inputRadio = selectProduct.querySelectorAll('.select--dropdown input[type=radio]');
+  inputRadio.forEach(function(el){
+    el.addEventListener('change', function(e){
+      let idSelectProduct = e.target.id;
+      selectService.querySelector('.select--value').textContent = 'Seleccionar';
+      selectService.querySelector('.select--button').setAttribute('disabled', true);
+      listService.innerHTML = `
+        <li class="select--item disabled">
+          <input type="radio" id="" name="services" value="">
+          <label for="">Seleccionar</label>
+        </li>  
+      `;
+      for(let i = 0; i < transact.length; i++){
+        let innerObject = transact[i];
+        if(innerObject.id == idSelectProduct){
+          let services = innerObject.servicios;
+          if(services){
+            selectService.querySelector('.select--button').removeAttribute('disabled');
+            // conResult.innerHTML = '';
+            for(let j = 0; j < services.length; j++){
+              listService.innerHTML += `
+                <li class="select--item">
+                  <input type="radio" id="${services[j].id}" name="services" value="${services[j].nombre}">
+                  <label for="${services[j].id}">${services[j].nombre}</label>
+                </li>
+              `;
+            }
+          }
+        }
+      }
+    });
+  });
+}
+
+//Select function
+function selectCustom(ele){
+  let customSelect = ele.parentNode;
+  let optionsList = customSelect.querySelectorAll(".select--dropdown li");
+  let selectedValue = customSelect.querySelector(".select--value");
+  if(!customSelect.classList.contains("active")){
+    document.querySelectorAll('.pvr__select').forEach(function (ele) {
+      ele.classList.remove("active");
+    });
+    customSelect.classList.add('active');
+  }else if(customSelect.classList.contains("active")){
+    customSelect.classList.remove('active');
+  }
+  ele.setAttribute(
+    "aria-expanded",
+    ele.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
+
+  //lista opciones
+  optionsList.forEach((option) => {
+    function handler(e) {
+      // Click Events
+      if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
+        selectedValue.textContent = this.children[1].textContent;
+        customSelect.classList.remove("active");
+      }
+      // Key Events
+      if (e.key === "Enter") {
+        selectedValue.textContent = this.textContent;
+        customSelect.classList.remove("active");
+      }
+    }  
+    option.addEventListener("keyup", handler);
+    option.addEventListener("click", handler);
+  });
+}
+
 //function resize
 window.addEventListener("resize", widthChangeCallback);
 widthChangeCallback();
@@ -843,6 +1108,11 @@ if (document.querySelector(".tab__carousel-container")) {
   );
   tabsSection(prvTabs, prvTabsPane);
 }
+
+// Json function
+getJson('http://localhost:3000/js/offices.json', loadOffices);
+getJson('http://localhost:3000/js/transact.json', loadTransact);
+
 
 // Footer Menu accordion
 footerAccordion();

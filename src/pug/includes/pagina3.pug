@@ -45,7 +45,7 @@ include ../structure/breadcrumb
                                     span.item--number 03
                                     span.item--text ¿Cómo realizar la solicitud del beneficio pensional por este canal?                   
             .col-lg-8.order-lg-1
-                .pvr__section-search.prv-sp-d40-m32
+                .pvr__section-search
                     .container 
                         h2.title.prv-txt-green-700 ¿En qué te podemos ayudar?
                         .navigation--search.pvr__search
@@ -66,7 +66,113 @@ include ../structure/breadcrumb
                                         span.icon
                                             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.03033 0.46967C7.32322 0.762563 7.32322 1.23744 7.03033 1.53033L2.56066 6L7.03033 10.4697C7.32322 10.7626 7.32322 11.2374 7.03033 11.5303C6.73744 11.8232 6.26256 11.8232 5.96967 11.5303L1.14645 6.70711C0.755922 6.31658 0.755922 5.68342 1.14645 5.29289L5.96967 0.46967C6.26256 0.176777 6.73744 0.176777 7.03033 0.46967Z" fill="#404040"/>
-                                            </svg>   
+                                            </svg>  
+
+                .pvr__offices.prv-sp-d40-m32
+                    .container 
+                        h2.title Nuestras oficinas
+                        p.text Contamos con 51 oficinas a nivel nacional en donde encontrarás a los mejores asesores, quienes estarán dispuestos a ayudarte con todos los trámites relacionados a tus productos. 
+                        form(action="").form 
+                            fieldset.form__fieldset 
+                                legend.form__legend Por favor selecciona la ciudad donde te encuentras:
+                                .pvr__select#selectCity
+                                    span.label Ciudad
+                                    button(onclick="selectCustom(this);" type="button" class="select--button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown")
+                                        span.select--value Seleccionar
+                                        span.arrow.icon: svg: use(xlink:href=iconPath+'chevron-down')
+                                    ul.select--dropdown
+                                        li.select--item.disabled
+                                            input(type="radio", id="defaultCity", name="defaultCity") 
+                                            label(for="defaultCity") Seleccionar
+
+                                .pvr__select#selectTown
+                                    span.label Localidad/comuna
+                                    button(disabled onclick="selectCustom(this);" type="button" class="select--button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown")
+                                        span.select--value Seleccionar
+                                        span.arrow.icon: svg: use(xlink:href=iconPath+'chevron-down')
+                                    ul.select--dropdown
+                                        li.select--item.disabled
+                                            input(type="radio", id="defaultTown", name="defaultTown")
+                                            label(for="defaultTown") Seleccionar
+
+                        .results 
+                            .title--result Nuestra oficina más cercana a ti
+                            .result__row 
+                                .result__column 
+                                    .content 
+                                        span.icon: svg: use(xlink:href=iconPath+'location')
+                                        .description 
+                                            span.name Porvenir Pensiones y Cesantías
+                                            span.address #0000
+                                            span.journal Jornada continua
+                                    .footer 
+                                        a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Cómo llegar        
+
+                .pvr__transact.prv-sp-d40-m32
+                    .container 
+                        h2.title Realiza tu trámite
+                        form(action="").form 
+                            fieldset.form__fieldset
+                                .pvr__select#selectProduct
+                                    span.label Producto
+                                    button(onclick="selectCustom(this);" type="button" class="select--button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown")
+                                        span.select--value Elige un producto
+                                        span.arrow.icon: svg: use(xlink:href=iconPath+'chevron-down')
+                                    ul.select--dropdown
+                                        li.select--item.disabled
+                                            input(type="radio", id="defaultProduct", name="defaultProduct") 
+                                            label(for="defaultProduct") Elige un producto
+
+                                .pvr__select#selectService
+                                    span.label Servicio
+                                    button(disabled onclick="selectCustom(this);" type="button" class="select--button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown")
+                                        span.select--value Elige un servicio 
+                                        span.arrow.icon: svg: use(xlink:href=iconPath+'chevron-down')
+                                    ul.select--dropdown
+                                        li.select--item.disabled
+                                            input(type="radio", id="defaultService", name="defaultService")
+                                            label(for="defaultService") Elige un servicio 
+
+                        .results 
+                            span.text--result Estos son los canales recomendados para realizar tu trámite.
+                            .result__row 
+                                .result__column 
+                                    .prv-card.prv-card--center.prv-style-3
+                                        picture.prv-card__image 
+                                            source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
+                                            img(src="images/selector/icon-prueba-mobile.png", alt="imagen prueba", srcset="images/selector/icon-prueba-mobile.png")
+                                        .prv-card__body 
+                                            span.card__title.title__ellipsis.prv-txt-green-500 Lorem ipsum
+                                            .card__button
+                                                a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn prv-btn--link") Button 
+                                .result__column 
+                                    .prv-card.prv-card--center.prv-style-3
+                                        picture.prv-card__image 
+                                            source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
+                                            img(src="images/selector/icon-prueba-mobile.png", alt="imagen prueba", srcset="images/selector/icon-prueba-mobile.png")
+                                        .prv-card__body 
+                                            span.card__title.title__ellipsis.prv-txt-green-500 Lorem ipsum
+                                            .card__button
+                                                a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn prv-btn--link") Button 
+                                .result__column 
+                                    .prv-card.prv-card--center.prv-style-3
+                                        picture.prv-card__image 
+                                            source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
+                                            img(src="images/selector/icon-prueba-mobile.png", alt="imagen prueba", srcset="images/selector/icon-prueba-mobile.png")
+                                        .prv-card__body 
+                                            span.card__title.title__ellipsis.prv-txt-green-500 Lorem ipsum
+                                            .card__button
+                                                a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn prv-btn--link") Button 
+                                .result__column 
+                                    .prv-card.prv-card--center.prv-style-3
+                                        picture.prv-card__image 
+                                            source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
+                                            img(src="images/selector/icon-prueba-mobile.png", alt="imagen prueba", srcset="images/selector/icon-prueba-mobile.png")
+                                        .prv-card__body 
+                                            span.card__title.title__ellipsis.prv-txt-green-500 Lorem ipsum
+                                            .card__button
+                                                a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn prv-btn--link") Button 
+
                 .section.pvr__information#introduccion
                     .container 
                         h2.title Proceso de afiliación
