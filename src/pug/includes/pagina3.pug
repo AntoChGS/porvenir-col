@@ -12,18 +12,19 @@
 //-                 img(src="images/Banner-Family-mobile.png", alt="").picture  
 include ../structure/breadcrumb
 
-.pvr__banner.pvr__banner--v2.pvr__banner--bkg-green
-    .pvr__banner--content
-        .pvr__banner--left
-            h1.title Afíliate a pensiones
-            p.text Asegura tu futuro, vive el presente
-            .pvr__banner--btn--content
-                a(href="#").pvr__banner--btn.prv-btn.prv-btn--round-corner.prv-btn--orange.open-modal Afiliarme
-            
-        .pvr__banner--right 
-            picture.pvr__banner--image
-                source(media="(min-width: 1024px)" srcset="images/Banner-Family-desktop.png")
-                img(src="images/Banner-Family-mobile.png", alt="").picture
+section.prv-banner-tpl.prv-variant-2.pvr-banner--bkg-green
+    .banner-wrap.container
+        .banner-content
+            .banner-left
+                h1.title Ahorra para tus sueños, construye tu futuro.
+                .banner-btn(disabled)
+                    a(href="#").prv-btn.prv-btn--round-corner.prv-btn--orange Afiliate a Porvenir
+                
+            .banner-right 
+                picture.banner-image
+                    source(media="(min-width: 1024px)" srcset="images/Banner-Family-desktop.png")
+                    img.picture(src="images/Banner-Family-mobile.png", alt="")    
+
 .prv-layout-frg-section.prv-sp-d40-m20
     .container
         .row

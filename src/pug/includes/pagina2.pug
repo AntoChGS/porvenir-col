@@ -1,36 +1,38 @@
-section.pvr__banner.pvr__banner--v2.pvr__banner--bkg-green
-    .pvr__banner--content
-        .pvr__banner--left
-            h1.title Afíliate a pensiones
-            p.text Asegura tu futuro, vive el presente
-            .pvr__banner--btn--content
-                a(href="#").pvr__banner--btn.prv-btn.prv-btn--round-corner.prv-btn--orange Afiliarme
-            
-        .pvr__banner--right 
-            picture.pvr__banner--image
-                source(media="(min-width: 1024px)" srcset="images/Banner-Family-desktop.png")
-                img(src="images/Banner-Family-mobile.png", alt="").picture
+section.prv-banner-tpl.prv-variant-1.pvr-banner--bkg-green
+    .banner-wrap.container
+        .banner-content
+            .banner-left
+                h1.title Ahorra para tus sueños, construye tu futuro.
+                p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                .banner-btn(disabled)
+                    a(href="#").prv-btn.prv-btn--round-corner.prv-btn--orange Afiliate a Porvenir
+                
+            .banner-right 
+                picture.banner-image
+                    source(media="(min-width: 1024px)" srcset="images/Banner-Family-desktop.png")
+                    img.picture(src="images/Banner-Family-mobile.png", alt="")
 
-.pvr__hub-navigation
+.pvr__hub-navigation#sidebar
     .content
         h2.title Aquí encontrarás
         ul.navigation__list
             li.navigation__item
-                a(href="#"  data-navigatelink="historias" class="link")
-                    span.item--info
-                        span.item--number 01
-                        span.item--text Button
+                a.link(href="#")
+                    span.item--number 01
+                    span.item--text ¿Cómo afiliarse a fondo de pensiones?
             li.navigation__item
-                a(href="#" data-navigatelink="preguntas" class="link")
-                    span.item--info
-                        span.item--number 02
-                        span.item--text Button
+                a.link(href="#")
+                    span.item--number 02
+                    span.item--text ¿Aún no estás afiliado a Porvenir?
             li.navigation__item
-                a(href="#" data-navigatelink="intereses" class="link")
-                    span.item--info
-                        span.item--number 03
-                        span.item--text Button     
-
+                a.link(href="#")
+                    span.item--number 03
+                    span.item--text Beneficios producto con Porvenir
+            li.navigation__item
+                a.link(href="#")
+                    span.item--number 04
+                    span.item--text ¿Cuál régimen me conviene más?
+                    
 section.pvr-testimonials-tpl.prv-bg-white.prv-sp-d24-m16.anchor_#anchor1(data-navigateanchor="historias")
     .container
         h2.testimonials-tpl__title.prv-title.prv-txt-green-700 ¿Qué esperas para vivir tu Porvenir? 
