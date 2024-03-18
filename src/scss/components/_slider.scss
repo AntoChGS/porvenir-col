@@ -1,3 +1,24 @@
+.altoContrasGeneral{ 
+    .swiper {
+        .prv-slider {
+            &-controls {    
+                .swiper-pagination-bullet {
+                    border: 1px solid var(--color-green-accesibility);
+                }
+    
+                .swiper-pagination-bullet-active {
+                    background: var(--color-green-accesibility);
+                    border-color: var(--color-green-accesibility);
+                }
+            }
+    
+            &-btn {
+                color: var(--color-green-accesibility);
+            }
+        }
+    }
+}
+
 .swiper {
     .prv-slider {
         &-controls {

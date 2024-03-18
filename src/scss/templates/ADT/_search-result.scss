@@ -1,3 +1,281 @@
+.newFontSize{
+    &__100 {
+        .pvr{
+            &__search-result{
+                .search__total-label{
+                    font-size: 18px;
+                }
+                .search__list{                    
+                    .list__group-item{                        
+                        .content{
+                            .title{
+                                font-size: 20px;
+                                @media (min-width:992px){
+                                    font-size: 24px;
+                                }
+                            }
+                            .text-box{
+                                .text{
+                                    font-size: 16px;
+                                    @media (min-width:992px) {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }          
+                        .footer{
+                            .link{
+                                font-size: 14px;
+                            }
+                        }    
+                    }
+                }
+            }
+        }        
+        .pagination-bar{
+            .pagination{
+                font-size: 0.875rem;
+            } 
+            .dropdown-menu {
+                font-size: 0.875rem;
+            }
+        }
+    }
+    &__110 {
+        .pvr{
+            &__search-result{
+                .search__total-label{
+                    font-size: 19px;
+                }
+                .search__list{                    
+                    .list__group-item{                        
+                        .content{
+                            .title{
+                                font-size: 21px;
+                                @media (min-width:992px){
+                                    font-size: 25px;
+                                }
+                            }
+                            .text-box{
+                                .text{
+                                    font-size: 17px;
+                                    @media (min-width:992px) {
+                                        font-size: 19px;
+                                    }
+                                }
+                            }
+                        }          
+                        .footer{
+                            .link{
+                                font-size: 15px;
+                            }
+                        }    
+                    }
+                }
+            }
+        }        
+        .pagination-bar{
+            .pagination{
+                font-size: 0.890rem;
+            } 
+            .dropdown-menu {
+                font-size: 0.890rem;
+            }
+        }
+    }
+    &__120 {
+        .pvr{
+            &__search-result{
+                .search__total-label{
+                    font-size: 20px;
+                }
+                .search__list{                    
+                    .list__group-item{                        
+                        .content{
+                            .title{
+                                font-size: 22px;
+                                @media (min-width:992px){
+                                    font-size: 26px;
+                                }
+                            }
+                            .text-box{
+                                .text{
+                                    font-size: 18px;
+                                    @media (min-width:992px) {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }          
+                        .footer{
+                            .link{
+                                font-size: 16px;
+                            }
+                        }    
+                    }
+                }
+            }
+        }        
+        .pagination-bar{
+            .pagination{
+                font-size: 0.9rem;
+            } 
+            .dropdown-menu {
+                font-size: 0.9rem;
+            }
+        }
+    }
+    &__130 {
+        .pvr{
+            &__search-result{
+                .search__total-label{
+                    font-size: 21px;
+                }
+                .search__list{                    
+                    .list__group-item{                        
+                        .content{
+                            .title{
+                                font-size: 23px;
+                                @media (min-width:992px){
+                                    font-size: 27px;
+                                }
+                            }
+                            .text-box{
+                                .text{
+                                    font-size: 19px;
+                                    @media (min-width:992px) {
+                                        font-size: 21px;
+                                    }
+                                }
+                            }
+                        }          
+                        .footer{
+                            .link{
+                                font-size: 17px;
+                            }
+                        }    
+                    }
+                }
+            }
+        }        
+        .pagination-bar{
+            .pagination{
+                font-size: 0.975rem;
+            } 
+            .dropdown-menu {
+                font-size: 0.975rem;
+            }
+        }
+    }
+    &__140 {
+        .pvr{
+            &__search-result{
+                .search__total-label{
+                    font-size: 22px;
+                }
+                .search__list{                    
+                    .list__group-item{                        
+                        .content{
+                            .title{
+                                font-size: 24px;
+                                @media (min-width:992px){
+                                    font-size: 28px;
+                                }
+                            }
+                            .text-box{
+                                .text{
+                                    font-size: 20px;
+                                    @media (min-width:992px) {
+                                        font-size: 22px;
+                                    }
+                                }
+                            }
+                        }          
+                        .footer{
+                            .link{
+                                font-size: 18px;
+                            }
+                        }    
+                    }
+                }
+            }
+        }        
+        .pagination-bar{
+            .pagination{
+                font-size: 0.990rem;
+            } 
+            .dropdown-menu {
+                font-size: 0.990rem;
+            }
+        }
+    }
+}
+
+.altoContrasGeneral{  
+    .pvr{
+        &__search-result{
+            border-bottom: 1px solid var(--color-green-accesibility-100);
+            .search__total-label{
+                color: var(--color-green-accesibility-300);
+            }
+            .search__list{
+                .list__group-item{                    
+                    .content{
+                        .title{
+                            .link{
+                                color: var(--color-green-accesibility);
+                            }
+                        }
+                        .text-box{
+                            .text{
+                                color: var(--color-green-accesibility-300);
+                            }
+                        }
+                    }          
+                    .footer{
+                        .link{
+                            color: var(--color-green-accesibility);                            
+                        }
+                    }    
+                }
+            }
+        }
+    }
+    
+    .pagination-bar{        
+        .page-link{
+            color: var(--color-green-accesibility);
+            .lfr-portal-tooltip{
+                color: var(--color-green-accesibility);
+            }
+        }
+        .page-item.active .page-link, .nav-underline .tab.active a.page-item .page-link{
+            background-color: var(--color-green-accesibility-300);
+        }
+    
+        .page-item.disabled .page-link{
+            color: var(--color-green-accesibility);
+        }
+        
+        .page-link:hover, .page-link.hover{
+            background-color: var(--color-green-accesibility-300);
+        }
+        .page-link[aria-expanded='true'], .page-link.show{
+            background-color: var(--color-green-accesibility-300);
+        }
+        .dropdown-menu{
+            border: 1px solid var(--color-green-accesibility-50);
+        }
+        .dropdown-menu {
+            border-color: var(--color-green-accesibility-50);
+            color: var(--color-green-accesibility);
+        }
+        .dropdown-item, .dropdown-menu > li > a, .dropdown-menu .link-list > li > a{
+            color: var(--color-green-accesibility);
+        }
+    }
+}
+
 .pvr{
     &__search-result{
         position: relative;

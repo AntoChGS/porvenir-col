@@ -1,3 +1,194 @@
+.newFontSize{
+    &__100 {
+        .pvr-faq-tpl {
+            .faq-tpl {        
+                &__list {
+                    .faq-acc {
+                        &__header {
+                            .title {
+                                font-size: 14px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }        
+                        &__body {        
+                            .info {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__110 {
+        .pvr-faq-tpl {
+            .faq-tpl {        
+                &__list {
+                    .faq-acc {
+                        &__header {
+                            .title {
+                                font-size: 15px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }
+                            }
+                        }        
+                        &__body {        
+                            .info {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__120 {
+        .pvr-faq-tpl {
+            .faq-tpl {        
+                &__list {
+                    .faq-acc {
+                        &__header {
+                            .title {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+                            }
+                        }        
+                        &__body {        
+                            .info {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__130 {
+        .pvr-faq-tpl {
+            .faq-tpl {        
+                &__list {
+                    .faq-acc {
+                        &__header {
+                            .title {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+                            }
+                        }        
+                        &__body {        
+                            .info {
+                                font-size: 19px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__140 {
+        .pvr-faq-tpl {
+            .faq-tpl {        
+                &__list {
+                    .faq-acc {
+                        &__header {
+                            .title {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }        
+                        &__body {        
+                            .info {
+                                font-size: 20px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.altoContrasGeneral{
+    .pvr-faq-tpl {    
+        .faq-tpl {    
+            &__list {
+                &.faq-tpl__list {
+                    &-orange {
+                        .faq-acc {
+                            &__header {
+                                .title {
+                                    &:after {
+                                        border-right: 2px solid var(--color-green-accesibility);
+                                        border-bottom: 2px solid var(--color-green-accesibility);
+                                    }
+                                }
+                            }    
+                            &__body {
+                                background-color: var(--color-green-accesibility-50);
+                                border-left: 2px solid var(--color-green-accesibility);
+                            }
+                        }
+                    }
+    
+                    &-green {
+                        .faq-acc {
+                            &__header {
+                                .title {
+                                    &:after {
+                                        border-right: 2px solid var(--color-green-accesibility);
+                                        border-bottom: 2px solid var(--color-green-accesibility);
+                                    }
+                                }
+                            }    
+                            &__body {
+                                background-color: var(--color-green-accesibility-50);
+                                border-left: 2px solid var(--color-green-accesibility);
+                            }
+                        }
+                    }
+                }    
+                .faq-acc {
+                    &__header {
+                        border-bottom: 1px solid var(--color-green-accesibility);    
+                        .title {
+                            color: var(--color-green-accesibility);    
+                        }
+                    }
+    
+                    &__body {
+                        .info {
+                            color: var(--color-green-accesibility);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .pvr-faq-tpl {
     position: relative;
 

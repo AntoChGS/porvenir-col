@@ -1,3 +1,114 @@
+.newFontSize{
+    &__100 {
+        .alertCard {
+            .alertCard-body{
+                .alertCard-body__txt{
+                    .txt-tit{
+                        font-size: 20px;
+                        @media (min-width: 1023px) {
+                            font-size: 24px;
+                        }
+                    }
+                    .txt-des{
+                        font-size: 16px;
+                        @media (min-width: 1023px) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__110 {
+        .alertCard {
+            .alertCard-body{
+                .alertCard-body__txt{
+                    .txt-tit{
+                        font-size: 21px;
+                        @media (min-width: 1023px) {
+                            font-size: 25px;
+                        }
+                    }
+                    .txt-des{
+                        font-size: 17px;
+                        @media (min-width: 1023px) {
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__120 {
+        .alertCard {
+            .alertCard-body{
+                .alertCard-body__txt{
+                    .txt-tit{
+                        font-size: 22px;
+                        @media (min-width: 1023px) {
+                            font-size: 26px;
+                        }
+                    }
+                    .txt-des{
+                        font-size: 18px;
+                        @media (min-width: 1023px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__130 {
+        .alertCard {
+            .alertCard-body{
+                .alertCard-body__txt{
+                    .txt-tit{
+                        font-size: 23px;
+                        @media (min-width: 1023px) {
+                            font-size: 27px;
+                        }
+                    }
+                    .txt-des{
+                        font-size: 19px;
+                        @media (min-width: 1023px) {
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__140 {
+        .alertCard {
+            .alertCard-body{
+                .alertCard-body__txt{
+                    .txt-tit{
+                        font-size: 24px;
+                        @media (min-width: 1023px) {
+                            font-size: 28px;
+                        }
+                    }
+                    .txt-des{
+                        font-size: 20px;
+                        @media (min-width: 1023px) {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.altoContrasGeneral{
+    .alertCard {
+        .alertCard-body{
+            background-color:var(--color-green-accesibility-50);            
+        }
+    }
+}
+
 .alertCard {
     .alertCard-body{
         display:flex;

@@ -1,3 +1,1460 @@
+.newFontSize{
+    &__100 {
+        .prv-card {
+            &.prv-style-1 {        
+                .prv-card {  
+                    &__body {  
+                        .card {
+                            &__badge {
+                                font-size: 14px;   
+                            }        
+                            &__title {
+                                font-size: 20px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 24px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 16px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 18px;
+                                }
+        
+                                >* {
+                                    font-size: 16px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-2 {     
+                .prv-card {             
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 14px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }
+        
+                                >* {
+                                    font-size: 14px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-3 {             
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 20px;        
+                                @media (min-width: 992px) {
+                                    font-size: 24px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+        
+                                >* {
+                                    font-size: 16px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-4 {        
+                .prv-card {         
+                    &__body {        
+                        .card {
+                            &__title {
+                                font-size: 14px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }  
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-5 {        
+                .prv-card {   
+                    &__body {   
+                        .card {
+                            &__title {
+                                font-size: 20px;        
+                                @media (min-width: 992px) {
+                                    font-size: 24px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 14px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }
+        
+                                >* {
+                                    font-size: 14px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 16px;
+                                    }   
+                                }
+                            }
+                        }
+                    }
+        
+                    &__list {        
+                        .link-box {
+                            .box {
+                                &__info {        
+                                    .info {        
+                                        &__text {
+                                            font-size: 14px;        
+                                            @media (min-width: 992px) {
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-6 {           
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 14px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-7 {     
+                .prv-card {    
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 24px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 36px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 16px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 18px;
+                                }
+        
+                                >* {
+                                    font-size: 16px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-8 { 
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 14px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-9 {           
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-10 {            
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 20px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 14px;        
+                                @media (min-width: 992px) {
+                                    font-size: 14px;
+                                }
+        
+                                >* {
+                                    font-size: 14px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__110 {
+        .prv-card {
+            &.prv-style-1 {        
+                .prv-card {  
+                    &__body {  
+                        .card {
+                            &__badge {
+                                font-size: 15px;   
+                            }        
+                            &__title {
+                                font-size: 21px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 25px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 17px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 19px;
+                                }
+        
+                                >* {
+                                    font-size: 17px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 19px;
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-2 {     
+                .prv-card {             
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 19px;        
+                                @media (min-width: 992px) {
+                                    font-size: 21px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 15px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }
+        
+                                >* {
+                                    font-size: 15px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 17px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-3 {             
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 21px;        
+                                @media (min-width: 992px) {
+                                    font-size: 25px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+        
+                                >* {
+                                    font-size: 17px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 19px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-4 {        
+                .prv-card {         
+                    &__body {        
+                        .card {
+                            &__title {
+                                font-size: 15px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }  
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-5 {        
+                .prv-card {   
+                    &__body {   
+                        .card {
+                            &__title {
+                                font-size: 21px;        
+                                @media (min-width: 992px) {
+                                    font-size: 25px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 15px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }
+        
+                                >* {
+                                    font-size: 15px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 17px;
+                                    }   
+                                }
+                            }
+                        }
+                    }
+        
+                    &__list {        
+                        .link-box {
+                            .box {
+                                &__info {        
+                                    .info {        
+                                        &__text {
+                                            font-size: 15px;        
+                                            @media (min-width: 992px) {
+                                                font-size: 17px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-6 {           
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 15px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-7 {     
+                .prv-card {    
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 25px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 37px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 17px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 19px;
+                                }
+        
+                                >* {
+                                    font-size: 17px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 19px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-8 { 
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 15px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-9 {           
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-10 {            
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 21px;        
+                                @media (min-width: 992px) {
+                                    font-size: 21px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 15px;        
+                                @media (min-width: 992px) {
+                                    font-size: 15px;
+                                }
+        
+                                >* {
+                                    font-size: 15px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__120 {
+        .prv-card {
+            &.prv-style-1 {        
+                .prv-card {  
+                    &__body {  
+                        .card {
+                            &__badge {
+                                font-size: 16px;   
+                            }        
+                            &__title {
+                                font-size: 22px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 26px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 18px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 20px;
+                                }
+        
+                                >* {
+                                    font-size: 18px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-2 {     
+                .prv-card {             
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 20px;        
+                                @media (min-width: 992px) {
+                                    font-size: 22px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+        
+                                >* {
+                                    font-size: 16px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-3 {             
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 22px;        
+                                @media (min-width: 992px) {
+                                    font-size: 26px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+        
+                                >* {
+                                    font-size: 18px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-4 {        
+                .prv-card {         
+                    &__body {        
+                        .card {
+                            &__title {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }  
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-5 {        
+                .prv-card {   
+                    &__body {   
+                        .card {
+                            &__title {
+                                font-size: 22px;        
+                                @media (min-width: 992px) {
+                                    font-size: 26px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+        
+                                >* {
+                                    font-size: 16px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 18px;
+                                    }   
+                                }
+                            }
+                        }
+                    }
+        
+                    &__list {        
+                        .link-box {
+                            .box {
+                                &__info {        
+                                    .info {        
+                                        &__text {
+                                            font-size: 16px;        
+                                            @media (min-width: 992px) {
+                                                font-size: 18px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-6 {           
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-7 {     
+                .prv-card {    
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 26px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 38px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 18px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 20px;
+                                }
+        
+                                >* {
+                                    font-size: 18px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-8 { 
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-9 {           
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-10 {            
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 22px;        
+                                @media (min-width: 992px) {
+                                    font-size: 22px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 16px;        
+                                @media (min-width: 992px) {
+                                    font-size: 16px;
+                                }
+        
+                                >* {
+                                    font-size: 16px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__130 {
+        .prv-card {
+            &.prv-style-1 {        
+                .prv-card {  
+                    &__body {  
+                        .card {
+                            &__badge {
+                                font-size: 17px;   
+                            }        
+                            &__title {
+                                font-size: 23px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 27px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 19px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 21px;
+                                }
+        
+                                >* {
+                                    font-size: 19px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 21px;
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-2 {     
+                .prv-card {             
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 21px;        
+                                @media (min-width: 992px) {
+                                    font-size: 23px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+        
+                                >* {
+                                    font-size: 17px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 19px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-3 {             
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 23px;        
+                                @media (min-width: 992px) {
+                                    font-size: 27px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 19px;        
+                                @media (min-width: 992px) {
+                                    font-size: 21px;
+                                }
+        
+                                >* {
+                                    font-size: 19px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 21px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-4 {        
+                .prv-card {         
+                    &__body {        
+                        .card {
+                            &__title {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }  
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-5 {        
+                .prv-card {   
+                    &__body {   
+                        .card {
+                            &__title {
+                                font-size: 23px;        
+                                @media (min-width: 992px) {
+                                    font-size: 27px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+        
+                                >* {
+                                    font-size: 17px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 19px;
+                                    }   
+                                }
+                            }
+                        }
+                    }
+        
+                    &__list {        
+                        .link-box {
+                            .box {
+                                &__info {        
+                                    .info {        
+                                        &__text {
+                                            font-size: 17px;        
+                                            @media (min-width: 992px) {
+                                                font-size: 19px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-6 {           
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-7 {     
+                .prv-card {    
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 27px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 39px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 19px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 21px;
+                                }
+        
+                                >* {
+                                    font-size: 19px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 21px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-8 { 
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-9 {           
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 19px;        
+                                @media (min-width: 992px) {
+                                    font-size: 21px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-10 {            
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 23px;        
+                                @media (min-width: 992px) {
+                                    font-size: 23px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 17px;        
+                                @media (min-width: 992px) {
+                                    font-size: 17px;
+                                }
+        
+                                >* {
+                                    font-size: 17px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 17px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__140 {
+        .prv-card {
+            &.prv-style-1 {        
+                .prv-card {  
+                    &__body {  
+                        .card {
+                            &__badge {
+                                font-size: 18px;   
+                            }        
+                            &__title {
+                                font-size: 24px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 28px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 20px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 22px;
+                                }
+        
+                                >* {
+                                    font-size: 20px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 22px;
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-2 {     
+                .prv-card {             
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 22px;        
+                                @media (min-width: 992px) {
+                                    font-size: 24px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+        
+                                >* {
+                                    font-size: 18px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-3 {             
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 24px;        
+                                @media (min-width: 992px) {
+                                    font-size: 28px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 20px;        
+                                @media (min-width: 992px) {
+                                    font-size: 22px;
+                                }
+        
+                                >* {
+                                    font-size: 20px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 22px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-4 {        
+                .prv-card {         
+                    &__body {        
+                        .card {
+                            &__title {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }  
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-5 {        
+                .prv-card {   
+                    &__body {   
+                        .card {
+                            &__title {
+                                font-size: 24px;        
+                                @media (min-width: 992px) {
+                                    font-size: 28px;
+                                }
+                            }        
+                            &__description {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+        
+                                >* {
+                                    font-size: 18px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 20px;
+                                    }   
+                                }
+                            }
+                        }
+                    }
+        
+                    &__list {        
+                        .link-box {
+                            .box {
+                                &__info {        
+                                    .info {        
+                                        &__text {
+                                            font-size: 18px;        
+                                            @media (min-width: 992px) {
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-6 {           
+                .prv-card {
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-7 {     
+                .prv-card {    
+                    &__body {  
+                        .card {
+                            &__title {
+                                font-size: 28px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 40px;
+                                }  
+                            }
+        
+                            &__description {
+                                font-size: 20px;        
+                                @media (min-width: 1024px) {
+                                    font-size: 22px;
+                                }
+        
+                                >* {
+                                    font-size: 20px;        
+                                    @media (min-width: 1024px) {
+                                        font-size: 22px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-8 { 
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-9 {           
+                .prv-card {    
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 20px;        
+                                @media (min-width: 992px) {
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.prv-style-10 {            
+                .prv-card {        
+                    &__body {
+                        .card {
+                            &__title {
+                                font-size: 24px;        
+                                @media (min-width: 992px) {
+                                    font-size: 24px;
+                                }
+                            }
+        
+                            &__description {
+                                font-size: 18px;        
+                                @media (min-width: 992px) {
+                                    font-size: 18px;
+                                }
+        
+                                >* {
+                                    font-size: 18px;        
+                                    @media (min-width: 992px) {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.altoContrasGeneral{
+    .prv-card {
+        &.prv-style-2 {
+            background: var(--color-white);
+            .prv-card {
+                &__body {
+                    .card {
+                        &__title {
+                            color: var(--color-green-accesibility);
+                        }                    
+                    }
+                }
+            }
+        }
+        &.prv-style-3 {
+            .prv-card {
+                &__body {
+                    .card {
+                        &__description {
+                            color: var(--color-green-accesibility);
+                        }
+                    }
+                }
+            }
+        }
+        &.prv-style-4 {
+            .prv-card {
+                &__body {
+                    .card {
+                        &__title {
+                            color: var(--color-green-accesibility);
+                            >a {
+                                color: var(--color-green-accesibility);
+                                &:hover {
+                                    color: var(--color-green-accesibility);
+                                }
+                                &:focus {
+                                    color: var(--color-green-accesibility);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.prv-style-5 {
+            background: var(--color-white);
+            .prv-card {
+                &__body {
+                    .card {
+                        &__title {
+                            color: var(--color-green-accesibility);
+                        }
+                        &__description {
+                            color: var(--color-green-accesibility);
+                            >* {
+                                color: var(--color-green-accesibility);
+                            }
+                        }
+                    }
+                }
+                &__list {
+                    .link-box {
+                        border-bottom: 0.5px solid var(--color-green-accesibility);
+                        color: var(--color-green-accesibility);
+                        &:hover {
+                            background: var(--color-green-accesibility-50);
+                        }
+                        &:focus {
+                            background: var(--color-green-accesibility-50);
+                        }
+                        .box {
+                            &__info {
+                                .info {
+                                    &__number {
+                                        background-color: var(--color-green-accesibility);
+                                        color: var(--color-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.prv-style-6 {
+            &.prv-card {
+                &--green-600 {
+                    background: var(--color-green-accesibility-100);
+                    .prv-card {
+                        &__body {
+                            .card {
+                                &__title {
+                                    color: var(--color-green-accesibility);
+                                    >a {
+                                        color: var(--color-green-accesibility);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &--yellow {
+                    background: var(--color-green-accesibility-300);
+                    .prv-card {
+                        &__body {
+                            .card {
+                                &__title {
+                                    color: var(--color-white);
+    
+                                    >a {
+                                        color: var(--color-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.prv-style-7 {
+            border: 2px solid var(--color-green-accesibility);
+            &.prv-card {
+                &--green-600 {
+                    background: var(--color-green-accesibility-100);
+                    .prv-card {
+                        &__body {
+                            .card {
+                                &__title {
+                                    color: var(--color-green-accesibility);
+                                }
+                            }
+                        }
+                    }
+                }
+                &--yellow {
+                    background: var(--color-green-accesibility-300);
+                    .prv-card {
+                        &__body {
+                            .card {
+                                &__title {
+                                    color: var(--color-white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .prv-card {
+                &__body {
+                    .card {
+                        &__description {
+                            color: var(--color-green-accesibility);
+                            >* {
+                                color: var(--color-green-accesibility);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.prv-style-10 {
+            border: 1px solid var(--color-green-accesibility-300);
+            .prv-card {
+                &__body {
+                    .card {
+                        &__description {
+                            color: var(--color-green-accesibility);
+                            >* {
+                                color: var(--color-green-accesibility);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .prv-card {
     &.prv-style-1 {
         position: relative;

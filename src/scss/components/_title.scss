@@ -1,3 +1,111 @@
+.newFontSize{
+    &__100 {   
+        .prv-title {
+            font-size: 24px;
+            @media (min-width: 768px) {
+                font-size: 36px;
+            }
+        }
+        
+        .prv-subtitle {
+            font-size: 16px;
+            @media (min-width: 768px) {
+                font-size: 18px;
+            }        
+            >* {
+                font-size: 16px;
+                @media (min-width: 768px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &__110 {
+        .prv-title {
+            font-size: 25px;
+            @media (min-width: 768px) {
+                font-size: 37px;
+            }
+        }
+        
+        .prv-subtitle {
+            font-size: 17px;
+            @media (min-width: 768px) {
+                font-size: 19px;
+            }        
+            >* {
+                font-size: 17px;
+                @media (min-width: 768px) {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    &__120 {
+        .prv-title {
+            font-size: 26px;
+            @media (min-width: 768px) {
+                font-size: 38px;
+            }
+        }
+        
+        .prv-subtitle {
+            font-size: 18px;
+            @media (min-width: 768px) {
+                font-size: 20px;
+            }        
+            >* {
+                font-size: 18px;
+                @media (min-width: 768px) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &__130 {
+        .prv-title {
+            font-size: 27px;
+            @media (min-width: 768px) {
+                font-size: 39px;
+            }
+        }
+        
+        .prv-subtitle {
+            font-size: 19px;
+            @media (min-width: 768px) {
+                font-size: 21px;
+            }        
+            >* {
+                font-size: 19px;
+                @media (min-width: 768px) {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+    &__140 {
+        .prv-title {
+            font-size: 28px;
+            @media (min-width: 768px) {
+                font-size: 40px;
+            }
+        }
+        
+        .prv-subtitle {
+            font-size: 20px;
+            @media (min-width: 768px) {
+                font-size: 22px;
+            }        
+            >* {
+                font-size: 20px;
+                @media (min-width: 768px) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
 .prv-title-content {
     .prv-title {
         margin-bottom: 10px;

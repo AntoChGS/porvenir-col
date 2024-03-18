@@ -1,3 +1,186 @@
+.newFontSize{
+  &__100 {
+    .pvr__hub-navigation {     
+      .content {    
+        .title {
+          font-size: 16px;    
+          @media (min-width: 1222px) {
+            font-size: 18px;
+          }
+        }    
+        .text {
+          font-size: 14px;    
+          @media (min-width: 1222px) {
+            font-size: 16px;
+          }
+        }    
+        .link {   
+          .item {
+            &--number {
+              font-size: 14px;
+            }    
+            &--text {
+              font-size: 14px;    
+              @media (min-width: 1222px) {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__110 {
+    .pvr__hub-navigation {     
+      .content {    
+        .title {
+          font-size: 17px;    
+          @media (min-width: 1222px) {
+            font-size: 19px;
+          }
+        }    
+        .text {
+          font-size: 15px;    
+          @media (min-width: 1222px) {
+            font-size: 17px;
+          }
+        }    
+        .link {   
+          .item {
+            &--number {
+              font-size: 15px;
+            }    
+            &--text {
+              font-size: 15px;    
+              @media (min-width: 1222px) {
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__120 {
+    .pvr__hub-navigation {     
+      .content {    
+        .title {
+          font-size: 18px;    
+          @media (min-width: 1222px) {
+            font-size: 20px;
+          }
+        }    
+        .text {
+          font-size: 16px;    
+          @media (min-width: 1222px) {
+            font-size: 18px;
+          }
+        }    
+        .link {   
+          .item {
+            &--number {
+              font-size: 16px;
+            }    
+            &--text {
+              font-size: 16px;    
+              @media (min-width: 1222px) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__130 {
+    .pvr__hub-navigation {     
+      .content {    
+        .title {
+          font-size: 19px;    
+          @media (min-width: 1222px) {
+            font-size: 21px;
+          }
+        }    
+        .text {
+          font-size: 17px;    
+          @media (min-width: 1222px) {
+            font-size: 19px;
+          }
+        }    
+        .link {   
+          .item {
+            &--number {
+              font-size: 17px;
+            }    
+            &--text {
+              font-size: 17px;    
+              @media (min-width: 1222px) {
+                font-size: 19px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__140 {
+    .pvr__hub-navigation {     
+      .content {    
+        .title {
+          font-size: 20px;    
+          @media (min-width: 1222px) {
+            font-size: 22px;
+          }
+        }    
+        .text {
+          font-size: 18px;    
+          @media (min-width: 1222px) {
+            font-size: 20px;
+          }
+        }    
+        .link {   
+          .item {
+            &--number {
+              font-size: 18px;
+            }    
+            &--text {
+              font-size: 18px;    
+              @media (min-width: 1222px) {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.altoContrasGeneral{
+  .pvr__hub-navigation {
+    .content {   
+      .title {
+        color: var(--color-green-accesibility);
+      } 
+      .link {
+        color: var(--color-green-accesibility);
+        border-bottom: 0.5px solid var(--color-green-accesibility);  
+        &:hover,
+        &:focus,
+        &:active {
+          background: var(--color-green-accesibility-50);
+        }  
+        .item {
+          &--number {
+            background-color: var(--color-green-accesibility-100);
+            color: var(--color-green-accesibility);
+          }
+        }
+      }
+    }
+  }
+}
+
 .pvr__hub-navigation {
   background: var(--color-white);
   display: block;
@@ -8,7 +191,7 @@
   border-radius: 24px;
 
   @media (min-width: 992px) {
-    max-width: 380px;
+    max-width: 400px;
     margin: 0 auto;
   }
 

@@ -1,3 +1,80 @@
+.newFontSize{
+    &__100 {
+        .pvr-testimonials-tpl {        
+            .testimonials-tpl {  
+                &-swiper {         
+                    .testimonials-tpl-slider-btn {
+                        font-size: 8px;  
+                    } 
+                }
+            }
+        }
+    }
+    &__110 {
+        .pvr-testimonials-tpl {        
+            .testimonials-tpl {  
+                &-swiper {         
+                    .testimonials-tpl-slider-btn {
+                        font-size: 9px;  
+                    } 
+                }
+            }
+        }
+    }
+    &__120 {
+        .pvr-testimonials-tpl {        
+            .testimonials-tpl {  
+                &-swiper {         
+                    .testimonials-tpl-slider-btn {
+                        font-size: 10px;  
+                    } 
+                }
+            }
+        }
+    }
+    &__130 {
+        .pvr-testimonials-tpl {        
+            .testimonials-tpl {  
+                &-swiper {         
+                    .testimonials-tpl-slider-btn {
+                        font-size: 11px;  
+                    } 
+                }
+            }
+        }
+    }
+    &__140 {
+        .pvr-testimonials-tpl {        
+            .testimonials-tpl {  
+                &-swiper {         
+                    .testimonials-tpl-slider-btn {
+                        font-size: 12px;  
+                    } 
+                }
+            }
+        }
+    }
+}
+
+.altoContrasGeneral{
+    .pvr-testimonials-tpl {
+        .testimonials-tpl {   
+            &-swiper {    
+                .testimonials-tpl-slider-btn {
+                    color: var(--color-green-accesibility);
+                }    
+                .swiper-pagination-bullet {
+                    border: 1px solid var(--color-green-accesibility);
+                }    
+                .swiper-pagination-bullet-active {
+                    background: var(--color-green-accesibility);
+                    border-color: var(--color-green-accesibility);
+                }
+            }
+        }
+    }
+}
+
 .pvr-testimonials-tpl {
     position: relative;
 
