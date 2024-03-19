@@ -17,10 +17,57 @@
             .prv-tab-content
                 .prv-tab-pane(aria-labelledby="tab1", data-fragment-namespace="aywy1", id="tueTabPanel1", role="tabpanel", tabindex="0")
                     p Lorem 1 ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta ratione, veniam autem eveniet pariatur odit eum mollitia dolore qui, fugit necessitatibus quibusdam voluptatibus ad sed voluptatum, voluptatem officiis odio.             
+                    .prv-accordion.prv-accordion--orange#accordion
+                        .accordion-container
+                            .accordion-item
+                                h3.accordion-header
+                                    button.accordion-trigger#accordion-trigger-1(aria-expanded="false" aria-controls="accordion-content-1")
+                                        span.accordion-title How does an accordion work?
+                                .accordion-content#accordion-content-1(role="region" aria-labelledby="accordion-trigger-1")
+                                    .info
+                                        p It toggles #[a(href="") collapsible] content based on user interaction.
+
+                            .accordion-item
+                                h3.accordion-header
+                                    button.accordion-trigger#accordion-trigger-2(aria-expanded="false" aria-controls="accordion-content-2")
+                                        span.accordion-title Why should I use an accordion?
+                                .accordion-content#accordion-content-2(role="region" aria-labelledby="accordion-trigger-2")
+                                    .info
+                                        p It helps improves user exerience by providing condensed information in an easy-to-read manner.
+                            .accordion-item
+                                h3.accordion-header
+                                    button.accordion-trigger#accordion-trigger-3(aria-expanded="false" aria-controls="accordion-content-3")
+                                        span.accordion-title Is an accordion a type of animal?
+                                .accordion-content#accordion-content-3(role="region" aria-labelledby="accordion-trigger-3")
+                                    .info
+                                        p No, you're thinking of an armadillo.
                 .prv-tab-pane.prv-tab-pane--none(aria-labelledby="tab2", data-fragment-namespace="aywy1", id="tueTabPanel2", role="tabpanel", tabindex="0")
                     p Lorem 2 ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta ratione, veniam autem eveniet pariatur odit eum mollitia dolore qui, fugit necessitatibus quibusdam voluptatibus ad sed voluptatum, voluptatem officiis odio.
-                    
-.prv-tab-frg-section.prv-bg-white
+                    .prv-accordion.prv-accordion--green#accordion1
+                        .accordion-container
+                            .accordion-item
+                                h3.accordion-header
+                                    button.accordion-trigger#accordion-trigger-1(aria-expanded="false" aria-controls="accordion-content-1")
+                                        span.accordion-title How does an accordion work?
+                                .accordion-content#accordion-content-1(role="region" aria-labelledby="accordion-trigger-1")
+                                    .info
+                                        p It toggles collapsible content based on user interaction.
+
+                            .accordion-item
+                                h3.accordion-header
+                                    button.accordion-trigger#accordion-trigger-2(aria-expanded="false" aria-controls="accordion-content-2")
+                                        span.accordion-title Why should I use an accordion?
+                                .accordion-content#accordion-content-2(role="region" aria-labelledby="accordion-trigger-2")
+                                    .info
+                                        p It helps improves user exerience by providing condensed information in an easy-to-read manner.
+                            .accordion-item
+                                h3.accordion-header
+                                    button.accordion-trigger#accordion-trigger-3(aria-expanded="false" aria-controls="accordion-content-3")
+                                        span.accordion-title Is an accordion a type of animal?
+                                .accordion-content#accordion-content-3(role="region" aria-labelledby="accordion-trigger-3")
+                                    .info
+                                        p No, you're thinking of an armadillo.
+//.prv-tab-frg-section.prv-bg-white
     .container 
         .prv-title-content
             h2.prv-title.prv-txt-green-700 Tabs 6
@@ -45,4 +92,3 @@
                     p Lorem 1 ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta ratione, veniam autem eveniet pariatur odit eum mollitia dolore qui, fugit necessitatibus quibusdam voluptatibus ad sed voluptatum, voluptatem officiis odio.             
                 .prv-tab-pane.prv-tab-pane--none(aria-labelledby="tab2", data-fragment-namespace="aywy2", id="tueTabPanel2", role="tabpanel", tabindex="0")
                     p Lorem 2 ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta ratione, veniam autem eveniet pariatur odit eum mollitia dolore qui, fugit necessitatibus quibusdam voluptatibus ad sed voluptatum, voluptatem officiis odio.
-                    
