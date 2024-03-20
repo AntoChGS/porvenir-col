@@ -1,3 +1,51 @@
+.altoContrasGeneral{
+    .prv-txt {    
+        &-black {
+            color: var(--color-green-accesibility);
+    
+            * {
+                color: var(--color-green-accesibility);
+            }
+        }
+    
+        &-gray {
+            &-500 {
+                color: var(--color-green-accesibility);
+    
+                * {
+                    color: var(--color-green-accesibility);
+                }
+            }
+        }
+    
+        &-green-700 {
+            color: var(--color-green-accesibility);
+    
+            * {
+                color: var(--color-green-accesibility);
+            }
+        }
+    
+        &-orange {
+            &-300 {
+                color: var(--color-green-accesibility-300);
+    
+                * {
+                    color: var(--color-green-accesibility-300);
+                }
+            }
+    
+            &-400 {
+                color: var(--color-green-accesibility);
+    
+                * {
+                    color: var(--color-green-accesibility);
+                }
+            }
+        }
+    } 
+}
+
 .prv-txt {
     &-white {
         color: var(--color-white);

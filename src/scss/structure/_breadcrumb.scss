@@ -1,3 +1,115 @@
+.newFontSize{
+    &__100 {
+        .pvr{
+            &__breadcrumb{
+                .breadcrumb{
+                    &__item{   
+                        &.active{
+                            .text{
+                                font-size: 16px;
+                            }
+                        }
+                        .link{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__110 {
+        .pvr{
+            &__breadcrumb{
+                .breadcrumb{
+                    &__item{   
+                        &.active{
+                            .text{
+                                font-size: 17px;
+                            }
+                        }
+                        .link{
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__120 {
+        .pvr{
+            &__breadcrumb{
+                .breadcrumb{
+                    &__item{   
+                        &.active{
+                            .text{
+                                font-size: 18px;
+                            }
+                        }
+                        .link{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__130 {
+        .pvr{
+            &__breadcrumb{
+                .breadcrumb{
+                    &__item{   
+                        &.active{
+                            .text{
+                                font-size: 19px;
+                            }
+                        }
+                        .link{
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__140 {
+        .pvr{
+            &__breadcrumb{
+                .breadcrumb{
+                    &__item{   
+                        &.active{
+                            .text{
+                                font-size: 20px;
+                            }
+                        }
+                        .link{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.altoContrasGeneral{  
+    .pvr{
+        &__breadcrumb{
+            .breadcrumb{                
+                &__item{   
+                    &.active{
+                        .text{
+                            color: var(--color-green-accesibility);
+                        }
+                    }
+                    .link{
+                        color: var(--color-green-accesibility);
+                    }
+                }
+            }
+        }
+    } 
+}
+
 .pvr{
     &__breadcrumb{
         padding: 16px 0;

@@ -1,5 +1,243 @@
+.newFontSize{
+    &__100 {
+        .prv-tabs {
+            &.prv-variant-1 {
+                .prv {        
+                    &-nav-tab {                        
+                        .tab {
+                            &__link {
+                                font-size: 14px;
+                                @media (min-width: 768px) {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            &.prv-variant-2 {        
+                .prv {        
+                    &-nav-tab {        
+                        .tab {    
+                            &__link {
+                                font-size: 18px;
+                                @media (min-width: 768px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__110 {
+        .prv-tabs {
+            &.prv-variant-1 {
+                .prv {        
+                    &-nav-tab {                        
+                        .tab {
+                            &__link {
+                                font-size: 15px;
+                                @media (min-width: 768px) {
+                                    font-size: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            &.prv-variant-2 {        
+                .prv {        
+                    &-nav-tab {        
+                        .tab {    
+                            &__link {
+                                font-size: 19px;
+                                @media (min-width: 768px) {
+                                    font-size: 21px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__120 {
+        .prv-tabs {
+            &.prv-variant-1 {
+                .prv {        
+                    &-nav-tab {                        
+                        .tab {
+                            &__link {
+                                font-size: 16px;
+                                @media (min-width: 768px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            &.prv-variant-2 {        
+                .prv {        
+                    &-nav-tab {        
+                        .tab {    
+                            &__link {
+                                font-size: 20px;
+                                @media (min-width: 768px) {
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__130 {
+        .prv-tabs {
+            &.prv-variant-1 {
+                .prv {        
+                    &-nav-tab {                        
+                        .tab {
+                            &__link {
+                                font-size: 17px;
+                                @media (min-width: 768px) {
+                                    font-size: 21px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            &.prv-variant-2 {        
+                .prv {        
+                    &-nav-tab {        
+                        .tab {    
+                            &__link {
+                                font-size: 21px;
+                                @media (min-width: 768px) {
+                                    font-size: 23px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__140 {
+        .prv-tabs {
+            &.prv-variant-1 {
+                .prv {        
+                    &-nav-tab {                        
+                        .tab {
+                            &__link {
+                                font-size: 18px;
+                                @media (min-width: 768px) {
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            &.prv-variant-2 {        
+                .prv {        
+                    &-nav-tab {        
+                        .tab {    
+                            &__link {
+                                font-size: 22px;
+                                @media (min-width: 768px) {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.altoContrasGeneral{
+    .prv-tabs {
+        &.prv-variant-1 {
+            .prv {    
+                &-nav-tab {    
+                    .tab {
+                        &__item {    
+                            .tab__link {
+                                &.active {
+                                    background: var(--color-green-accesibility-50);
+                                    color: var(--color-green-accesibility);
+                                    border-bottom: 1px solid var(--color-green-accesibility);
+                                }
+                            }
+                        }
+    
+                        &__link {
+                            background: var(--color-green-accesibility-50);
+                            border-bottom: 1px solid var(--color-green-accesibility-50);
+                            &::after {
+                                background-color: var(--color-green-accesibility-50);
+                            }    
+                            &:hover {
+                                color: var(--color-green-accesibility);
+                            }    
+                            &:focus,
+                            >*:focus {
+                                color: var(--color-green-accesibility);
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+    
+        &.prv-variant-2 {    
+            .prv {
+                &-tab {
+                    &-content {
+                        background-color: var(--color-yellow-80);
+                    }
+                }    
+                &-nav-tab {    
+                    .tab {
+                        &__item {    
+                            .tab__link {
+                                &.active {
+                                    color: var(--color-orange-300);
+                                    background-color: var(--color-yellow-80);
+    
+                                    &:focus,
+                                    >*:focus {
+                                        background-color: var(--color-yellow-80);
+                                    }
+                                }
+                            }
+                        }    
+                        &__link {
+                            color: var(--color-orange-300);
+                            background-color: var(--color-gray-100);    
+                            &:hover {
+                                color: var(--color-gray-600);
+                            }    
+                            &:focus,
+                            >*:focus {
+                                background-color: var(--color-white-300);
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .prv-tabs {
-    &.prv-style-1 {
+    &.prv-variant-1 {
         .prv {
             &-tab {
                 &-horizontal {
@@ -56,7 +294,7 @@
                         font-size: 14px;
                         font-weight: 700;
                         font-family: var(--fontBanda);
-                        line-height: 1.5;
+                        line-height: 1.25;
                         text-align: center;
                         color: var(--color-gray-400);
                         transition: color;
@@ -101,13 +339,21 @@
                         >span {
                             white-space: normal;
                         }
+
+                        .link__icon {
+                            display: block;
+                            margin-bottom: 4px;
+                            > img {
+                                max-width: 100%;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
-    &.prv-style-2 {
+    &.prv-variant-2 {
         position: relative;
         border-radius: 24px;
         overflow: hidden;

@@ -1,3 +1,74 @@
+.altoContrasGeneral{
+    .prv-bg {    
+        &-green-50 {
+            background: var(--color-green-accesibility-50);
+        }    
+        &-green-50-1 {
+            &::before {
+                @media (min-width: 992px) {
+                    background: var(--color-green-accesibility-50);
+                }
+            }    
+            .prv-card {
+                @media (max-width: 991.98px) {
+                    background: var(--color-green-accesibility-50);
+                }
+            }
+        }    
+        &-green-90deg-1 {
+            background: linear-gradient(90deg, var(--color-green-accesibility) 0, var(--color-green-accesibility-300) 100%);
+        }
+    
+        &-green-90deg-2 {
+            &::before {
+                @media (min-width: 992px) {
+                    background: linear-gradient(90deg, var(--color-green-accesibility) 0, var(--color-green-accesibility-300) 100%);
+                }
+            }
+        }    
+        &-green-90deg-3 {
+            &::before {
+                @media (min-width: 992px) {
+                    background: linear-gradient(90deg, var(--color-green-accesibility) 0, var(--color-green-accesibility-300) 100%);
+                }
+            }
+        }    
+        &-orange-90deg-1 {
+            background: linear-gradient(90deg, var(--color-green-accesibility) 0, var(--color-green-accesibility-300) 100%);
+        }    
+        &-orange-90deg-2 {
+            &::before {
+                @media (min-width: 992px) {
+                    background: linear-gradient(90deg, var(--color-green-accesibility) 0, var(--color-green-accesibility-300) 100%);
+                }
+            }
+        }    
+        &-orange-90deg-3 {
+            &::before {
+                @media (min-width: 992px) {
+                    background: linear-gradient(90deg, var(--color-green-accesibility) 0, var(--color-green-accesibility-300) 100%);
+                }
+            }
+        }
+    
+        &-yellow-80 {
+            background: var(--color-green-accesibility-50);
+        }
+    
+        &-yellow-80-1 {
+            &::before {
+                @media (min-width: 992px) {
+                    background: var(--color-green-accesibility-50);
+                }
+            }    
+            .prv-card {
+                @media (max-width: 991.98px) {
+                    background: var(--color-green-accesibility-50);
+                }
+            }
+        }
+    }
+}
 .prv-bg {
     &-radius {
         border-radius: 24px;
@@ -62,8 +133,9 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                width: 100%;
+                width: calc(100% - 40px);
                 height: 138px;
+                margin: 0 auto;
                 border-bottom-left-radius: 16px;
                 border-bottom-right-radius: 16px;
                 background: linear-gradient(90deg, var(--color-green-400) 0, var(--color-green-300) 100%);
@@ -102,8 +174,9 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                width: 100%;
+                width: calc(100% - 40px);
                 height: 138px;
+                margin: 0 auto;
                 border-bottom-left-radius: 16px;
                 border-bottom-right-radius: 16px;
                 background: linear-gradient(90deg, var(--color-orange-500) 0, var(--color-yellow-100) 100%);
