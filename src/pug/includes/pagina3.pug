@@ -97,16 +97,22 @@ include ../structure/breadcrumb
 
                         .results 
                             .title--result Nuestra oficina más cercana a ti
-                            .result__row 
-                                .result__column 
-                                    .content 
-                                        span.icon: svg: use(xlink:href=iconPath+'location')
-                                        .description 
-                                            span.name Porvenir Pensiones y Cesantías
-                                            span.address #0000
-                                            span.journal Jornada continua
-                                    .footer 
-                                        a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Cómo llegar        
+                            .swiper.result__swiper                                
+                                .result__row.swiper-wrapper
+                                    .result__column.swiper-slide
+                                        .result__box
+                                            .content 
+                                                span.icon: svg: use(xlink:href=iconPath+'location')
+                                                .description 
+                                                    span.name Porvenir Pensiones y Cesantías
+                                                    span.address #0000
+                                                    span.journal Jornada continua
+                                            .footer 
+                                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Cómo llegar 
+                                .swiper-custom-navigation  
+                                    .swiper-button-prev 
+                                    .swiper-pagination
+                                    .swiper-button-next
 
                 .pvr__transact.prv-sp-d40-m32
                     .container 

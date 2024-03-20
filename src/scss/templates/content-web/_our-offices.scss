@@ -67,14 +67,25 @@
             color: var(--color-green-700);
             padding: 8px 0;
         }
-        .result__row{
-            width: 100%;
+        .result__swiper{
             max-width: 575px;
             margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .result__row{        
+            flex-direction: row;
+            .result__box{
+                width: 100%;
+                border-bottom: 0.5px solid #ABABAB
+            }    
             .result__column{
+                height: calc((100% - 30px) / 2);
                 display: flex;
-                flex-direction: column;
-                border-bottom: 1px solid var(--color-gray-300);
+                justify-content: center;
+                align-items: center;
                 .content{
                     display: flex;
                     flex-direction: row;
@@ -126,9 +137,62 @@
                         font-weight: 700;
                         line-height: 24px;
                         display: inline-block;
+                        text-decoration: underline;
                     }
                 }
             }
+        }
+        .swiper-custom-navigation {
+            margin-top: 24px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .swiper-button-prev, .swiper-rtl .swiper-button-next{
+                left: 0;
+                width: 36px;
+                height: 36px;
+                margin: 0;
+                color: var(--color-gray-600);
+                outline: none;
+            }
+            .swiper-button-next, .swiper-rtl .swiper-button-prev{
+                right: 0;
+                width: 36px;
+                height: 36px;
+                margin: 0;
+                color: var(--color-gray-600);
+                outline: none;
+            }
+            .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+            .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+                font-size: 12px;
+                font-weight: 700;
+            }
+            .swiper-button-next, .swiper-button-prev{
+                position: relative;
+            }
+        }
+        .swiper-pagination{
+            width: auto;
+            position: relative;
+            bottom: 0;            
+        }
+        .swiper-pagination-bullet{
+            width: 36px;
+            height: 36px;
+            font-size: 14px;
+            line-height: 36px;
+            font-weight: 700;
+            background: var(--color-white);
+            color: var(--color-gray-500);
+            opacity: 1;
+            outline: none;
+        }
+        .swiper-pagination-bullet-active{
+            background: var(--color-orange-300);
+            color: var(--color-white);
         }
     }
 }

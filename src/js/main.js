@@ -780,7 +780,6 @@ function getJson(rqUrlJson, loadFunction){
   request.open("GET", requestUrl);
   request.responseType = "json";
   request.send();
-
   request.onload = function () {
     const rqObject = request.response;
     loadFunction(rqObject);
@@ -792,21 +791,45 @@ function loadOffices(jsonObj){
   const selectCity = document.getElementById('selectCity');
   const listCities = selectCity.querySelector('.select--dropdown');
   const selectTown = document.getElementById('selectTown');
-  const listTowns = selectTown.querySelector('.select--dropdown');
+  const listTowns = selectTown? selectTown.querySelector('.select--dropdown') : "";
 
   //variables resultado
   let conResult = document.querySelector('.pvr__offices .result__row');
-  let contResultName = conResult.querySelector('.result__column .name');
-  let contResultAddress = conResult.querySelector('.result__column .address');
-  let contResultJournal = conResult.querySelector('.result__column .journal');
-  let contResultLink = conResult.querySelector('.result__column .footer .link');
-
   let dataCities = cities.sort((a, b) => {
     if (a.nombre < b.nombre) {
       return -1;
     }
   });
 
+  //swiper paginator
+  const swiperOffices = new Swiper(".pvr__offices .result__swiper", {
+    slidesPerView: 1,
+    slidesPerColumn: 2,
+    grid: {
+      rows: 2
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+  });
+
+  //reinicia valores del swiper
+  function reloadSwiper(){
+    swiperOffices.update();
+    swiperOffices.updateSize();
+    swiperOffices.updateSlides();
+    swiperOffices.updateProgress();
+    swiperOffices.updateSlidesClasses();
+  }
+  
   //carga de ciudades
   for(let i = 0; i < dataCities.length; i++){
     let innerObject = dataCities[i];
@@ -830,53 +853,128 @@ function loadOffices(jsonObj){
       let innerObject = cities[i];
       if(innerObject.id == getCheckFirstEl){
         let locations = innerObject.locaciones;      
-        if(locations){
-          selectTown.querySelector('.select--button').removeAttribute('disabled');
+        if(locations.length > 1){
+          selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
           conResult.innerHTML = '';
           for(let j = 0; j < locations.length; j++){
+            let location = locations[j];
             listTowns.innerHTML += `
               <li class="select--item">
-                <input type="radio" id="${locations[j].id}" name="town" value="${locations[j].locacion}">
-                <label for="${locations[j].id}">${locations[j].locacion}</label>
+                <input type="radio" id="${location.id}" name="town" value="${location.locacion}">
+                <label for="${location.id}">${location.locacion}</label>
               </li> 
             `;
-            conResult.innerHTML += `
-              <div class="result__column"> 
-                <div class="content"> <span class="icon">
-                        <svg>
-                            <use xlink:href="images/icons/icons.svg#icon-location"></use>
-                        </svg></span>
-                    <div class="description"> 
-                      <span class="name">${locations[j].locacion}</span>
-                      <span class="address">${locations[j].informacion.direccion}</span>
-                      <span class="journal">${locations[j].informacion.jornada}</span></div>
+            for (let x = 0; x < location.oficinas.length; x++) {
+              let oficina = location.oficinas[x];    
+              conResult.innerHTML += `
+                <div class="result__column swiper-slide">
+                  <div class="result__box"> 
+                    <div class="content">
+                      <span class="icon">
+                        <svg><use xlink:href="images/icons/icons.svg#icon-location"></use></svg>
+                      </span>
+                      <div class="description"> 
+                        <span class="name">${oficina.oficina}</span>
+                        <span class="address">${oficina.direccion}</span>
+                        <span class="journal">${oficina.horario} ${oficina.jornada}</span>
+                      </div>
+                    </div>
+                    <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${oficina.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+                  </div>
                 </div>
-                <div class="footer"> <a class="link" href="#" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
-              </div>              
-            `
+              `;
+            }
           }
         }else{
-          let ciudad = innerObject;
-          let informacion = ciudad.informacion;
+          let local = innerObject.locaciones[0];                    
+          conResult.innerHTML = '';
+          selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
+          listTowns.innerHTML += `
+            <li class="select--item">
+              <input type="radio" id="${local.id}" name="town" value="${local.locacion}" checked="true">
+              <label for="${local.id}">${local.locacion}</label>
+            </li> 
+          `;
+          let oneTown = selectTown ? listTowns.querySelector(".select--item #T001") : "";     
+          selectTown ? selectTown.querySelector('.select--value').textContent = oneTown.value : "";
+          let informacion = local.oficinas;
           if(informacion){
-            contResultName.textContent = ciudad.nombre;
-            contResultAddress.textContent = informacion.direccion;
-            contResultJournal.textContent = informacion.jornada;
+            for (let i = 0; i < informacion.length; i++) {
+              conResult.innerHTML += `
+                <div class="result__column swiper-slide"> 
+                  <div class="result__box">
+                    <div class="content"> <span class="icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-location"></use>
+                            </svg></span>
+                        <div class="description"> 
+                          <span class="name">${informacion[i].oficina}</span>
+                          <span class="address">${informacion[i].direccion}</span>
+                          <span class="journal">${informacion[i].horario} ${informacion[i].jornada}</span></div>
+                    </div>
+                    <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${informacion[i].direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+                  </div>     
+                </div>          
+              `              
+            }
           }else{
             document.querySelector('.results .title--result').textContent = 'Para la búsqueda que estás realizando no se encontraron resultados';
           }
         }
       }
     }
+
+    //ciudad por defecto seleccionar localidad / comuna 
+    let locacion = selectTown ? listTowns.querySelectorAll('input[type=radio]') : "";
+    locacion.forEach(function(el){
+      el.addEventListener('change', function(e){
+        let idLocal = e.target.id;
+        conResult.innerHTML = "";
+        for (let i = 0; i < cities.length; i++){
+          let innerObject = cities[i];
+          if(innerObject.id == checkFirstEl.getAttribute('id')){
+            let locations = innerObject.locaciones; 
+            for (let j = 0; j < locations.length; j++) {
+              let location = locations[j];
+              if(location.id == idLocal){
+                let officess = location.oficinas;
+                for (let k = 0; k < officess.length; k++) {
+                  const office = officess[k];
+                  conResult.innerHTML += `
+                  <div class="result__column swiper-slide">
+                    <div class="result__box"> 
+                      <div class="content">
+                        <span class="icon">
+                          <svg><use xlink:href="images/icons/icons.svg#icon-location"></use></svg>
+                        </span>
+                        <div class="description"> 
+                          <span class="name">${office.oficina}</span>
+                          <span class="address">${office.direccion}</span>
+                          <span class="journal">${office.horario} ${office.jornada}</span>
+                        </div>
+                      </div>
+                      <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${office.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+                    </div>
+                  </div>
+                `;
+                }
+              }
+            }
+          }
+        }
+        reloadSwiper();
+      });
+    });
   }
 
   //capturar cambio de valor
-  let inputRadio = selectCity.querySelectorAll('.select--dropdown input[type=radio]');
-  inputRadio.forEach(function(el){
+  let inputRadioCity = selectCity.querySelectorAll('.select--dropdown input[type=radio]');
+  let idSelectCity = '';
+  inputRadioCity.forEach(function(el){
     el.addEventListener('change', function(e){
-      let idSelectCity = e.target.id;
-      selectTown.querySelector('.select--value').textContent = 'Seleccionar';
-      selectTown.querySelector('.select--button').setAttribute('disabled', true);
+      idSelectCity = e.target.id;
+      selectTown ? selectTown.querySelector('.select--value').textContent = 'Seleccionar' : "";
+      selectTown ? selectTown.querySelector('.select--button').setAttribute('disabled', true) : "";      
       listTowns.innerHTML = `
         <li class="select--item disabled">
           <input type="radio" id="" name="offices" value="">
@@ -887,58 +985,120 @@ function loadOffices(jsonObj){
         let innerObject = cities[i];
         if(innerObject.id == idSelectCity){
           let locations = innerObject.locaciones;
-          if(locations){
-            selectTown.querySelector('.select--button').removeAttribute('disabled');
+          if(locations.length > 1){
+            selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
             conResult.innerHTML = '';
             for(let j = 0; j < locations.length; j++){
+              let location = locations[j];
               listTowns.innerHTML += `
                 <li class="select--item">
-                  <input type="radio" id="${locations[j].id}" name="town" value="${locations[j].locacion}">
-                  <label for="${locations[j].id}">${locations[j].locacion}</label>
+                  <input type="radio" id="${location.id}" name="town" value="${location.locacion}">
+                  <label for="${location.id}">${location.locacion}</label>
                 </li>
               `;
-              document.querySelector('.results .title--result').textContent = 'Nuestra oficina más cercana a ti';
-              conResult.innerHTML += `
-                <div class="result__column"> 
-                  <div class="content"> <span class="icon">
-                          <svg>
-                              <use xlink:href="images/icons/icons.svg#icon-location"></use>
-                          </svg></span>
-                      <div class="description"> 
-                        <span class="name">${locations[j].locacion}</span>
-                        <span class="address">${locations[j].informacion.direccion}</span>
-                        <span class="journal">${locations[j].informacion.jornada}</span></div>
-                  </div>
-                  <div class="footer"> <a class="link" href="#" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
-                </div>              
-              `;
+              document.querySelector('.pvr__offices .results .title--result').textContent = 'Nuestra oficina más cercana a ti';
+              for (let x = 0; x < location.oficinas.length; x++) {
+                let oficina = location.oficinas[x];
+                conResult.innerHTML += `
+                  <div class="result__column swiper-slide"> 
+                    <div class="result__box"> 
+                      <div class="content"> <span class="icon">
+                              <svg>
+                                  <use xlink:href="images/icons/icons.svg#icon-location"></use>
+                              </svg></span>
+                          <div class="description"> 
+                            <span class="name">${oficina.oficina}</span>
+                            <span class="address">${oficina.direccion}</span>
+                            <span class="journal">${oficina.horario} ${oficina.jornada}</span></div>
+                      </div>
+                      <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${oficina.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+                    </div>   
+                  </div>           
+                `;
+              }
             }
           }else{
-            document.querySelector('.results .title--result').textContent = 'Nuestra oficina más cercana a ti';
+            let ciudad = innerObject.locaciones[0];                    
             conResult.innerHTML = '';
-            let ciudad = innerObject;
-            let informacion = ciudad.informacion;
+            selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
+            listTowns.innerHTML += `
+              <li class="select--item">
+                <input type="radio" id="${ciudad.id}" name="town" value="${ciudad.locacion}" checked="true">
+                <label for="${ciudad.id}">${ciudad.locacion}</label>
+              </li> 
+            `;
+            let oneTown = selectTown ? listTowns.querySelector(".select--item #T001") : ""; 
+            selectTown ? selectTown.querySelector('.select--value').textContent = oneTown.value : "";
+            let informacion = ciudad.oficinas;
             if(informacion){
-              conResult.innerHTML += `
-                <div class="result__column"> 
-                  <div class="content"> <span class="icon">
-                          <svg>
-                              <use xlink:href="images/icons/icons.svg#icon-location"></use>
-                          </svg></span>
-                      <div class="description"> 
-                        <span class="name">${ciudad.nombre}</span>
-                        <span class="address">${informacion.direccion}</span>
-                        <span class="journal">${informacion.jornada}</span></div>
-                  </div>
-                  <div class="footer"> <a class="link" href="#" target="_blank" rel="noopener noreferrer">Cómo llegar</a></div>
-                </div>              
-              `;
+              for (let i = 0; i < informacion.length; i++) {
+                conResult.innerHTML += `
+                  <div class="result__column swiper-slide"> 
+                    <div class="result__box"> 
+                      <div class="content"> <span class="icon">
+                              <svg>
+                                  <use xlink:href="images/icons/icons.svg#icon-location"></use>
+                              </svg></span>
+                          <div class="description"> 
+                            <span class="name">${informacion[i].oficina}</span>
+                            <span class="address">${informacion[i].direccion}</span>
+                            <span class="journal">${informacion[i].horario} ${informacion[i].jornada}</span></div>
+                      </div>
+                      <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${informacion[i].direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+                    </div> 
+                  </div>             
+                `              
+              }
             }else{
               document.querySelector('.results .title--result').textContent = 'Para la búsqueda que estás realizando no se encontraron resultados';
             }
           }
         }
       }
+      //seleccionar localidad / comuna
+      let locacion = selectTown ? listTowns.querySelectorAll('input[type=radio]') : "";
+      if(locacion.length > 2){
+        locacion.forEach(function(el){
+          el.addEventListener('change', function(e){
+            let idLocal = e.target.id;
+            conResult.innerHTML = "";
+            for (let i = 0; i < cities.length; i++){
+              let innerObject = cities[i];
+              if(innerObject.id == idSelectCity){
+                let locations = innerObject.locaciones; 
+                for (let j = 0; j < locations.length; j++) {
+                  let location = locations[j];
+                  if(location.id == idLocal){
+                    let officess = location.oficinas;
+                    for (let k = 0; k < officess.length; k++) {
+                      const office = officess[k];
+                      conResult.innerHTML += `
+                      <div class="result__column swiper-slide">
+                        <div class="result__box"> 
+                          <div class="content">
+                            <span class="icon">
+                              <svg><use xlink:href="images/icons/icons.svg#icon-location"></use></svg>
+                            </span>
+                            <div class="description"> 
+                              <span class="name">${office.oficina}</span>
+                              <span class="address">${office.direccion}</span>
+                              <span class="journal">${office.horario} ${office.jornada}</span>
+                            </div>
+                          </div>
+                          <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${office.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
+                        </div>
+                      </div>
+                    `;
+                    }
+                  }
+                }
+              }
+            }
+            reloadSwiper();
+          });
+        });
+      }
+      reloadSwiper();
     });
   });
 }
