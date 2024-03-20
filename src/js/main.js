@@ -787,11 +787,15 @@ function getJson(rqUrlJson, loadFunction){
 }
 
 function loadOffices(jsonObj){
+
+  //variables Generales
   const cities = jsonObj['ciudades'];
   const selectCity = document.getElementById('selectCity');
   const listCities = selectCity.querySelector('.select--dropdown');
   const selectTown = document.getElementById('selectTown');
   const listTowns = selectTown? selectTown.querySelector('.select--dropdown') : "";
+  const resultContent = document.querySelector('.pvr__offices .results');
+  let getHeightResultC = resultContent.offsetHeight;
 
   //variables resultado
   let conResult = document.querySelector('.pvr__offices .result__row');
@@ -804,7 +808,6 @@ function loadOffices(jsonObj){
   //swiper paginator
   const swiperOffices = new Swiper(".pvr__offices .result__swiper", {
     slidesPerView: 1,
-    slidesPerColumn: 2,
     grid: {
       rows: 2
     },
@@ -854,6 +857,7 @@ function loadOffices(jsonObj){
       if(innerObject.id == getCheckFirstEl){
         let locations = innerObject.locaciones;      
         if(locations.length > 1){
+          resultContent.style.height = getHeightResultC+'px';
           selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
           conResult.innerHTML = '';
           for(let j = 0; j < locations.length; j++){
@@ -886,6 +890,7 @@ function loadOffices(jsonObj){
             }
           }
         }else{
+          resultContent.style.height = "auto";
           let local = innerObject.locaciones[0];                    
           conResult.innerHTML = '';
           selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
@@ -918,6 +923,7 @@ function loadOffices(jsonObj){
               `              
             }
           }else{
+            resultContent.style.height = "auto";
             document.querySelector('.results .title--result').textContent = 'Para la búsqueda que estás realizando no se encontraron resultados';
           }
         }
@@ -926,6 +932,7 @@ function loadOffices(jsonObj){
 
     //ciudad por defecto seleccionar localidad / comuna 
     let locacion = selectTown ? listTowns.querySelectorAll('input[type=radio]') : "";
+    resultContent.style.height = getHeightResultC+'px';
     locacion.forEach(function(el){
       el.addEventListener('change', function(e){
         let idLocal = e.target.id;
@@ -939,6 +946,7 @@ function loadOffices(jsonObj){
               if(location.id == idLocal){
                 let officess = location.oficinas;
                 for (let k = 0; k < officess.length; k++) {
+                  officess.length > 1 ? resultContent.style.height = getHeightResultC+'px' : resultContent.style.height = "auto";
                   const office = officess[k];
                   conResult.innerHTML += `
                   <div class="result__column swiper-slide">
@@ -965,6 +973,7 @@ function loadOffices(jsonObj){
         reloadSwiper();
       });
     });
+    reloadSwiper();
   }
 
   //capturar cambio de valor
@@ -986,6 +995,7 @@ function loadOffices(jsonObj){
         if(innerObject.id == idSelectCity){
           let locations = innerObject.locaciones;
           if(locations.length > 1){
+            resultContent.style.height = getHeightResultC+'px';
             selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
             conResult.innerHTML = '';
             for(let j = 0; j < locations.length; j++){
@@ -1018,7 +1028,8 @@ function loadOffices(jsonObj){
               }
             }
           }else{
-            let ciudad = innerObject.locaciones[0];                    
+            resultContent.style.height = "auto";         
+            let ciudad = innerObject.locaciones[0];    
             conResult.innerHTML = '';
             selectTown ? selectTown.querySelector('.select--button').removeAttribute('disabled') : "";
             listTowns.innerHTML += `
@@ -1058,6 +1069,7 @@ function loadOffices(jsonObj){
       //seleccionar localidad / comuna
       let locacion = selectTown ? listTowns.querySelectorAll('input[type=radio]') : "";
       if(locacion.length > 2){
+        resultContent.style.height = getHeightResultC+'px';
         locacion.forEach(function(el){
           el.addEventListener('change', function(e){
             let idLocal = e.target.id;
@@ -1071,6 +1083,7 @@ function loadOffices(jsonObj){
                   if(location.id == idLocal){
                     let officess = location.oficinas;
                     for (let k = 0; k < officess.length; k++) {
+                      officess.length > 1 ? resultContent.style.height = getHeightResultC+'px' : resultContent.style.height = "auto";
                       const office = officess[k];
                       conResult.innerHTML += `
                       <div class="result__column swiper-slide">
