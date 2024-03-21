@@ -57,8 +57,9 @@
     }
     .results{
         height: 509px;
+        padding: 0 0 50px;
         @media (min-width: 992px){
-            padding: 0 20px;
+            padding: 0 20px 50px;
             height: 532px;
         }
         .title--result{
@@ -168,11 +169,6 @@
                 color: var(--color-gray-600);
                 outline: none;
             }
-            .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
-            .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
-                font-size: 12px;
-                font-weight: 700;
-            }
             .swiper-button-next, .swiper-button-prev{
                 position: relative;
             }
@@ -196,6 +192,15 @@
         .swiper-pagination-bullet-active{
             background: var(--color-orange-300);
             color: var(--color-white);
+        }
+        .swiper-button-prev, .swiper-button-next{
+            svg{
+                width: 8px;
+                font-weight: 700;
+            }
+            &:after{
+                display: none;
+            }
         }
     }
 }

@@ -931,48 +931,50 @@ function loadOffices(jsonObj){
     }
 
     //ciudad por defecto seleccionar localidad / comuna 
-    let locacion = selectTown ? listTowns.querySelectorAll('input[type=radio]') : "";
-    resultContent.style.height = getHeightResultC+'px';
-    locacion.forEach(function(el){
-      el.addEventListener('change', function(e){
-        let idLocal = e.target.id;
-        conResult.innerHTML = "";
-        for (let i = 0; i < cities.length; i++){
-          let innerObject = cities[i];
-          if(innerObject.id == checkFirstEl.getAttribute('id')){
-            let locations = innerObject.locaciones; 
-            for (let j = 0; j < locations.length; j++) {
-              let location = locations[j];
-              if(location.id == idLocal){
-                let officess = location.oficinas;
-                for (let k = 0; k < officess.length; k++) {
-                  officess.length > 1 ? resultContent.style.height = getHeightResultC+'px' : resultContent.style.height = "auto";
-                  const office = officess[k];
-                  conResult.innerHTML += `
-                  <div class="result__column swiper-slide">
-                    <div class="result__box"> 
-                      <div class="content">
-                        <span class="icon">
-                          <svg><use xlink:href="images/icons/icons.svg#icon-location"></use></svg>
-                        </span>
-                        <div class="description"> 
-                          <span class="name">${office.oficina}</span>
-                          <span class="address">${office.direccion}</span>
-                          <span class="journal">${office.horario} ${office.jornada}</span>
+    if(selectTown){
+      let locacion = listTowns.querySelectorAll('input[type=radio]');
+      resultContent.style.height = getHeightResultC+'px';
+      locacion.forEach(function(el){
+        el.addEventListener('change', function(e){
+          let idLocal = e.target.id;
+          conResult.innerHTML = "";
+          for (let i = 0; i < cities.length; i++){
+            let innerObject = cities[i];
+            if(innerObject.id == checkFirstEl.getAttribute('id')){
+              let locations = innerObject.locaciones; 
+              for (let j = 0; j < locations.length; j++) {
+                let location = locations[j];
+                if(location.id == idLocal){
+                  let officess = location.oficinas;
+                  for (let k = 0; k < officess.length; k++) {
+                    officess.length > 1 ? resultContent.style.height = getHeightResultC+'px' : resultContent.style.height = "auto";
+                    const office = officess[k];
+                    conResult.innerHTML += `
+                    <div class="result__column swiper-slide">
+                      <div class="result__box"> 
+                        <div class="content">
+                          <span class="icon">
+                            <svg><use xlink:href="images/icons/icons.svg#icon-location"></use></svg>
+                          </span>
+                          <div class="description"> 
+                            <span class="name">${office.oficina}</span>
+                            <span class="address">${office.direccion}</span>
+                            <span class="journal">${office.horario} ${office.jornada}</span>
+                          </div>
                         </div>
+                        <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${office.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
                       </div>
-                      <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${office.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
                     </div>
-                  </div>
-                `;
+                  `;
+                  }
                 }
               }
             }
           }
-        }
-        reloadSwiper();
+          reloadSwiper();
+        });
       });
-    });
+    }
     reloadSwiper();
   }
 
@@ -1067,49 +1069,51 @@ function loadOffices(jsonObj){
         }
       }
       //seleccionar localidad / comuna
-      let locacion = selectTown ? listTowns.querySelectorAll('input[type=radio]') : "";
-      if(locacion.length > 2){
-        resultContent.style.height = getHeightResultC+'px';
-        locacion.forEach(function(el){
-          el.addEventListener('change', function(e){
-            let idLocal = e.target.id;
-            conResult.innerHTML = "";
-            for (let i = 0; i < cities.length; i++){
-              let innerObject = cities[i];
-              if(innerObject.id == idSelectCity){
-                let locations = innerObject.locaciones; 
-                for (let j = 0; j < locations.length; j++) {
-                  let location = locations[j];
-                  if(location.id == idLocal){
-                    let officess = location.oficinas;
-                    for (let k = 0; k < officess.length; k++) {
-                      officess.length > 1 ? resultContent.style.height = getHeightResultC+'px' : resultContent.style.height = "auto";
-                      const office = officess[k];
-                      conResult.innerHTML += `
-                      <div class="result__column swiper-slide">
-                        <div class="result__box"> 
-                          <div class="content">
-                            <span class="icon">
-                              <svg><use xlink:href="images/icons/icons.svg#icon-location"></use></svg>
-                            </span>
-                            <div class="description"> 
-                              <span class="name">${office.oficina}</span>
-                              <span class="address">${office.direccion}</span>
-                              <span class="journal">${office.horario} ${office.jornada}</span>
+      if(selectTown){
+        let locacion = selectTown ? listTowns.querySelectorAll('input[type=radio]') : "";
+        if(locacion.length > 2){
+          resultContent.style.height = getHeightResultC+'px';
+          locacion.forEach(function(el){
+            el.addEventListener('change', function(e){
+              let idLocal = e.target.id;
+              conResult.innerHTML = "";
+              for (let i = 0; i < cities.length; i++){
+                let innerObject = cities[i];
+                if(innerObject.id == idSelectCity){
+                  let locations = innerObject.locaciones; 
+                  for (let j = 0; j < locations.length; j++) {
+                    let location = locations[j];
+                    if(location.id == idLocal){
+                      let officess = location.oficinas;
+                      for (let k = 0; k < officess.length; k++) {
+                        officess.length > 1 ? resultContent.style.height = getHeightResultC+'px' : resultContent.style.height = "auto";
+                        const office = officess[k];
+                        conResult.innerHTML += `
+                        <div class="result__column swiper-slide">
+                          <div class="result__box"> 
+                            <div class="content">
+                              <span class="icon">
+                                <svg><use xlink:href="images/icons/icons.svg#icon-location"></use></svg>
+                              </span>
+                              <div class="description"> 
+                                <span class="name">${office.oficina}</span>
+                                <span class="address">${office.direccion}</span>
+                                <span class="journal">${office.horario} ${office.jornada}</span>
+                              </div>
                             </div>
+                            <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${office.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
                           </div>
-                          <div class="footer"> <a class="link" href="https://www.google.com/maps/place/${office.direccion},+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar                             </a></div>
                         </div>
-                      </div>
-                    `;
+                      `;
+                      }
                     }
                   }
                 }
               }
-            }
-            reloadSwiper();
+              reloadSwiper();
+            });
           });
-        });
+        }
       }
       reloadSwiper();
     });
