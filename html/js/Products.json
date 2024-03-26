@@ -1,0 +1,17 @@
+{
+    "productos" : [
+        {
+            "id" : "P001",
+            "nombre" : "Pensiones Obligatorias"
+        },
+        {
+            "id" : "P002",
+            "nombre" : "Cesantías"
+
+        },
+        {
+            "id" : "P003",
+            "nombre" : "Pensiones Voluntarias"
+        }
+    ]
+}

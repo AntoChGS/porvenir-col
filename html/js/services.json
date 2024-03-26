@@ -1,0 +1,44 @@
+{
+    "servicios" : [
+        {
+            "id" : "S001",
+            "parent" : ["P001"],
+            "nombre" : "Actualización Historia Laboral"
+        },
+        {   
+            "id" : "S002",
+            "parent" : ["P001","P002","P003"],
+            "nombre" : "Agendamiento"
+        },
+        {
+            "id" : "S003",
+            "parent" : ["P001","P002","P003"],
+            "nombre" : "Consulta de saldo"
+        },
+        {
+            "id" : "S004",
+            "parent" : ["P001"],
+            "nombre" : "Descarga Historia Laboral"
+        },
+        {
+            "id" : "S005",
+            "parent" : ["P001"],
+            "nombre" : "Doble Asesoría"
+        },
+        {
+            "id" : "S006",
+            "parent" : ["P003"],
+            "nombre" : "Retiro de cesantías"
+        },
+        {
+            "id" : "S007",
+            "parent" : ["P001"],
+            "nombre" : "Simulador pensional"
+        },
+        {
+            "id" : "S008",
+            "parent" : ["P003"],
+            "nombre" : "Transparencia entre portafolio"
+        }
+    ]
+}

@@ -787,7 +787,6 @@ function getJson(rqUrlJson, loadFunction){
 }
 
 function loadOffices(jsonObj){
-
   //variables Generales
   const cities = jsonObj['ciudades'];
   const selectCity = document.getElementById('selectCity');
@@ -1121,18 +1120,21 @@ function loadOffices(jsonObj){
 }
 
 function loadTransact(jsonObj){
-  const transact = jsonObj['productos'];
+  
+  const getProducts = jsonObj['productos'] ? jsonObj['productos'] : '';
+  const getServices = jsonObj['servicios'] ? jsonObj['servicios'] : '';
+
   const selectProduct = document.getElementById('selectProduct');
   const listProduct = selectProduct.querySelector('.select--dropdown');
   const selectService = document.getElementById('selectService');
   const listService = selectService.querySelector('.select--dropdown');
 
   //variables resultado
-  let conResult = document.querySelector('.pvr__transact .result__row');
+  const conResult = document.querySelector('.pvr__transact .results');
 
   //carga de productos
-  for(let i = 0; i < transact.length; i++){
-    let innerObject = transact[i];
+  for(let i = 0; i < getProducts.length; i++){
+    let innerObject = getProducts[i];
     let id = innerObject.id;
     let product = innerObject.nombre;
     listProduct.innerHTML += `
@@ -1144,9 +1146,11 @@ function loadTransact(jsonObj){
   }
 
   //capturar cambio de valor
-  let inputRadio = selectProduct.querySelectorAll('.select--dropdown input[type=radio]');
-  inputRadio.forEach(function(el){
+  const inputRadioProd = selectProduct.querySelectorAll('.select--dropdown input[type=radio]');
+
+  inputRadioProd.forEach(function(el){
     el.addEventListener('change', function(e){
+      let arrayServices = [];
       let idSelectProduct = e.target.id;
       selectService.querySelector('.select--value').textContent = 'Seleccionar';
       selectService.querySelector('.select--button').setAttribute('disabled', true);
@@ -1155,25 +1159,44 @@ function loadTransact(jsonObj){
           <input type="radio" id="" name="services" value="">
           <label for="">Seleccionar</label>
         </li>  
-      `;
-      for(let i = 0; i < transact.length; i++){
-        let innerObject = transact[i];
-        if(innerObject.id == idSelectProduct){
-          let services = innerObject.servicios;
-          if(services){
-            selectService.querySelector('.select--button').removeAttribute('disabled');
-            // conResult.innerHTML = '';
-            for(let j = 0; j < services.length; j++){
-              listService.innerHTML += `
-                <li class="select--item">
-                  <input type="radio" id="${services[j].id}" name="services" value="${services[j].nombre}">
-                  <label for="${services[j].id}">${services[j].nombre}</label>
-                </li>
-              `;
-            }
+      `;      
+      for (let i = 0; i < getServices.length; i++) {
+        const services = getServices[i];
+        const servicesParent = services.parent;
+        for (let j = 0; j < servicesParent.length; j++) {      
+          if(servicesParent.indexOf(idSelectProduct) !== -1){
+            arrayServices.push(services);
+            break;
           }
         }
       }
+      let ServiForProd = arrayServices;       
+      for (let x = 0; x < ServiForProd.length; x++) {
+        selectService.querySelector('.select--button').removeAttribute('disabled');
+        const service = ServiForProd[x];
+        listService.innerHTML += `
+          <li class="select--item">
+            <input type="radio" id="${service.id}" name="services" value="${service.nombre}">
+            <label for="${service.id}">${service.nombre}</label>
+          </li>
+        `;
+      }
+      
+      const inputRadioServ = selectService.querySelectorAll('.select--dropdown input[type=radio]');
+      inputRadioServ.forEach(function(el){
+        el.addEventListener('change', function(e){
+          conResult.style.display = "block";
+          const idService = e.target.id;
+          const itemResult = conResult.querySelectorAll('.result__row .result__column');
+          for (let i = 0; i < itemResult.length; i++) {
+            let columnElement = itemResult[i];     
+            columnElement.classList.remove('show'); 
+            if(columnElement.hasAttribute('data-'+idService)){
+              columnElement.classList.add('show');
+            }
+          }
+        });
+      });
     });
   });
 }
@@ -1288,8 +1311,8 @@ if (document.querySelector(".tab__carousel-container")) {
 
 // Json function
 getJson('http://localhost:3000/js/offices.json', loadOffices);
-getJson('http://localhost:3000/js/transact.json', loadTransact);
-
+getJson('http://localhost:3000/js/products.json', loadTransact);
+getJson('http://localhost:3000/js/services.json', loadTransact);
 
 // Footer Menu accordion
 footerAccordion();

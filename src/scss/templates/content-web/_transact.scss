@@ -1,4 +1,9 @@
 .pvr__transact{
+    .container{
+        @media (min-width: 1200px) {
+            max-width: 804px;
+        }
+    }
     .title{
         font-size: 24px;
         font-weight: 700;
@@ -84,6 +89,7 @@
             flex-wrap: wrap;
             margin-left: -5px;
             margin-right: -5px;
+            justify-content: center;
             @media (min-width: 768px){
                 margin-left: -12px;
                 margin-right: -12px;
@@ -93,16 +99,20 @@
                 margin-right: -8px;
             }
             .result__column{
+                display: none;
                 flex: 0 0 auto;
                 width: 50%;                
                 padding: 0 5px;
+                @media (min-width: 576px){
+                    padding: 0 8px;
+                    width: 33.33%;                    
+                }
                 @media (min-width: 768px){
                     padding: 0 12px;
                     width: 25%;
                 }
-                @media (min-width: 576px){
-                    padding: 0 8px;
-                    width: 33.33%;                    
+                &.show{
+                    display: block;
                 }
             }
         }

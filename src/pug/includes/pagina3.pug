@@ -86,15 +86,15 @@ section.prv-banner-tpl.prv-variant-2.pvr-banner--bkg-green
                                             input(type="radio", id="defaultCity", name="defaultCity") 
                                             label(for="defaultCity") Seleccionar
 
-                                //- .pvr__select#selectTown
-                                //-     span.label Localidad/comuna
-                                //-     button(disabled onclick="selectCustom(this);" type="button" class="select--button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown")
-                                //-         span.select--value Seleccionar
-                                //-         span.arrow.icon: svg: use(xlink:href=iconPath+'chevron-down')
-                                //-     ul.select--dropdown
-                                //-         li.select--item.disabled
-                                //-             input(type="radio", id="defaultTown", name="defaultTown")
-                                //-             label(for="defaultTown") Seleccionar
+                                .pvr__select#selectTown
+                                    span.label Localidad/comuna
+                                    button(disabled onclick="selectCustom(this);" type="button" class="select--button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown")
+                                        span.select--value Seleccionar
+                                        span.arrow.icon: svg: use(xlink:href=iconPath+'chevron-down')
+                                    ul.select--dropdown
+                                        li.select--item.disabled
+                                            input(type="radio", id="defaultTown", name="defaultTown")
+                                            label(for="defaultTown") Seleccionar
 
                         .results 
                             .title--result Nuestra oficina más cercana a ti
@@ -145,7 +145,7 @@ section.prv-banner-tpl.prv-variant-2.pvr-banner--bkg-green
                         .results 
                             span.text--result Estos son los canales recomendados para realizar tu trámite.
                             .result__row 
-                                .result__column 
+                                .result__column(data-S001 data-S002 data-S003 data-S004 data-S005 data-S006 data-S007 data-S008)
                                     .prv-card.prv-card--center.prv-style-3
                                         picture.prv-card__image 
                                             source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
@@ -154,7 +154,7 @@ section.prv-banner-tpl.prv-variant-2.pvr-banner--bkg-green
                                             span.card__title.title__ellipsis.prv-txt-green-500 Lorem ipsum
                                             .card__button
                                                 a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn prv-btn--link") Button 
-                                .result__column 
+                                .result__column(data-S002 data-S003 data-S004 data-S005 data-S006 data-S007 data-S008) 
                                     .prv-card.prv-card--center.prv-style-3
                                         picture.prv-card__image 
                                             source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
@@ -163,7 +163,7 @@ section.prv-banner-tpl.prv-variant-2.pvr-banner--bkg-green
                                             span.card__title.title__ellipsis.prv-txt-green-500 Lorem ipsum
                                             .card__button
                                                 a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn prv-btn--link") Button 
-                                .result__column 
+                                .result__column(data-S001 data-S003 data-S004 data-S005 data-S006 data-S007 data-S008)
                                     .prv-card.prv-card--center.prv-style-3
                                         picture.prv-card__image 
                                             source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
@@ -172,7 +172,7 @@ section.prv-banner-tpl.prv-variant-2.pvr-banner--bkg-green
                                             span.card__title.title__ellipsis.prv-txt-green-500 Lorem ipsum
                                             .card__button
                                                 a(href="http://", target="_blank", rel="noopener noreferrer" class="prv-btn prv-btn--link") Button 
-                                .result__column 
+                                .result__column(data-S001 data-S002 data-S003 data-S005 data-S006 data-S007 data-S008) 
                                     .prv-card.prv-card--center.prv-style-3
                                         picture.prv-card__image 
                                             source(media="(min-width: 992px)", srcset="images/selector/icon-prueba.png")
